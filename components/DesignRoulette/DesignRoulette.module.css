@@ -43,24 +43,42 @@
   letter-spacing: 0.64px;
 }
 
-.spin {
-  height: rem(35px);
+.buttons {
+  display: flex;
+  gap: rem(16px);
   margin-top: rem(40px);
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  height: rem(35px);
   padding: 0 rem(24px);
-  border: 0;
+  border: rem(1px) solid transparent;
   border-radius: rem(100px);
-  background: var(--color-primary);
-  color: var(--mantine-color-white);
   font-family: var(--font-public), sans-serif;
   font-size: rem(16px);
   font-weight: 500;
   letter-spacing: rem(0.8px);
+  text-decoration: none;
   cursor: pointer;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: var(--mantine-color-white);
 
   &:disabled {
     opacity: 0.6;
     cursor: default;
   }
+}
+
+.secondary {
+  border-color: var(--color-tertiary);
+  background: transparent;
+  color: var(--color-primary);
 }
 
 /* The wheel is taller than the card; the card clips its lower half, as in the design.
@@ -79,9 +97,22 @@
   inset: 0;
   border-radius: 50%;
   background: repeating-conic-gradient(#efefee 0deg 45deg, var(--mantine-color-white) 45deg 90deg);
-  box-shadow: 0 0 0 rem(4px) rgb(195 194 191 / 15%);
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.15, 0.8, 0.2, 1);
+}
+
+/* The landed slice, tinted once the wheel stops; --from is the slice's starting angle */
+.highlight {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from var(--from), #ffe6e6 0deg 45deg, transparent 45deg);
+  opacity: 0;
+  transition: opacity 300ms ease;
+
+  &[data-visible] {
+    opacity: 1;
+  }
 }
 
 /* Each icon sits at 77% of the radius in the middle of its slice, turned to face outwards */

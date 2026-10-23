@@ -2,6 +2,7 @@ import { render, screen } from '@/test-utils';
 import { ProjectCard } from './ProjectCard';
 
 const project = {
+  slug: 'comfort-drift',
   title: 'Comfort Drift',
   description: 'Helping homeowners catch temperature issues.',
   image: '/projects/comfort-drift.png',

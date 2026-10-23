@@ -4,6 +4,8 @@ export interface Project {
   description: string;
   image: string;
   featured: boolean;
+  /** Short, playful line shown when Design Roulette lands on this project */
+  rouletteBlurb: string;
 }
 
 export const projects: Project[] = [
@@ -14,6 +16,7 @@ export const projects: Project[] = [
       'Guiding customers through the stressful situation of a heating & cooling breakdown.',
     image: '/projects/anomaly-detection.png',
     featured: true,
+    rouletteBlurb: 'A riveting story about HVAC systems',
   },
   {
     slug: 'filter-smart-alerts',
@@ -22,6 +25,7 @@ export const projects: Project[] = [
       'Bringing eduction and ease into alerts triggered by actual system usage, not just time passed.',
     image: '/projects/filter-smart-alerts.png',
     featured: true,
+    rouletteBlurb: 'An inhaler for your home',
   },
   {
     slug: 'energy-visualized',
@@ -30,6 +34,7 @@ export const projects: Project[] = [
       'Rethinking how people experience energy data through creative, intuitive visualizations that make insights accessible.',
     image: '/projects/energy-visualized.png',
     featured: false,
+    rouletteBlurb: 'A firehose of UI',
   },
   {
     slug: 'comfort-drift',
@@ -38,6 +43,7 @@ export const projects: Project[] = [
       'Helping homeowners catch temperature issues and inefficiencies before they snowball.',
     image: '/projects/comfort-drift.png',
     featured: false,
+    rouletteBlurb: 'For all the people that can’t handle a 3° temp change',
   },
   {
     slug: 'ev-smart-charging',
@@ -46,6 +52,7 @@ export const projects: Project[] = [
       'From insights to iteration. Turning user behavior into thoughtful design improvements.',
     image: '/projects/ev-smart-charging.png',
     featured: false,
+    rouletteBlurb: 'Constantly being humbled by user tests',
   },
   {
     slug: 'thermostat-alerts',
@@ -54,6 +61,7 @@ export const projects: Project[] = [
       'Creating a pattern for notifications spanning from critical alerts to simple recommendations for an uncommon interface.',
     image: '/projects/thermostat-alerts.png',
     featured: false,
+    rouletteBlurb: 'Squares are so much easier to design on',
   },
   {
     slug: 'solar-lead-gen',
@@ -61,5 +69,6 @@ export const projects: Project[] = [
     description: 'Going beyond what was asked for the benefit of the user. Fixing up an old flow.',
     image: '/projects/solar-lead-gen.png',
     featured: false,
+    rouletteBlurb: 'Dusting up some old pixels',
   },
 ];

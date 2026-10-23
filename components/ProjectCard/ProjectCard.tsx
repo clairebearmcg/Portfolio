@@ -3,7 +3,7 @@ import type { Project } from '@/data/projects';
 import classes from './ProjectCard.module.css';
 
 interface ProjectCardProps {
-  project: Pick<Project, 'title' | 'description' | 'image'>;
+  project: Pick<Project, 'slug' | 'title' | 'description' | 'image'>;
   variant?: 'featured' | 'compact';
 }
 
@@ -17,7 +17,7 @@ export function ProjectCard({ project, variant = 'compact' }: ProjectCardProps) 
   const { width, height } = IMAGE_SIZE[variant];
 
   return (
-    <article className={classes.card} data-variant={variant}>
+    <article id={project.slug} className={classes.card} data-variant={variant}>
       <div className={classes.text}>
         <h2 className={classes.title}>{project.title}</h2>
         <p className={classes.description}>{project.description}</p>
