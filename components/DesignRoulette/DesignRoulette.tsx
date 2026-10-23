@@ -5,7 +5,7 @@ import Image from 'next/image';
 import classes from './DesignRoulette.module.css';
 
 // Clockwise from the top of the wheel; each slice is 45°
-const SLICES = [
+export const SLICES = [
   'comfort-drift',
   'home',
   'ev-smart-charging',
@@ -15,7 +15,7 @@ const SLICES = [
   'anomaly-detection',
   'energy-visualized',
 ];
-const SLICE_ANGLE = 360 / SLICES.length;
+export const SLICE_ANGLE = 360 / SLICES.length;
 const FULL_TURNS = 5;
 const SPIN_MS = 4000;
 
