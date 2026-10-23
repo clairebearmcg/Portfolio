@@ -1,3 +1,4 @@
+import { SiteNav } from '../SiteNav/SiteNav';
 import classes from './SiteHeader.module.css';
 
 export function SiteHeader() {
@@ -14,13 +15,7 @@ export function SiteHeader() {
           I aim to create things the world needs, not things it simply desires.
         </p>
       </div>
-      <nav aria-label="Main" className={classes.nav}>
-        <span className={classes.active} aria-current="page">
-          UX
-        </span>
-        <span className={classes.link}>ME</span>
-        <span className={classes.link}>CV</span>
-      </nav>
+      <SiteNav />
     </header>
   );
 }
