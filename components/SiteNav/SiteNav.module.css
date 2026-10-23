@@ -13,7 +13,22 @@
   }
 }
 
-.pill {
+.filter {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Holds the pill and the droplets; the gooey filter makes touching shapes merge like liquid */
+.liquid {
+  position: absolute;
+  inset: 0;
+  filter: url('#nav-goo');
+  pointer-events: none;
+}
+
+.pill,
+.blob {
   position: absolute;
   top: 0;
   left: 0;
@@ -21,12 +36,15 @@
   height: 100%;
   border-radius: rem(100px);
   background: var(--color-primary);
-  transform: translateX(calc(var(--active) * (var(--slot) + var(--gap))));
+}
 
-  /* Quick, smooth slide; the short delay and soft start give a hint of lag */
-  @media (prefers-reduced-motion: no-preference) {
-    transition: transform 280ms cubic-bezier(0.45, 0, 0.15, 1) 20ms;
-  }
+.pill {
+  transform: translateX(calc(var(--active) * (var(--slot) + var(--gap))));
+}
+
+/* Only visible while SiteNav animates them */
+.blob {
+  opacity: 0;
 }
 
 /* letter-spacing adds trailing space after the last letter; text-indent re-centres the label */
@@ -55,7 +73,7 @@
     font-weight: 700;
 
     @media (prefers-reduced-motion: no-preference) {
-      transition-delay: 150ms;
+      transition-delay: 300ms;
     }
   }
 }
