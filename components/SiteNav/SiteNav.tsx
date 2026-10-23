@@ -4,21 +4,24 @@ import { useRef, useState, type CSSProperties } from 'react';
 import classes from './SiteNav.module.css';
 
 const ITEMS = ['UX', 'ME', 'CV'] as const;
-const DURATION = 360;
-// How far the trailing droplet lags behind the pill; long enough for it to break away mid-slide
-const TRAIL_LAG = 120;
+const DURATION = 290;
 const EASE = 'cubic-bezier(0.5, 0, 0.2, 1)';
+// Blobs that follow the pill, each smaller and later; the goo filter blends them into one tapering tail
+const TAIL = [
+  { lag: 25, scale: 'scale(0.8, 0.85)' },
+  { lag: 50, scale: 'scale(0.6, 0.7)' },
+  { lag: 75, scale: 'scale(0.42, 0.55)' },
+];
 
 // The ME and CV pages don't exist yet, so for now the items only move the pill
 export function SiteNav() {
   const [active, setActive] = useState(0);
   const items = useRef<(HTMLButtonElement | null)[]>([]);
   const pill = useRef<HTMLSpanElement>(null);
-  const droplet = useRef<HTMLSpanElement>(null);
+  const tail = useRef<(HTMLSpanElement | null)[]>([]);
 
-  // Liquid slide: the pill slides across, squashing slightly, while a droplet trails behind it,
-  // breaks away mid-slide and merges back in on arrival.
-  // The gooey SVG filter on the layer makes shapes merge where they touch.
+  // Liquid slide: the pill slides across, squashing slightly, and stretches a tail behind it
+  // that pulls back in when it stops. The gooey SVG filter on the layer merges the shapes.
   const animate = (from: number, to: number) => {
     const fromEl = items.current[from];
     const toEl = items.current[to];
@@ -42,13 +45,15 @@ export function SiteNav() {
       ],
       { duration: DURATION, easing: EASE }
     );
-    droplet.current?.animate(
-      [
-        { opacity: 1, transform: `${x0} scale(0.35, 0.6)` },
-        { opacity: 1, transform: `${x1} scale(0.35, 0.6)` },
-      ],
-      { duration: DURATION, delay: TRAIL_LAG, easing: EASE, fill: 'backwards' }
-    );
+    TAIL.forEach(({ lag, scale }, i) => {
+      tail.current[i]?.animate(
+        [
+          { opacity: 1, transform: `${x0} ${scale}` },
+          { opacity: 1, transform: `${x1} ${scale}` },
+        ],
+        { duration: DURATION, delay: lag, easing: EASE, fill: 'backwards' }
+      );
+    });
   };
 
   const select = (i: number) => {
@@ -72,7 +77,15 @@ export function SiteNav() {
         </filter>
       </svg>
       <span className={classes.liquid} aria-hidden>
-        <span ref={droplet} className={classes.blob} />
+        {TAIL.map(({ lag }, i) => (
+          <span
+            key={lag}
+            ref={(el) => {
+              tail.current[i] = el;
+            }}
+            className={classes.blob}
+          />
+        ))}
         <span ref={pill} className={classes.pill} />
       </span>
       {ITEMS.map((label, i) => (
