@@ -73,6 +73,7 @@ export function DesignRoulette() {
               alt=""
               width={52}
               height={52}
+              unoptimized
               style={{ '--angle': `${i * SLICE_ANGLE + SLICE_ANGLE / 2}deg` } as CSSProperties}
             />
           ))}

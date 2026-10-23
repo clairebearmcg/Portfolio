@@ -28,7 +28,8 @@ export function ProjectCard({ project, variant = 'compact' }: ProjectCardProps) 
         alt={project.title}
         width={width}
         height={height}
-        sizes={`(max-width: 62em) 100vw, ${width}px`}
+        // The optimizer palette-reduces PNGs, which blurs the small UI text in these previews
+        unoptimized
       />
     </article>
   );
