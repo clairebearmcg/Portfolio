@@ -27,6 +27,11 @@
   }
 }
 
+.home {
+  color: inherit;
+  text-decoration: none;
+}
+
 .surname {
   margin-left: rem(4px);
   opacity: 0.25;

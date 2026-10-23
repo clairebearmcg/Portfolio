@@ -5,7 +5,10 @@ export function SiteHeader() {
     <header className={classes.header}>
       <div className={classes.intro}>
         <p className={classes.name}>
-          Claire <span className={classes.surname}>McGregor</span>
+          {/* A plain link (not next/link) so clicking does a full page load of the homepage */}
+          <a href="/" className={classes.home}>
+            Claire <span className={classes.surname}>McGregor</span>
+          </a>
         </p>
         <p className={classes.tagline}>
           I aim to create things the world needs, not things it simply desires.
