@@ -33,7 +33,7 @@
 .subtitle {
   margin: rem(12px) 0 0;
   color: var(--color-secondary);
-  font-size: rem(16px);
-  line-height: rem(20px);
-  letter-spacing: rem(0.64px);
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.64px;
 }

@@ -3,6 +3,9 @@
 import { createTheme, CSSVariablesResolver, rem } from '@mantine/core';
 
 export const theme = createTheme({
+  // Shrinks every rem()-based size on the page; 1 matches the Figma frame exactly.
+  // Body text is set in px so it stays at the Figma size.
+  scale: 0.95,
   fontFamily: 'var(--font-plex), sans-serif',
   headings: {
     fontFamily: 'var(--font-serif), serif',
