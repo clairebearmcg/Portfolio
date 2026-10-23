@@ -1,0 +1,39 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Round 2px dots every ~10.5px, matching the Figma dotted line */
+.rule {
+  width: min(rem(633px), 100%);
+  height: rem(2px);
+  margin: 0 0 rem(40px);
+  border: 0;
+  background: radial-gradient(circle, var(--color-tertiary) rem(1px), transparent rem(1.2px)) left
+    center / rem(10.5px) rem(2px) repeat-x;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-serif), serif;
+  font-size: rem(40px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(32px);
+    line-height: rem(34px);
+  }
+}
+
+.subtitle {
+  margin: rem(12px) 0 0;
+  color: var(--color-secondary);
+  font-size: rem(16px);
+  line-height: rem(20px);
+  letter-spacing: rem(0.64px);
+}

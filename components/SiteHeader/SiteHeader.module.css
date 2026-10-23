@@ -1,0 +1,77 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(24px);
+  padding-top: rem(136px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column-reverse;
+    padding-top: rem(40px);
+  }
+}
+
+.intro {
+  max-width: rem(278px);
+}
+
+.name {
+  margin: 0;
+  font-family: var(--font-cal), sans-serif;
+  font-size: rem(28px);
+  line-height: normal;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(24px);
+  }
+}
+
+.surname {
+  margin-left: rem(4px);
+  opacity: 0.25;
+}
+
+.tagline {
+  margin: rem(13px) 0 0;
+  font-size: rem(16px);
+  line-height: rem(30px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(15px);
+    line-height: rem(26px);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: rem(47px);
+  margin-right: rem(41px);
+  font-family: var(--font-public), sans-serif;
+  font-size: rem(16px);
+  letter-spacing: rem(8px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    margin-right: 0;
+  }
+}
+
+/* letter-spacing adds trailing space after the last letter; text-indent re-centres the label */
+.active {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(90px);
+  height: rem(35px);
+  border-radius: rem(100px);
+  background: var(--color-primary);
+  color: var(--mantine-color-white);
+  font-weight: 700;
+  text-indent: rem(8px);
+}
+
+.link + .link {
+  margin-left: rem(13px);
+}

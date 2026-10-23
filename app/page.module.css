@@ -1,0 +1,39 @@
+.container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+.featured {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+  margin-top: rem(180px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+    margin-top: rem(64px);
+  }
+}
+
+.charcuterie {
+  margin-top: rem(108px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(80px);
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(80px) rem(40px);
+  margin-top: rem(105px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+    gap: rem(16px);
+    margin-top: rem(56px);
+  }
+}

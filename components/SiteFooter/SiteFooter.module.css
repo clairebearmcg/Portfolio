@@ -1,0 +1,32 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(98px);
+  padding: rem(212px) 0 rem(100px);
+  font-family: var(--font-public), sans-serif;
+  font-size: rem(14px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(64px);
+    padding-top: rem(120px);
+  }
+}
+
+.backToTop {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  font: inherit;
+  letter-spacing: rem(2.1px);
+  text-decoration: underline;
+  text-underline-position: from-font;
+  cursor: pointer;
+}
+
+.wordmark {
+  margin: 0;
+  color: var(--color-tertiary);
+  letter-spacing: rem(7px);
+}

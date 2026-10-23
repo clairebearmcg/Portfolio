@@ -1,0 +1,104 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: rem(500px);
+  padding: rem(40px) rem(40px) 0;
+  overflow: hidden;
+  border-radius: var(--mantine-radius-default);
+  background: var(--color-card);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(24px) rem(24px) 0;
+  }
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-serif), serif;
+  font-size: rem(40px);
+  font-weight: 400;
+  line-height: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(32px);
+    line-height: rem(34px);
+  }
+}
+
+.description {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: rem(16px);
+  line-height: rem(25px);
+  letter-spacing: rem(0.64px);
+}
+
+.spin {
+  height: rem(35px);
+  margin-top: rem(40px);
+  padding: 0 rem(24px);
+  border: 0;
+  border-radius: rem(100px);
+  background: var(--color-primary);
+  color: var(--mantine-color-white);
+  font-family: var(--font-public), sans-serif;
+  font-size: rem(16px);
+  font-weight: 500;
+  letter-spacing: rem(0.8px);
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+}
+
+/* The wheel is taller than the card; the card clips its lower half, as in the design */
+.stage {
+  position: relative;
+  width: rem(406px);
+  height: rem(406px);
+  margin-top: rem(53px);
+  flex-shrink: 0;
+}
+
+.wheel {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: repeating-conic-gradient(#efefee 0deg 45deg, var(--mantine-color-white) 45deg 90deg);
+  box-shadow: 0 0 0 rem(4px) rgb(195 194 191 / 15%);
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.15, 0.8, 0.2, 1);
+}
+
+/* Each icon sits at 77% of the radius in the middle of its slice, turned to face outwards */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(52px);
+  height: rem(52px);
+  object-fit: contain;
+  transform: translate(-50%, -50%) rotate(var(--angle)) translateY(rem(-156px));
+}
+
+.pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: rem(55px);
+  height: auto;
+  transform: translate(-50%, -62%);
+  pointer-events: none;
+}

@@ -1,5 +1,30 @@
 'use client';
 
-import { createTheme } from '@mantine/core';
+import { createTheme, CSSVariablesResolver, rem } from '@mantine/core';
 
-export const theme = createTheme({/* Put your mantine theme override here */});
+export const theme = createTheme({
+  fontFamily: 'var(--font-plex), sans-serif',
+  headings: {
+    fontFamily: 'var(--font-serif), serif',
+    fontWeight: '400',
+  },
+  defaultRadius: rem(20),
+  other: {
+    primary: '#2d2c2a',
+    secondary: '#77746d',
+    tertiary: '#c3c2bf',
+    card: '#f7f7f7',
+  },
+});
+
+// Exposes theme.other colours as --color-* CSS variables for the CSS modules
+export const cssVariablesResolver: CSSVariablesResolver = (t) => ({
+  variables: {
+    '--color-primary': t.other.primary,
+    '--color-secondary': t.other.secondary,
+    '--color-tertiary': t.other.tertiary,
+    '--color-card': t.other.card,
+  },
+  light: {},
+  dark: {},
+});
