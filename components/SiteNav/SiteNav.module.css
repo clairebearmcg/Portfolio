@@ -73,7 +73,7 @@
     font-weight: 700;
 
     @media (prefers-reduced-motion: no-preference) {
-      transition-delay: 300ms;
+      transition-delay: 220ms;
     }
   }
 }

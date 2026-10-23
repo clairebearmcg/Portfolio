@@ -4,17 +4,20 @@ import { useRef, useState, type CSSProperties } from 'react';
 import classes from './SiteNav.module.css';
 
 const ITEMS = ['UX', 'ME', 'CV'] as const;
-const DURATION = 440;
+const DURATION = 360;
+// How far the trailing droplet lags behind the pill; long enough for it to break away mid-slide
+const TRAIL_LAG = 120;
+const EASE = 'cubic-bezier(0.5, 0, 0.2, 1)';
 
 // The ME and CV pages don't exist yet, so for now the items only move the pill
 export function SiteNav() {
   const [active, setActive] = useState(0);
   const items = useRef<(HTMLButtonElement | null)[]>([]);
   const pill = useRef<HTMLSpanElement>(null);
-  const leaving = useRef<HTMLSpanElement>(null);
   const droplet = useRef<HTMLSpanElement>(null);
 
-  // Liquid hop: the old pill shrinks away, a droplet pulls off it, travels, and swells into the new pill.
+  // Liquid slide: the pill slides across, squashing slightly, while a droplet trails behind it,
+  // breaks away mid-slide and merges back in on arrival.
   // The gooey SVG filter on the layer makes shapes merge where they touch.
   const animate = (from: number, to: number) => {
     const fromEl = items.current[from];
@@ -29,34 +32,22 @@ export function SiteNav() {
     }
     const x0 = `translateX(${fromEl.offsetLeft}px)`;
     const x1 = `translateX(${toEl.offsetLeft}px)`;
+    const xMid = `translateX(${(fromEl.offsetLeft + toEl.offsetLeft) / 2}px)`;
 
-    leaving.current?.animate(
+    pill.current.animate(
       [
-        { opacity: 1, transform: `${x0} scale(1)` },
-        { opacity: 1, transform: `${x0} scale(0.55, 0.7)`, offset: 0.35 },
-        { opacity: 1, transform: `${x0} scale(0)` },
+        { transform: `${x0} scale(1)` },
+        { transform: `${xMid} scale(1.06, 0.86)` },
+        { transform: `${x1} scale(1)` },
       ],
-      { duration: DURATION * 0.5, easing: 'ease-in' }
+      { duration: DURATION, easing: EASE }
     );
     droplet.current?.animate(
       [
-        { opacity: 1, transform: `${x0} scale(0.5, 0.7)` },
-        {
-          opacity: 1,
-          transform: `translateX(${(fromEl.offsetLeft + toEl.offsetLeft) / 2}px) scale(0.3, 0.45)`,
-        },
-        { opacity: 1, transform: `${x1} scale(0.5, 0.7)` },
+        { opacity: 1, transform: `${x0} scale(0.35, 0.6)` },
+        { opacity: 1, transform: `${x1} scale(0.35, 0.6)` },
       ],
-      { duration: DURATION, easing: 'ease-in-out' }
-    );
-    pill.current.animate(
-      [
-        { transform: `${x1} scale(0)` },
-        { transform: `${x1} scale(0)`, offset: 0.5 },
-        { transform: `${x1} scale(0.6, 0.75)`, offset: 0.8 },
-        { transform: `${x1} scale(1)` },
-      ],
-      { duration: DURATION, easing: 'linear' }
+      { duration: DURATION, delay: TRAIL_LAG, easing: EASE, fill: 'backwards' }
     );
   };
 
@@ -81,7 +72,6 @@ export function SiteNav() {
         </filter>
       </svg>
       <span className={classes.liquid} aria-hidden>
-        <span ref={leaving} className={classes.blob} />
         <span ref={droplet} className={classes.blob} />
         <span ref={pill} className={classes.pill} />
       </span>
