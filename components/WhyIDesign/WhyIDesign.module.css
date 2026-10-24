@@ -1,5 +1,6 @@
 /* Spacing follows the Figma frame "Why I design- FINAL" (24510:2834) */
 .page {
+  position: relative;
   padding: rem(276px) 0 rem(363px);
   color: var(--color-primary);
 
@@ -7,6 +8,38 @@
     padding-top: rem(120px);
     padding-bottom: rem(160px);
   }
+}
+
+/* Back link sits in the left margin like the About me links (x130, y275); above the story on small screens */
+.backBar {
+  position: absolute;
+  top: rem(275px);
+  right: 0;
+  left: 0;
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+  pointer-events: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    margin-bottom: rem(40px);
+  }
+}
+
+.back {
+  color: var(--color-primary);
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  line-height: normal;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+.backText {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .container {

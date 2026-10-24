@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import classes from './WhyIDesign.module.css';
 
 const STORY = [
@@ -13,6 +14,12 @@ const STORY = [
 export function WhyIDesign() {
   return (
     <article className={classes.page}>
+      {/* Same style and spot as the links on the About me page */}
+      <div className={classes.backBar}>
+        <Link className={classes.back} href="/me">
+          ←<span className={classes.backText}>Back</span>
+        </Link>
+      </div>
       <div className={classes.container}>
         <header className={classes.titleGroup}>
           <h1 className={classes.title}>Ok, sit down and listen to my story about chairs.</h1>
