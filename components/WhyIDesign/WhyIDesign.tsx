@@ -34,11 +34,11 @@ export function WhyIDesign() {
         <div className={classes.story}>
           <p>
             When I was in college, I had to take this boring class about chairs and industrial
-            design history. Once, we unironically spent an entire class period tracing pictures of
-            chairs. Another time, we talked about a flagpole for 45 mins. As an aspiring UX
-            designer, I rolled my eyes during these lectures about tables and teapots. I couldn’t
-            understand how this class could possibly apply to someone like me who would be working
-            on <u>digital</u> products.
+            design history. Once, we spent an entire class period tracing pictures of chairs.
+            Another time, we talked about a flagpole for 45 mins. As an aspiring UX designer, I
+            rolled my eyes during these lectures about tables and teapots. I couldn’t understand how
+            this class could possibly apply to someone like me who would be working on{' '}
+            <u>digital</u> products.
           </p>
           {STORY.map((paragraph) => (
             <p key={paragraph.slice(0, 24)}>{paragraph}</p>
