@@ -15,45 +15,23 @@
   box-sizing: content-box;
 }
 
-/* ---- Top bar: home link on the left, nav centred ---- */
+/* ---- Top bar: nav on the right, in the same spot as on the homepage ---- */
 .top {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  padding-top: rem(113px);
+  display: flex;
+  justify-content: flex-end;
+  padding-top: rem(136px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    display: flex;
-    flex-direction: column;
-    gap: rem(20px);
+    justify-content: flex-start;
     padding-top: rem(40px);
   }
-}
-
-.home {
-  justify-self: start;
-  color: inherit;
-  font-family: var(--font-cal), sans-serif;
-  font-size: rem(20px);
-  line-height: normal;
-  text-decoration: none;
-}
-
-.surname {
-  margin-left: rem(4px);
-  opacity: 0.25;
-}
-
-/* SiteNav carries a right margin for the homepage header; centre it here */
-.navSlot > * {
-  margin-right: 0;
 }
 
 /* ---- "A Vivint project" tag ---- */
 .tag {
   display: inline-flex;
   align-items: center;
-  margin: rem(178px) 0 0;
+  margin: rem(155px) 0 0;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(72px);

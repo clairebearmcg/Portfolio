@@ -47,13 +47,7 @@ export function AdIntro() {
   return (
     <div className={classes.intro}>
       <header className={`${classes.container} ${classes.top}`}>
-        {/* A plain link (not next/link) so clicking does a full page load of the homepage */}
-        <a href="/" className={classes.home}>
-          Claire <span className={classes.surname}>McGregor</span>
-        </a>
-        <div className={classes.navSlot}>
-          <SiteNav />
-        </div>
+        <SiteNav />
       </header>
 
       <div className={classes.container}>
