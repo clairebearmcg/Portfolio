@@ -85,8 +85,12 @@ export function AboutMe() {
             </a>
           </li>
           <li>
-            {/* TODO: LinkedIn URL — replace href="#" and remove aria-disabled once known */}
-            <a className={classes.link} href="#" aria-disabled="true">
+            <a
+              className={classes.link}
+              href="https://www.linkedin.com/in/clairemcgreg/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <span className={classes.linkText}>LinkedIn</span>→
             </a>
           </li>

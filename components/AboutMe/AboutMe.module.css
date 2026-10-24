@@ -383,10 +383,6 @@
   font-size: 16px;
   line-height: normal;
   text-decoration: none;
-
-  &[aria-disabled='true'] {
-    pointer-events: none;
-  }
 }
 
 .linkText {
