@@ -13,6 +13,8 @@
  * Running text is set in px, so it keeps its size either way.
  */
 .content {
+  /* Section content width: kept at the 90% width so the smaller desktop scale spreads out rather than leaving wide margins */
+  --case-study-width: 1062px;
   --mantine-scale: 0.9;
 
   @media (min-width: $mantine-breakpoint-md) {

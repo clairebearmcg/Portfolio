@@ -7,7 +7,7 @@
 
 .container {
   box-sizing: content-box;
-  max-width: rem(1180px);
+  max-width: var(--case-study-width);
   margin: 0 auto;
   padding: 0 rem(16px);
 }

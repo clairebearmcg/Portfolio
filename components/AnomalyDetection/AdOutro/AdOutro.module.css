@@ -11,7 +11,7 @@
 }
 
 .inner {
-  max-width: rem(1180px);
+  max-width: var(--case-study-width);
   margin: 0 auto;
   padding: 0 rem(16px);
   box-sizing: content-box;
