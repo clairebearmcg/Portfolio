@@ -189,7 +189,7 @@ export function FsaDesigns() {
           <h3 className={classes.label}>But it could be better</h3>
           <p className={classes.betterSubtitle}>
             The MVP was great at tackling some of the basic needs of users, but it lacked solutions
-            of existing problems and an innovative touch to evoke satisfaction and ease. Some common
+            to existing problems and an innovative touch to evoke satisfaction and ease. Some common
             questions that came up while designing for 1.0:
           </p>
         </div>
@@ -269,20 +269,13 @@ export function FsaDesigns() {
 
           <Block
             id="fsa-designs-q4"
-            question="How can we help users who don’t know how or always forget how to change their filter?"
-          >
-            <FilterDetailsFlow />
-          </Block>
-
-          <Block
-            id="fsa-designs-q5"
             question="How can we help users who can never remember what filter they have?"
           >
             <FilterDetailsFlow />
           </Block>
 
           <Block
-            id="fsa-designs-q6"
+            id="fsa-designs-q5"
             question="How can we help users who don’t know how or always forget how to change their filter?"
           >
             <div className={`${classes.flow} ${classes.flowGuide}`}>
@@ -298,7 +291,7 @@ export function FsaDesigns() {
           </Block>
 
           <Block
-            id="fsa-designs-q7"
+            id="fsa-designs-q6"
             question="What about the users that can’t remember when they last changed their filter or when they should next?"
           >
             <div className={`${classes.flow} ${classes.flowWide}`}>

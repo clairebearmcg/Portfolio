@@ -215,7 +215,7 @@ export function FsaIntro() {
                   Research
                 </h2>
                 <p className={classes.researchLede}>
-                  Breaking it down to understand the problem at it’s core.
+                  Breaking it down to understand the problem at its core.
                 </p>
               </div>
             </div>
@@ -228,7 +228,7 @@ export function FsaIntro() {
                   wears out your system faster.
                 </p>
                 <p className={`${classes.whyText} ${classes.whyAside}`}>
-                  Additionally, regular replacement maintains air quality which can effect health,
+                  Additionally, regular replacement maintains air quality which can affect health,
                   comfort, sleep, focus, and long-term well-being.
                 </p>
               </div>

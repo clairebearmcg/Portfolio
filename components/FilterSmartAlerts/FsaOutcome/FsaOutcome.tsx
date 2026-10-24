@@ -124,7 +124,7 @@ export function FsaOutcome() {
             </div>
             <div className={classes.homeAirText}>
               <p className={classes.body}>
-                There is so much potential to expand this feature into it’s own “Home Air” suite in
+                There is so much potential to expand this feature into its own “Home Air” suite in
                 the app. Here, we could include information about air quality in the home with cool
                 data viz, savings from filter replacements &amp; basic HVAC maintenance, reminders,
                 change guides, etc.
@@ -132,7 +132,7 @@ export function FsaOutcome() {
               <p className={classes.body}>
                 People care about the air that they breathe at home. Expanding awareness and
                 surfacing wanted data is something I think Vivint could excel at if we choose to
-                pursue this terriroty.
+                pursue this territory.
               </p>
             </div>
           </div>
@@ -144,8 +144,8 @@ export function FsaOutcome() {
               runtime has reached a point where the filter needs replacing. Though runtime is a much
               more accurate measure of filter contamination compared to estimated calendar time that
               most people typically use, filters embedded with sensors detect when a filter needs
-              changing with the most accuracy. Woosh provides the opportunity to expanded our
-              detection accuracy with it’s smart filter frame and increase ease with filter care
+              changing with the most accuracy. Woosh provides the opportunity to expand our
+              detection accuracy with its smart filter frame and increase ease with filter care
               through their delivery system.
             </TitleBlock>
           </div>
