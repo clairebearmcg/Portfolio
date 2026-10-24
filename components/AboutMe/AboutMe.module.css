@@ -346,9 +346,10 @@
 .caption {
   color: #000;
   font-family: var(--font-about-iosevka), monospace;
-  font-size: rem(10.1px);
+  /* Fixed size, so it doesn't shrink with the collage */
+  font-size: 10px;
   font-weight: 500;
-  line-height: rem(20.25px);
+  line-height: 20px;
   letter-spacing: rem(0.4px);
   text-align: center;
 
