@@ -1,0 +1,98 @@
+/* Spacing follows the Figma frame "Why I design- FINAL" (24510:2834) */
+.page {
+  padding: rem(276px) 0 rem(363px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: rem(120px);
+    padding-bottom: rem(160px);
+  }
+}
+
+.container {
+  max-width: rem(972px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Hand-written margin notes ("^ lol", ":)") use a monospace face */
+.aside,
+.smile {
+  margin: 0;
+  color: #000;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-weight: 500;
+  font-size: rem(25px);
+  line-height: rem(32px);
+  letter-spacing: rem(1px);
+  white-space: nowrap;
+}
+
+/* ---- Title with the "lol" note pointing down at it ---- */
+.titleGroup {
+  position: relative;
+  padding-top: rem(40px);
+}
+
+.title,
+.closingText {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: rem(40px);
+  line-height: rem(50px);
+}
+
+.aside {
+  position: absolute;
+  top: 0;
+  left: rem(77px);
+}
+
+.arrow {
+  display: inline-block;
+  margin-right: rem(5px);
+  transform: scaleY(-1);
+}
+
+/* ---- Story ---- */
+.story {
+  margin-top: rem(85px);
+  font-size: 16px;
+  line-height: 32px;
+  letter-spacing: 0.64px;
+
+  p {
+    margin: 0;
+  }
+
+  p + p {
+    margin-top: 32px;
+  }
+
+  u {
+    text-decoration-skip-ink: none;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(56px);
+  }
+}
+
+/* ---- Closing line ---- */
+.closing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  column-gap: rem(18px);
+  margin: rem(85px) 0 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(56px);
+  }
+}
+
+.smile {
+  margin-top: rem(14px);
+}

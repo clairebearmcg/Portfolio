@@ -6,9 +6,10 @@
   padding-top: rem(136px);
   color: var(--color-primary);
 
+  /* The site nav floats above this on small screens: 40px down, 35px tall, then a 24px gap */
   @media (max-width: $mantine-breakpoint-md) {
-    flex-direction: column-reverse;
-    padding-top: rem(40px);
+    flex-direction: column;
+    padding-top: rem(99px);
   }
 }
 

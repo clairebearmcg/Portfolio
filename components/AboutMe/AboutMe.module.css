@@ -1,0 +1,391 @@
+/* Positions follow the Figma frame "About me" (24510:2761); the collage group sits at y275 */
+.about {
+  padding: rem(275px) 0 rem(160px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(120px) 0 rem(96px);
+  }
+}
+
+.container {
+  max-width: rem(827px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---- Collage: left photos at x0, middle photos at x215/y149, words at x521 ---- */
+.collage {
+  position: relative;
+  height: rem(1030px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: rem(48px) rem(16px);
+    height: auto;
+  }
+}
+
+.words {
+  position: absolute;
+  top: 0;
+  left: rem(521px);
+  width: rem(306px);
+  height: 100%;
+  margin: 0;
+  font-weight: 400;
+  line-height: 1.2;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    grid-column: 1 / -1;
+    width: auto;
+    height: auto;
+  }
+}
+
+/* Each line is placed by its vertical centre in the Figma group */
+.line {
+  position: absolute;
+  left: 0;
+  display: block;
+  white-space: nowrap;
+  transform: translateY(-50%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    margin-bottom: rem(14px);
+    white-space: normal;
+    transform: none;
+  }
+}
+
+.l1 {
+  top: rem(72.5px);
+}
+
+.l2 {
+  top: rem(145.9px);
+}
+
+.l3 {
+  top: rem(237px);
+}
+
+.l4 {
+  top: rem(298px);
+}
+
+.l5 {
+  top: rem(353px);
+}
+
+.l6 {
+  top: rem(404px);
+}
+
+.l7 {
+  top: rem(462px);
+}
+
+.l8 {
+  top: rem(524px);
+}
+
+.l9 {
+  top: rem(577px);
+}
+
+.l10 {
+  top: rem(645px);
+}
+
+.l11 {
+  top: rem(710px);
+}
+
+.l12 {
+  top: rem(768px);
+}
+
+.l13 {
+  top: rem(826px);
+}
+
+.l14 {
+  top: rem(882px);
+}
+
+/* ---- One typeface per word, as in the design ---- */
+.jacquardLg {
+  font-family: var(--font-about-jacquard), serif;
+  font-size: rem(68.8px);
+}
+
+.serifLg {
+  font-family: var(--font-serif), serif;
+  font-size: rem(57.3px);
+  font-style: italic;
+}
+
+/* Cochin is a macOS system font; other systems fall back to Georgia */
+.cochin {
+  font-family: Cochin, Georgia, serif;
+  font-size: rem(31.9px);
+  font-weight: 700;
+}
+
+.cal {
+  font-family: var(--font-cal), sans-serif;
+  font-size: rem(29px);
+}
+
+.jacquard {
+  font-family: var(--font-about-jacquard), serif;
+  font-size: rem(40.6px);
+}
+
+.serif {
+  margin-left: rem(6px);
+  font-family: var(--font-serif), serif;
+  font-size: rem(29px);
+  font-style: italic;
+}
+
+.chathura {
+  font-family: var(--font-about-chathura), sans-serif;
+  font-size: rem(53.9px);
+}
+
+.quantico {
+  font-family: var(--font-about-quantico), sans-serif;
+  font-size: rem(29px);
+}
+
+.public {
+  font-family: var(--font-public), sans-serif;
+  font-size: rem(29px);
+}
+
+.staatliches {
+  font-family: var(--font-about-staatliches), sans-serif;
+  font-size: rem(29px);
+  letter-spacing: rem(2.9px);
+}
+
+.sulphur {
+  font-family: var(--font-about-sulphur), sans-serif;
+  font-size: rem(23.2px);
+}
+
+.museo {
+  font-family: var(--font-about-museo), sans-serif;
+  font-size: rem(23.2px);
+  font-weight: 600;
+}
+
+.helvetica {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: rem(23.2px);
+}
+
+.fascinate {
+  font-family: var(--font-about-fascinate), serif;
+  font-size: rem(29px);
+  letter-spacing: rem(1.45px);
+}
+
+.sarina {
+  font-family: var(--font-about-sarina), cursive;
+  font-size: rem(23.2px);
+}
+
+.hubot {
+  font-family: var(--font-about-hubot), sans-serif;
+  font-size: rem(22px);
+  font-weight: 600;
+  font-variation-settings: 'wdth' 75;
+  letter-spacing: rem(8.8px);
+}
+
+/* Roca isn't a web font we have; Public Sans stands in */
+.roca {
+  font-family: Roca, var(--font-public), sans-serif;
+  font-size: rem(29px);
+  letter-spacing: rem(1.45px);
+}
+
+.shrikhand {
+  font-family: var(--font-about-shrikhand), serif;
+  font-size: rem(26.1px);
+  font-style: italic;
+  letter-spacing: rem(1.3px);
+}
+
+.poorStory {
+  font-family: var(--font-about-poor-story), sans-serif;
+  font-size: rem(29px);
+  text-decoration: line-through;
+  text-decoration-skip-ink: none;
+}
+
+/* Silom is a macOS system font; other systems fall back to Silkscreen */
+.silom {
+  font-family: Silom, var(--font-about-silkscreen), monospace;
+  font-size: rem(29px);
+  letter-spacing: rem(2.3px);
+}
+
+.romanesco {
+  font-family: var(--font-about-romanesco), cursive;
+  font-size: rem(46.4px);
+  letter-spacing: rem(1.4px);
+}
+
+.sixCaps {
+  font-family: var(--font-about-six-caps), sans-serif;
+  font-size: rem(34.8px);
+}
+
+/* Post No Bills Colombo isn't available from Google Fonts any more; Sulphur Point Light stands in */
+.postNoBills {
+  font-family: 'Post No Bills Colombo', var(--font-about-sulphur), sans-serif;
+  font-size: rem(31.9px);
+  font-weight: 300;
+}
+
+.novaSlim {
+  font-family: var(--font-about-nova-slim), sans-serif;
+  font-size: rem(20.3px);
+  letter-spacing: rem(4.06px);
+}
+
+.novaCut {
+  font-family: var(--font-about-nova-cut), sans-serif;
+  font-size: rem(26.1px);
+}
+
+.dokdo {
+  font-family: var(--font-about-dokdo), cursive;
+  font-size: rem(34.8px);
+}
+
+.silkscreen {
+  font-family: var(--font-about-silkscreen), monospace;
+  font-size: rem(26.1px);
+}
+
+.staatlichesSm {
+  font-family: var(--font-about-staatliches), sans-serif;
+  font-size: rem(23.2px);
+  letter-spacing: rem(2.3px);
+}
+
+/* ---- Photo columns ---- */
+.photos {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  width: rem(201px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    width: auto;
+  }
+}
+
+.left {
+  top: 0;
+  left: 0;
+}
+
+.middle {
+  top: rem(149px);
+  left: rem(215px);
+}
+
+.figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16.45px);
+  margin: 0;
+}
+
+.photo {
+  display: block;
+  width: rem(177px);
+  height: rem(236px);
+  object-fit: cover;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 177 / 236;
+  }
+}
+
+.caption {
+  color: #000;
+  font-family: var(--font-about-iosevka), monospace;
+  font-size: rem(10.1px);
+  font-weight: 500;
+  line-height: rem(20.25px);
+  letter-spacing: rem(0.4px);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+/* ---- Pill links, centred under the collage (y1424) ---- */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: rem(16px) rem(47px);
+  margin: rem(119px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+    margin-top: rem(64px);
+  }
+}
+
+.pill {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  height: rem(35px);
+  padding: rem(8px) rem(16px);
+  border: 0.5px solid var(--color-secondary);
+  border-radius: rem(100px);
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 4.8px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color 150ms ease;
+
+  &:hover {
+    background-color: var(--color-card);
+  }
+
+  &[aria-disabled='true'] {
+    cursor: default;
+    pointer-events: none;
+  }
+}

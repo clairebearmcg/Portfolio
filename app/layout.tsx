@@ -3,6 +3,7 @@ import '@mantine/core/styles.css';
 import React from 'react';
 import { Cal_Sans, IBM_Plex_Sans, Instrument_Serif, Public_Sans } from 'next/font/google';
 import { ColorSchemeScript, mantineHtmlProps, MantineProvider } from '@mantine/core';
+import { SiteNav } from '../components/SiteNav/SiteNav';
 import { cssVariablesResolver, theme } from '../theme';
 
 const calSans = Cal_Sans({
@@ -53,6 +54,7 @@ export default function RootLayout({ children }: { children: any }) {
           cssVariablesResolver={cssVariablesResolver}
           forceColorScheme="light"
         >
+          <SiteNav />
           {children}
         </MantineProvider>
       </body>

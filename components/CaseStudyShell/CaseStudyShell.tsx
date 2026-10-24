@@ -1,14 +1,11 @@
 import type { ReactNode } from 'react';
-import { SiteNav } from '../SiteNav/SiteNav';
 import classes from './CaseStudyShell.module.css';
 
-// Frame shared by case study pages: the site nav (inactive, UX links home) and the scaled content
+// Frame shared by case study pages: room for the floating site nav, then the scaled content
 export function CaseStudyShell({ children }: { children: ReactNode }) {
   return (
     <>
-      <header className={classes.top}>
-        <SiteNav homeHref="/" />
-      </header>
+      <div className={classes.navSpace} aria-hidden />
       <main className={classes.content}>{children}</main>
     </>
   );

@@ -1,5 +1,27 @@
+/* Floats over the top of every page (it doesn't take up space), in the homepage header's spot */
+.bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: rem(136px) rem(16px) 0;
+  box-sizing: content-box;
+  pointer-events: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    justify-content: flex-start;
+    padding-top: rem(40px);
+  }
+}
+
 /* Three equal slots; the pill sits behind the slot at index --active */
 .nav {
+  pointer-events: auto;
   --slot: rem(90px);
   --gap: rem(14px);
 

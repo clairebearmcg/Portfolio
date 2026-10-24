@@ -1,4 +1,3 @@
-import { SiteNav } from '../SiteNav/SiteNav';
 import classes from './SiteHeader.module.css';
 
 export function SiteHeader() {
@@ -15,7 +14,6 @@ export function SiteHeader() {
           I aim to create things the world needs, not things it simply desires.
         </p>
       </div>
-      <SiteNav />
     </header>
   );
 }

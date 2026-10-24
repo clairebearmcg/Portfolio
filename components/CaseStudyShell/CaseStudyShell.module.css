@@ -1,15 +1,9 @@
-/* Nav bar in the same spot and size as on the homepage */
-.top {
-  display: flex;
-  justify-content: flex-end;
-  max-width: rem(1180px);
-  margin: 0 auto;
-  padding: rem(136px) rem(16px) 0;
-  box-sizing: content-box;
+/* Keeps the content clear of the floating site nav (136px down + 35px tall; 40 + 35 on small screens) */
+.navSpace {
+  height: rem(171px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    justify-content: flex-start;
-    padding-top: rem(40px);
+    height: rem(75px);
   }
 }
 

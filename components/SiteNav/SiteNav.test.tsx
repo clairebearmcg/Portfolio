@@ -1,21 +1,42 @@
 import { fireEvent, render, screen } from '@/test-utils';
-import { SiteNav } from './SiteNav';
+import { activeIndexFor, SiteNav } from './SiteNav';
+
+let mockPathname = '/';
+jest.mock('next/navigation', () => ({ usePathname: () => mockPathname }));
+
+const nav = () => screen.getByRole('navigation');
 
 describe('SiteNav', () => {
-  it('moves the active item to the one clicked', () => {
+  it('links each item to its page', () => {
     render(<SiteNav />);
-    expect(screen.getByRole('button', { name: 'UX' })).toHaveAttribute('aria-current', 'page');
-
-    fireEvent.click(screen.getByRole('button', { name: 'CV' }));
-    expect(screen.getByRole('button', { name: 'CV' })).toHaveAttribute('aria-current', 'page');
-    expect(screen.getByRole('button', { name: 'UX' })).not.toHaveAttribute('aria-current');
-    expect(screen.getByRole('navigation').style.getPropertyValue('--active')).toBe('2');
+    expect(screen.getByRole('link', { name: 'UX' })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('link', { name: 'ME' })).toHaveAttribute('href', '/me');
+    expect(screen.getByRole('link', { name: 'CV' })).toHaveAttribute('href', '/cv');
   });
 
-  it('on other pages starts with nothing active and links UX home', () => {
-    render(<SiteNav homeHref="/" />);
-    expect(screen.getByRole('link', { name: 'UX' })).toHaveAttribute('href', '/');
-    expect(screen.getByRole('navigation')).toHaveAttribute('data-empty');
-    expect(screen.getByRole('button', { name: 'ME' })).not.toHaveAttribute('aria-current');
+  it('puts the pill on the current section', () => {
+    mockPathname = '/cv';
+    render(<SiteNav />);
+    expect(nav().style.getPropertyValue('--active')).toBe('2');
+    expect(screen.getByRole('link', { name: 'CV' })).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('shows no pill on case study pages', () => {
+    mockPathname = '/anomaly-detection';
+    render(<SiteNav />);
+    expect(nav()).toHaveAttribute('data-empty');
+    expect(screen.getByRole('link', { name: 'UX' })).not.toHaveAttribute('aria-current');
+  });
+
+  it('moves the pill as soon as an item is clicked', () => {
+    mockPathname = '/';
+    render(<SiteNav />);
+    fireEvent.click(screen.getByRole('link', { name: 'ME' }));
+    expect(nav().style.getPropertyValue('--active')).toBe('1');
+  });
+
+  it('keeps ME active on the Why I design page', () => {
+    expect(activeIndexFor('/why-i-design')).toBe(1);
+    expect(activeIndexFor('/filter-smart-alerts')).toBeNull();
   });
 });

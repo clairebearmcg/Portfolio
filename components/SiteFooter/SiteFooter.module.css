@@ -22,6 +22,10 @@
   }
 }
 
+.footer[data-wordmark-only] {
+  padding-top: 0;
+}
+
 .footer[data-tone='dark'] .backToTop {
   color: var(--mantine-color-white);
 }
