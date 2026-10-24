@@ -135,7 +135,7 @@ export function AdResearch() {
             <p className={classes.lead}>What I imagine the ideal user experience to look like.</p>
           </div>
           <ol className={classes.journey}>
-            {journey.map((step, i) => (
+            {journey.map((step) => (
               <li key={step.src} className={classes.step}>
                 <div className={classes.stepTop}>
                   <Image
@@ -152,19 +152,6 @@ export function AdResearch() {
                       } as CSSProperties
                     }
                   />
-                  {i < journey.length - 1 && (
-                    <svg
-                      className={classes.arrow}
-                      viewBox="0 0 41.5 11.0459"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M0.75 4.77297C0.335786 4.77297 0 5.10876 0 5.52297C0 5.93718 0.335786 6.27297 0.75 6.27297V5.52297V4.77297ZM0.75 5.52297V6.27297H40.75V5.52297V4.77297H0.75V5.52297ZM41.2803 6.0533C41.5732 5.76041 41.5732 5.28553 41.2803 4.99264L36.5074 0.21967C36.2145 -0.0732231 35.7396 -0.0732231 35.4467 0.21967C35.1538 0.512564 35.1538 0.987437 35.4467 1.28033L39.6893 5.52297L35.4467 9.76561C35.1538 10.0585 35.1538 10.5334 35.4467 10.8263C35.7396 11.1192 36.2145 11.1192 36.5074 10.8263L41.2803 6.0533Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  )}
                 </div>
                 <p className={classes.stepText}>{step.text}</p>
               </li>

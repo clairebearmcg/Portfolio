@@ -222,17 +222,6 @@
   object-fit: contain;
 }
 
-.arrow {
-  flex: none;
-  width: rem(41.5px);
-  height: auto;
-  color: var(--color-tertiary);
-
-  @media (max-width: $mantine-breakpoint-md) {
-    display: none;
-  }
-}
-
 .stepText {
   margin: 0;
   color: var(--color-primary);
