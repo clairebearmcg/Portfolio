@@ -511,8 +511,8 @@
 .calloutText {
   margin: 0;
   color: var(--color-secondary);
-  font-size: 14px;
+  font-size: 16px;
   font-style: italic;
   line-height: 25px;
-  letter-spacing: 0.56px;
+  letter-spacing: 0.64px;
 }

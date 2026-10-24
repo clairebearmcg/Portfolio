@@ -108,7 +108,7 @@ export function AdIntro() {
           </dl>
         </section>
 
-        <section className={classes.hero} aria-label="Problem and proposal">
+        <section className={classes.hero} aria-label="Problem and outcome">
           <Image
             className={classes.shadow}
             src={`${IMG}/intro-phone-shadow.svg`}
@@ -137,8 +137,8 @@ export function AdIntro() {
                 revenue.
               </p>
             </div>
-            <div className={`${classes.block} ${classes.proposal}`}>
-              <h2 className={classes.kicker}>PROPOSAL</h2>
+            <div className={`${classes.block} ${classes.outcome}`}>
+              <h2 className={classes.kicker}>OUTCOME</h2>
               <p className={classes.body}>
                 A detailed, data-backed app experience clearly informing users what happened to
                 their HVAC system, what to do about it, and how to prevent future issues from

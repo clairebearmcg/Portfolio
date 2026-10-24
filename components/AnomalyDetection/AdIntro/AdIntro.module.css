@@ -207,7 +207,7 @@
   font-weight: 700;
 }
 
-/* ---- Hero phone with problem / proposal ---- */
+/* ---- Hero phone with problem / outcome ---- */
 .hero {
   position: relative;
   display: grid;
@@ -264,7 +264,7 @@
   gap: rem(20px);
 }
 
-.proposal {
+.outcome {
   max-width: rem(471px);
   margin: rem(123px) 0 0 rem(13px);
 

@@ -251,7 +251,7 @@
 
 .statsIntro {
   margin: rem(128px) 0 0;
-  color: var(--color-tertiary);
+  color: var(--color-secondary);
   font-family: var(--font-public), sans-serif;
   font-size: 16px;
   font-style: italic;
