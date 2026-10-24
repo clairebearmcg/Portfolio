@@ -95,7 +95,7 @@
 
   /* Colour flips as the pill passes: the old label darkens early, the new one lightens late */
   @media (prefers-reduced-motion: no-preference) {
-    transition: color 120ms ease 25ms;
+    transition: color 129ms ease 28ms;
   }
 
   &[data-active] {
@@ -103,7 +103,7 @@
     font-weight: 700;
 
     @media (prefers-reduced-motion: no-preference) {
-      transition-delay: 135ms;
+      transition-delay: 156ms;
     }
   }
 }
