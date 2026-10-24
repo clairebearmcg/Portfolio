@@ -103,7 +103,7 @@
   }
 
   &:nth-child(2) {
-    top: rem(263px);
+    top: calc(rem(263px) + 20px);
     left: 28.2%;
     width: 28.64%;
   }
@@ -213,13 +213,18 @@
 
 .comparison {
   margin-top: rem(60px);
+
+  /* Desktop: the before/after columns stretch out to the left edge of the page */
+  @media (min-width: $mantine-breakpoint-md) {
+    margin-left: calc(50% - 50vw);
+  }
 }
 
 /* Column widths from Figma: 357 / 357 / 401 with a 4px gap between the tinted columns */
 .headerRow,
 .row {
   display: grid;
-  grid-template-columns: 357fr 357fr 401fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) rem(420px);
   column-gap: rem(4px);
 }
 
@@ -247,7 +252,7 @@
   text-transform: uppercase;
 
   &.before {
-    border-radius: rem(16px) rem(16px) 0 0;
+    border-radius: 0 rem(16px) 0 0;
     color: #f38571;
     text-align: center;
   }
@@ -338,7 +343,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: rem(175px);
+  /* Same size as the 1st Designs screens */
+  width: calc(160.4px * 0.9);
   max-width: 100%;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -348,8 +354,9 @@
 
 .screen {
   display: block;
-  width: 100%;
-  max-width: rem(175px);
+  /* Same size as the 1st Designs screens */
+  width: calc(160.4px * 0.9);
+  max-width: 100%;
   height: auto;
 
   &[data-rounded] {
@@ -361,7 +368,7 @@
   }
 
   @media (max-width: $mantine-breakpoint-md) {
-    max-width: rem(220px);
+    width: rem(220px);
 
     & + & {
       margin-top: rem(32px);
@@ -515,4 +522,11 @@
   font-style: italic;
   line-height: calc(25px * var(--case-study-text));
   letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* The before column meets the page's left edge on desktop, so its bottom-left corner stays square */
+.row:last-child > .before {
+  @media (min-width: $mantine-breakpoint-md) {
+    border-bottom-left-radius: 0;
+  }
 }

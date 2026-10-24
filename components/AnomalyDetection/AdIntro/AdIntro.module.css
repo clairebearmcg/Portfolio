@@ -212,7 +212,7 @@
   position: relative;
   display: grid;
   grid-template-columns: rem(451px) minmax(0, rem(513px));
-  column-gap: rem(56px);
+  column-gap: rem(140px);
   margin-top: rem(95px);
   padding-left: rem(83px);
 
@@ -321,9 +321,8 @@
 
 .researchRow {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: rem(40px);
+  align-items: stretch;
+  gap: rem(96px);
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
@@ -333,12 +332,13 @@
 
 .researchCard {
   display: flex;
-  flex: 0 1 rem(589px);
+  /* As wide as its one-line lede, as tall as the Missions column beside it */
+  flex: 0 0 auto;
   flex-direction: column;
+  justify-content: center;
   gap: rem(20px);
   box-sizing: border-box;
   min-width: 0;
-  min-height: rem(574px);
   padding: rem(56px) rem(59px) rem(56px) rem(60px);
   border-radius: rem(16px);
   background: var(--color-card);
@@ -381,11 +381,16 @@
   font-size: calc(16px * var(--case-study-text));
   line-height: calc(25px * var(--case-study-text));
   letter-spacing: calc(0.64px * var(--case-study-text));
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    white-space: normal;
+  }
 }
 
 .missions {
   display: flex;
-  flex: 0 1 rem(521px);
+  flex: 1 1 rem(521px);
   flex-direction: column;
   gap: rem(60px);
   min-width: 0;

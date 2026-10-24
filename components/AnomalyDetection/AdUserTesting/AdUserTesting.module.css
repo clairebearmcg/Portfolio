@@ -188,7 +188,8 @@
   flex-direction: column;
   align-items: center;
   gap: rem(47px);
-  width: rem(300px);
+  /* Keeps the size from before the 15% desktop shrink (300px at 90%) */
+  width: calc(300px * 0.9);
   max-width: 100%;
   margin: 0;
   text-align: center;
