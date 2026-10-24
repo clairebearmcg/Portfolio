@@ -214,11 +214,12 @@
   padding-right: rem(24px);
 }
 
+/* Each icon's Figma size comes in as --icon-w / --icon-h, scaled like rem() values */
 .stepIcon {
   display: block;
-  width: auto;
-  height: auto;
-  object-fit: cover;
+  width: calc(var(--icon-w) * var(--mantine-scale));
+  height: calc(var(--icon-h) * var(--mantine-scale));
+  object-fit: contain;
 }
 
 .arrow {

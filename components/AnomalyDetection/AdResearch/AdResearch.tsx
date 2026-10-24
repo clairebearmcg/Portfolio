@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import Image from 'next/image';
 import classes from './AdResearch.module.css';
 
@@ -144,6 +145,12 @@ export function AdResearch() {
                     height={step.height}
                     alt={step.alt}
                     unoptimized
+                    style={
+                      {
+                        '--icon-w': `${step.width}px`,
+                        '--icon-h': `${step.height}px`,
+                      } as CSSProperties
+                    }
                   />
                   {i < journey.length - 1 && (
                     <svg
