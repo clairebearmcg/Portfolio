@@ -73,6 +73,25 @@ export function AboutMe() {
   return (
     <div className={`${classes.about} ${aboutFontVariables}`}>
       <div className={classes.container}>
+        <ul className={classes.links}>
+          <li>
+            <a className={classes.link} href="/why-i-design">
+              <span className={classes.linkText}>Why I design</span>→
+            </a>
+          </li>
+          <li>
+            <a className={classes.link} href="mailto:claire.nmcgreg@gmail.com">
+              <span className={classes.linkText}>Email</span>→
+            </a>
+          </li>
+          <li>
+            {/* TODO: LinkedIn URL — replace href="#" and remove aria-disabled once known */}
+            <a className={classes.link} href="#" aria-disabled="true">
+              <span className={classes.linkText}>LinkedIn</span>→
+            </a>
+          </li>
+        </ul>
+
         <div className={classes.collage}>
           {/* One sentence in many typefaces. Each line is a block; the spaces between them
               keep the words separate for screen readers and copy/paste. */}
@@ -138,25 +157,6 @@ export function AboutMe() {
           <PhotoColumn photos={LEFT_PHOTOS} className={classes.left} />
           <PhotoColumn photos={MIDDLE_PHOTOS} className={classes.middle} />
         </div>
-
-        <ul className={classes.links}>
-          <li>
-            <a className={classes.pill} href="/why-i-design">
-              WHY I DESIGN
-            </a>
-          </li>
-          <li>
-            <a className={classes.pill} href="mailto:claire.nmcgreg@gmail.com">
-              EMAIL
-            </a>
-          </li>
-          <li>
-            {/* TODO: LinkedIn URL — replace href="#" and remove aria-disabled once known */}
-            <a className={classes.pill} href="#" aria-disabled="true">
-              LINKEDIN
-            </a>
-          </li>
-        </ul>
       </div>
     </div>
   );

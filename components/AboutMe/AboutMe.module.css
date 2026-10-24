@@ -1,4 +1,4 @@
-/* Positions follow the Figma frame "About me" (24510:2761); the collage group sits at y275 */
+/* Positions follow the Figma frame "About me" (24510:3258): links at x130, the collage at x380, both from y275 */
 .about {
   padding: rem(275px) 0 rem(160px);
   color: var(--color-primary);
@@ -9,14 +9,26 @@
 }
 
 .container {
-  max-width: rem(827px);
+  --site-scale: var(--mantine-scale);
+
+  display: grid;
+  grid-template-columns: rem(250px) rem(759px);
+  align-items: start;
+  max-width: rem(1180px);
   margin: 0 auto;
   padding: 0 rem(16px);
   box-sizing: content-box;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: block;
+  }
 }
 
 /* ---- Collage: left photos at x0, middle photos at x215/y149, words at x521 ---- */
+/* The collage is laid out at its original 827px size and shrunk to the new frame's 759px */
 .collage {
+  --mantine-scale: calc(var(--site-scale) * 759 / 827);
+
   position: relative;
   height: rem(1030px);
 
@@ -347,45 +359,37 @@
 }
 
 /* ---- Pill links, centred under the collage (y1424) ---- */
+
+/* ---- Links column: underlined label followed by an arrow ---- */
 .links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: rem(16px) rem(47px);
-  margin: rem(119px) 0 0;
+  flex-direction: column;
+  gap: rem(45px);
+  margin: 0;
   padding: 0;
   list-style: none;
 
   @media (max-width: $mantine-breakpoint-md) {
-    gap: rem(16px);
-    margin-top: rem(64px);
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: rem(16px) rem(32px);
+    margin-bottom: rem(56px);
   }
 }
 
-.pill {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  height: rem(35px);
-  padding: rem(8px) rem(16px);
-  border: 0.5px solid var(--color-secondary);
-  border-radius: rem(100px);
+.link {
   color: var(--color-primary);
+  font-family: var(--font-public), sans-serif;
   font-size: 16px;
-  font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 4.8px;
+  line-height: normal;
   text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 150ms ease;
-
-  &:hover {
-    background-color: var(--color-card);
-  }
 
   &[aria-disabled='true'] {
-    cursor: default;
     pointer-events: none;
   }
+}
+
+.linkText {
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
