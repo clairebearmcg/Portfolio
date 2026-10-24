@@ -1,0 +1,506 @@
+/* Vertical spacing follows the y positions of the Figma frame (24506:303) */
+.intro {
+  padding-bottom: rem(102px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-bottom: rem(64px);
+  }
+}
+
+.container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---- Top bar: home link on the left, nav centred ---- */
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding-top: rem(113px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(20px);
+    padding-top: rem(40px);
+  }
+}
+
+.home {
+  justify-self: start;
+  color: inherit;
+  font-family: var(--font-cal), sans-serif;
+  font-size: rem(20px);
+  line-height: normal;
+  text-decoration: none;
+}
+
+.surname {
+  margin-left: rem(4px);
+  opacity: 0.25;
+}
+
+/* SiteNav carries a right margin for the homepage header; centre it here */
+.navSlot > * {
+  margin-right: 0;
+}
+
+/* ---- "A Vivint project" tag ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin: rem(178px) 0 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(72px);
+  }
+}
+
+.tagIcon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.tagText {
+  margin-left: rem(-26px);
+  padding: rem(5.5px) rem(18px) rem(5.5px) rem(38px);
+  background: #f4f4f4;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+  white-space: nowrap;
+}
+
+/* ---- Topper: title, summary, audio card and stats ---- */
+.topper {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(40px);
+  margin-top: rem(50px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(48px);
+    margin-top: rem(32px);
+  }
+}
+
+.lead {
+  display: flex;
+  flex: 0 1 rem(784px);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(88px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(40px);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30px);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(52px);
+    line-height: rem(58px);
+  }
+}
+
+.summary {
+  margin: 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    line-height: 30px;
+  }
+}
+
+/* Audio card: disabled until a recording exists, but styled exactly as designed */
+.listen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(24px);
+  width: 100%;
+  max-width: rem(555px);
+  min-height: rem(108px);
+  padding: rem(27px) rem(54px) rem(26px) rem(40px);
+  border: 0;
+  border-radius: rem(30px);
+  background: rgb(0 0 0 / 5%);
+  color: var(--color-primary);
+  font-family: var(--font-plex), sans-serif;
+  text-align: left;
+  cursor: default;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(22px) rem(24px);
+  }
+}
+
+.listenText {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+}
+
+.listenKicker {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+}
+
+.listenHint {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.listenPlay {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: rem(17px);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 1.08px;
+  white-space: nowrap;
+}
+
+.playIcon {
+  display: block;
+  width: rem(23px);
+  height: rem(20px);
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: rem(50px);
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 4.8px;
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(32px) rem(16px);
+    white-space: normal;
+  }
+}
+
+/* Value sits above its label visually; the dt stays first for screen readers */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(24px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(8px);
+  }
+}
+
+.statLabel {
+  font-weight: 400;
+}
+
+.statValue {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---- Hero phone with problem / proposal ---- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: rem(451px) minmax(0, rem(513px));
+  column-gap: rem(56px);
+  margin-top: rem(95px);
+  padding-left: rem(83px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+    row-gap: rem(48px);
+    margin-top: rem(64px);
+    padding-left: 0;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: rem(807px);
+  left: rem(46px);
+  width: rem(978px);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.phone {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: rem(340px);
+    margin: 0 auto;
+  }
+}
+
+.heroText {
+  padding-top: rem(127px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: 0;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.proposal {
+  max-width: rem(471px);
+  margin: rem(123px) 0 0 rem(13px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: none;
+    margin: rem(48px) 0 0;
+  }
+}
+
+.kicker {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.body {
+  margin: 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    line-height: 30px;
+  }
+}
+
+/* ---- Research intro and missions ---- */
+.research {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80px);
+  margin-top: rem(215px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(48px);
+    margin-top: rem(80px);
+  }
+}
+
+/* Dotted rule: round 2px dots every ~10.5px, as in the Figma line */
+.divider {
+  width: 100%;
+  max-width: rem(1152px);
+  height: 2px;
+  margin: 0;
+  border: 0;
+  background-image: radial-gradient(circle, var(--color-tertiary) 1px, transparent 1.5px);
+  background-repeat: repeat-x;
+  background-size: rem(10.45px) 2px;
+}
+
+.researchRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(48px);
+  }
+}
+
+.researchCard {
+  display: flex;
+  flex: 0 1 rem(589px);
+  flex-direction: column;
+  gap: rem(20px);
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: rem(574px);
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+  border-radius: rem(16px);
+  background: var(--color-card);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 0;
+    padding: rem(32px) rem(24px);
+  }
+}
+
+.hvac {
+  display: block;
+  width: rem(176px);
+  height: auto;
+}
+
+.researchHeading {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+}
+
+.researchTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(52px);
+    line-height: rem(64px);
+  }
+}
+
+.researchLede {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.missions {
+  display: flex;
+  flex: 0 1 rem(521px);
+  flex-direction: column;
+  gap: rem(60px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(40px);
+  }
+}
+
+.missionsTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.3;
+}
+
+.missionList {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(40px);
+  }
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: rem(21px);
+}
+
+.missionHeading {
+  display: flex;
+  gap: rem(40px);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.missionBody {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+}
+
+.missionLine {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* ---- Research methods, centred italic lines ---- */
+.methods {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16px);
+  margin: rem(84px) 0 0;
+  padding: 0;
+  color: var(--color-tertiary);
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+  text-align: center;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(56px);
+    line-height: 28px;
+  }
+}

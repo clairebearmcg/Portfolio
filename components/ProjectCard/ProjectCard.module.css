@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: rem(60px);
@@ -57,6 +58,27 @@
   @media (max-width: $mantine-breakpoint-md) {
     font-size: rem(32px);
     line-height: rem(34px);
+  }
+}
+
+.link {
+  color: inherit;
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: var(--mantine-radius-default);
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::after {
+    outline: rem(2px) solid var(--color-primary);
+    outline-offset: rem(4px);
   }
 }
 

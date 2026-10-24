@@ -1,0 +1,518 @@
+.root {
+  /* The gap above is AdUserTesting's bottom padding */
+  padding-bottom: rem(100px);
+}
+
+.container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---------- Key learnings band ---------- */
+
+.band {
+  position: relative;
+  padding: rem(107px) 0 rem(163px);
+  overflow: hidden;
+  color: #fff;
+  background: #000 url('/case-studies/anomaly-detection/improve-ac-unit.jpg') center 41% / cover
+    no-repeat;
+
+  /* Dark, slightly blurred wash over the photo */
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 0, 0, 0.7);
+    backdrop-filter: blur(3px);
+  }
+
+  /* Fades the lower half of the photo to black */
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, rgb(35, 35, 35, 0) 0.2%, #000 112.9%);
+  }
+
+  > .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(64px) 0;
+  }
+}
+
+.bandHeader {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+}
+
+.bandTitle {
+  margin: 0;
+  font-family: var(--font-plex), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+}
+
+.bandSubtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* Learnings are scattered across the band like the Figma frame; positions are % of the 1180px content width */
+.learnings {
+  position: relative;
+  height: rem(700px);
+  margin: rem(92px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+    height: auto;
+    margin-top: rem(48px);
+  }
+}
+
+.learning {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: rem(23px);
+
+  &:nth-child(1) {
+    top: 0;
+    left: 0;
+    width: 20.76%;
+  }
+
+  &:nth-child(2) {
+    top: rem(263px);
+    left: 28.2%;
+    width: 28.64%;
+  }
+
+  &:nth-child(3) {
+    top: rem(12px);
+    left: 60.85%;
+    width: 39.15%;
+  }
+
+  &:nth-child(4) {
+    top: rem(419px);
+    left: 68.9%;
+    width: 24.4%;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    &:nth-child(n) {
+      position: static;
+      width: auto;
+    }
+  }
+}
+
+.learningNumber {
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  line-height: rem(72px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(56px);
+    line-height: rem(56px);
+  }
+}
+
+.learningText {
+  display: flex;
+  flex-direction: column;
+  gap: rem(18px);
+}
+
+.learningTitle {
+  margin: 0;
+  font-family: var(--font-plex), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+.learningBody {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* ---------- Improvements intro card ---------- */
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: rem(589px);
+  min-height: rem(445px);
+  margin-top: rem(122px);
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+  border-radius: rem(16px);
+  box-sizing: border-box;
+  background: var(--color-card);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+    margin-top: rem(80px);
+    padding: rem(32px) rem(24px);
+  }
+}
+
+.introIcon {
+  width: rem(80px);
+  height: auto;
+}
+
+.introTitle {
+  margin: rem(20px) 0 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(56px);
+    line-height: rem(64px);
+  }
+}
+
+.introSubtitle {
+  max-width: rem(434px);
+  margin: rem(8px) 0 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* ---------- Before / After / What changed ---------- */
+
+.comparison {
+  margin-top: rem(60px);
+}
+
+/* Column widths from Figma: 357 / 357 / 401 with a 4px gap between the tinted columns */
+.headerRow,
+.row {
+  display: grid;
+  grid-template-columns: 357fr 357fr 401fr;
+  column-gap: rem(4px);
+}
+
+.headerRow {
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.before {
+  background: rgb(254, 229, 224, 0.7);
+}
+
+.after {
+  background: rgb(202, 234, 233, 0.5);
+}
+
+.columnLabel {
+  margin: 0;
+  padding: rem(76px) 0 rem(80px);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+
+  &.before {
+    border-radius: rem(16px) rem(16px) 0 0;
+    color: #f38571;
+    text-align: center;
+  }
+
+  &.after {
+    border-radius: rem(16px) rem(16px) 0 0;
+    color: #1e8984;
+    text-align: center;
+  }
+
+  &.changed {
+    padding-left: rem(56px);
+    color: var(--color-primary);
+  }
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+  }
+}
+
+.row {
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: rem(16px);
+  }
+}
+
+.cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 rem(16px) rem(80px);
+
+  .row:last-child & {
+    padding-bottom: rem(64px);
+    border-radius: 0 0 rem(16px) rem(16px);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    &,
+    .row:last-child & {
+      gap: rem(16px);
+      padding: rem(24px) rem(16px);
+      border-radius: rem(16px);
+    }
+
+    &[data-empty] {
+      display: none;
+    }
+  }
+}
+
+.mobileLabel {
+  display: none;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+
+  .before > & {
+    color: #f38571;
+  }
+
+  .after > & {
+    color: #1e8984;
+  }
+
+  .notes > & {
+    color: var(--color-primary);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: block;
+  }
+}
+
+.screens {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: rem(175px);
+  max-width: 100%;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: rem(220px);
+  }
+}
+
+.screen {
+  display: block;
+  width: 100%;
+  max-width: rem(175px);
+  height: auto;
+
+  &[data-rounded] {
+    border-radius: rem(24px);
+  }
+
+  & + & {
+    margin-top: rem(90px);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: rem(220px);
+
+    & + & {
+      margin-top: rem(32px);
+    }
+  }
+}
+
+/* Bracket arrows leading from the first after-screen to the follow-up sheets below it */
+.connector {
+  position: absolute;
+  top: rem(185px);
+  left: rem(-50px);
+  width: rem(35px);
+  border: rem(1px) solid #1e8984;
+  border-right: 0;
+
+  &[data-to='2'] {
+    height: rem(557px);
+  }
+
+  &[data-to='3'] {
+    height: rem(905px);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: rem(-4px);
+    width: rem(7px);
+    height: rem(7px);
+    border-top: rem(1px) solid #1e8984;
+    border-right: rem(1px) solid #1e8984;
+    transform: rotate(45deg);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.notes {
+  display: flex;
+  flex-direction: column;
+  gap: rem(56px);
+  min-width: 0;
+  padding: 0 0 rem(80px) rem(56px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    padding: rem(8px) 0 0;
+  }
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.noteTitle {
+  margin: 0;
+  font-family: var(--font-plex), sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.noteBody,
+.noteList {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.noteList {
+  padding-left: 24px;
+}
+
+.narrow {
+  max-width: rem(320px);
+}
+
+.flowNote {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40px);
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: rem(22px);
+  max-width: rem(376px);
+  color: var(--color-secondary);
+}
+
+.flowLabel {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 3.84px;
+  text-transform: uppercase;
+}
+
+.flowSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding-left: 24px;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* Bullets line up with the step numbers, as in the Figma frame */
+.flowQuestions {
+  margin: 16px 0 0 -24px;
+  padding-left: 24px;
+}
+
+.callout {
+  display: flex;
+  align-items: center;
+  gap: rem(16px);
+  margin-top: rem(-16px);
+  padding: rem(16px);
+  border-radius: rem(24px);
+  background: #eee;
+}
+
+.calloutIcon {
+  flex: none;
+  width: rem(30px);
+  height: rem(30px);
+  color: var(--color-primary);
+}
+
+.calloutText {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.56px;
+}

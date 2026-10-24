@@ -56,9 +56,9 @@ export function DesignRoulette() {
     }
   };
 
-  // Scroll smoothly to the project's card; the href stays as a fallback without JS
+  // Projects with a case study open it; the rest scroll smoothly to their card on the homepage
   const viewProject = (event: MouseEvent<HTMLAnchorElement>) => {
-    const card = landed && document.getElementById(landed.slug);
+    const card = landed && !landed.href && document.getElementById(landed.slug);
     if (!card) {
       return;
     }
@@ -84,7 +84,11 @@ export function DesignRoulette() {
             <button type="button" className={classes.secondary} onClick={spin}>
               Spin again
             </button>
-            <a href={`#${landed.slug}`} className={classes.primary} onClick={viewProject}>
+            <a
+              href={landed.href ?? `#${landed.slug}`}
+              className={classes.primary}
+              onClick={viewProject}
+            >
               View project
             </a>
           </>

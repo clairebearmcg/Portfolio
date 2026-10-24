@@ -3,7 +3,7 @@ import type { Project } from '@/data/projects';
 import classes from './ProjectCard.module.css';
 
 interface ProjectCardProps {
-  project: Pick<Project, 'slug' | 'title' | 'description' | 'image'>;
+  project: Pick<Project, 'slug' | 'title' | 'description' | 'image' | 'href'>;
   variant?: 'featured' | 'compact';
 }
 
@@ -19,7 +19,16 @@ export function ProjectCard({ project, variant = 'compact' }: ProjectCardProps) 
   return (
     <article id={project.slug} className={classes.card} data-variant={variant}>
       <div className={classes.text}>
-        <h2 className={classes.title}>{project.title}</h2>
+        <h2 className={classes.title}>
+          {project.href ? (
+            // The link's ::after covers the whole card, so the card is clickable but the link text stays the title
+            <a href={project.href} className={classes.link}>
+              {project.title}
+            </a>
+          ) : (
+            project.title
+          )}
+        </h2>
         <p className={classes.description}>{project.description}</p>
       </div>
       <Image

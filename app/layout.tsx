@@ -17,12 +17,14 @@ const instrumentSerif = Instrument_Serif({
   variable: '--font-serif',
 });
 const plexSans = IBM_Plex_Sans({
-  weight: ['400', '500'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-plex',
 });
 const publicSans = Public_Sans({
   weight: ['400', '500', '700'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-public',
 });

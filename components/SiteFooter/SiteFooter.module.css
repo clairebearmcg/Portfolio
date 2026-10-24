@@ -11,6 +11,19 @@
     gap: rem(64px);
     padding-top: rem(120px);
   }
+
+  /* On a dark band the parent provides the space above */
+  &[data-tone='dark'] {
+    padding-top: rem(138px);
+
+    @media (max-width: $mantine-breakpoint-md) {
+      padding-top: rem(80px);
+    }
+  }
+}
+
+.footer[data-tone='dark'] .backToTop {
+  color: var(--mantine-color-white);
 }
 
 .backToTop {

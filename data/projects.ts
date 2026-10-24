@@ -4,6 +4,8 @@ export interface Project {
   description: string;
   image: string;
   featured: boolean;
+  /** The case study page, for projects that have one */
+  href?: string;
   /** Short, playful line shown when Design Roulette lands on this project */
   rouletteBlurb: string;
 }
@@ -16,6 +18,7 @@ export const projects: Project[] = [
       'Guiding customers through the stressful situation of a heating & cooling breakdown.',
     image: '/projects/anomaly-detection.png',
     featured: true,
+    href: '/anomaly-detection',
     rouletteBlurb: 'A riveting story about HVAC systems',
   },
   {

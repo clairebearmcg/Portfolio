@@ -1,0 +1,379 @@
+/* Figma y2877 (end of intro) to y6337 (dark band) */
+.root {
+  /* The gap above is AdIntro's bottom padding */
+  padding: 0 0 rem(103px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: 0 0 rem(64px);
+  }
+}
+
+.container {
+  box-sizing: content-box;
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+}
+
+/* ---------- How do we catch alerts early? ---------- */
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(92px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(48px);
+  }
+}
+
+/* Title with a thin vertical rule on the left */
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+  padding-left: rem(24px);
+  border-left: rem(2px) solid var(--color-primary);
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-plex), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+}
+
+.lead {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+.alertTypes {
+  display: flex;
+  align-items: flex-start;
+  gap: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(48px);
+  }
+}
+
+.graphs {
+  flex: 0 0 rem(383px);
+  width: rem(383px);
+  max-width: 100%;
+  height: auto;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+  }
+}
+
+.alertList {
+  display: flex;
+  flex: 0 1 rem(731px);
+  flex-direction: column;
+  gap: rem(60px);
+  min-width: 0;
+}
+
+.alert {
+  display: flex;
+  flex-direction: column;
+  gap: rem(53px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(24px);
+  }
+}
+
+.alertTitle {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12px);
+}
+
+.alertName {
+  display: flex;
+  align-items: center;
+  gap: rem(12px);
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-plex), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+    flex: none;
+    width: rem(12px);
+    height: rem(12px);
+    border-radius: 50%;
+    background: #607ef0;
+  }
+
+  &[data-variant='gradual']::before {
+    background: #ffbe92;
+  }
+}
+
+.timeframe {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 16px;
+  font-style: italic;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+.alertBody {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+}
+
+.alertDescription {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+.example {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+/* ---------- If I was a user... ---------- */
+
+.journeyBlock {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  margin-top: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    margin-top: rem(64px);
+  }
+}
+
+.journey {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: rem(8px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  min-height: rem(308px);
+  padding: rem(24px);
+  border-radius: rem(16px);
+  background: #f4f4f4;
+  box-sizing: border-box;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+  }
+}
+
+.stepTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: rem(56px);
+  padding-right: rem(24px);
+}
+
+.stepIcon {
+  display: block;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+}
+
+.arrow {
+  flex: none;
+  width: rem(41.5px);
+  height: auto;
+  color: var(--color-tertiary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.stepText {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+/* ---------- Annotated sketch (y4419) ---------- */
+
+.sketchWrap {
+  max-width: rem(1436px);
+  margin: rem(82px) auto 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+.sketch {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Statistics (y5328) ---------- */
+
+.statsIntro {
+  margin: rem(128px) 0 0;
+  color: var(--color-tertiary);
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: rem(16px);
+  margin: rem(48px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr);
+    margin-top: rem(24px);
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(54px);
+  min-height: rem(823px);
+  padding: rem(41px) rem(36px) rem(45px);
+  border-radius: rem(16px);
+  background: var(--color-card);
+  box-sizing: border-box;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    min-height: 0;
+    padding: rem(32px) rem(24px);
+  }
+}
+
+.cardIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(182px);
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.cardText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: rem(30px);
+  width: 100%;
+  max-width: rem(312px);
+}
+
+.cardHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(16px);
+  text-align: center;
+}
+
+.stat {
+  margin: 0;
+  color: #000;
+  font-family: var(--font-serif), serif;
+  font-size: rem(60px);
+  font-weight: 400;
+  line-height: rem(60px);
+}
+
+.cardTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-family: var(--font-plex), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 4.2px;
+  text-transform: uppercase;
+}
+
+.cardBody {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* Source line sits at the bottom of the card */
+.source {
+  margin: auto 0 0;
+  color: var(--color-secondary);
+  font-size: 14px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.56px;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}

@@ -15,4 +15,12 @@ describe('ProjectCard', () => {
     expect(screen.getByText('Helping homeowners catch temperature issues.')).toBeInTheDocument();
     expect(screen.getByAltText('Comfort Drift')).toBeInTheDocument();
   });
+
+  it('links the title to the case study when there is one', () => {
+    render(<ProjectCard project={{ ...project, href: '/comfort-drift' }} />);
+    expect(screen.getByRole('link', { name: 'Comfort Drift' })).toHaveAttribute(
+      'href',
+      '/comfort-drift'
+    );
+  });
 });
