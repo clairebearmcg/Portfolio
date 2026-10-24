@@ -83,8 +83,11 @@
 
 .aside {
   position: absolute;
-  top: 0;
+  /* Smaller than the ":)" note; nudged down so it still sits just above the title */
+  top: rem(8px);
   left: rem(77px);
+  font-size: rem(19px);
+  line-height: rem(24px);
 }
 
 .arrow {
