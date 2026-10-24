@@ -57,10 +57,10 @@
 .label {
   margin: 0;
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 

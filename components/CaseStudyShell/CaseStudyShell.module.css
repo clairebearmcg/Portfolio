@@ -10,14 +10,17 @@
 /*
  * Every rem() size inside scales with --mantine-scale (the rest of the site is 95%).
  * Case studies are 90% on small screens, and a further 15% smaller (76.5%) on desktop.
- * Running text is set in px, so it keeps its size either way.
+ * Running text follows --case-study-text instead (below).
  */
 .content {
   /* Section content width: kept at the 90% width so the smaller desktop scale spreads out rather than leaving wide margins */
   --case-study-width: 1062px;
   --mantine-scale: 0.9;
+  /* Running text (written in px) shrinks less than the layout: full size on small screens, 87.5% (16px → 14px) on desktop */
+  --case-study-text: 1;
 
   @media (min-width: $mantine-breakpoint-md) {
     --mantine-scale: 0.765;
+    --case-study-text: 0.875;
   }
 }

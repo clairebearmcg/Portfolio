@@ -21,19 +21,19 @@
   margin: 0;
   color: #fff;
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .body {
   margin: 0;
   color: #fff;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Section header */
@@ -90,9 +90,9 @@
 
 .titleSubtitle {
   margin: rem(8px) 0 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .issues {
@@ -211,9 +211,9 @@
 .constraintsSubtitle {
   max-width: rem(1010px);
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Comparison table; scrolls sideways inside its own wrapper on small screens */
@@ -239,10 +239,10 @@
     box-sizing: border-box;
     padding: rem(20px) rem(39px) rem(20px) rem(40px);
     color: #fff;
-    font-size: 16px;
+    font-size: calc(16px * var(--case-study-text));
     font-weight: 400;
-    line-height: 25px;
-    letter-spacing: 0.64px;
+    line-height: calc(25px * var(--case-study-text));
+    letter-spacing: calc(0.64px * var(--case-study-text));
     text-align: left;
     vertical-align: top;
     background: rgb(244 244 244 / 5%);
@@ -258,9 +258,9 @@
   }
 
   thead th {
-    font-size: 18px;
+    font-size: calc(18px * var(--case-study-text));
     font-weight: 600;
-    letter-spacing: 5.4px;
+    letter-spacing: calc(5.4px * var(--case-study-text));
     text-align: center;
     text-transform: uppercase;
     background: rgb(255 255 255 / 20%);
@@ -402,16 +402,16 @@
   box-sizing: border-box;
   padding: rem(8px) rem(16px);
   border-radius: rem(100px);
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 
   @media (max-width: $mantine-breakpoint-sm) {
     width: auto;
-    font-size: 14px;
-    letter-spacing: 3px;
+    font-size: calc(14px * var(--case-study-text));
+    letter-spacing: calc(3px * var(--case-study-text));
   }
 }
 

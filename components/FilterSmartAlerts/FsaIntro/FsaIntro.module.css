@@ -39,10 +39,10 @@
   padding: rem(5.5px) rem(14px) rem(5.5px) rem(38px);
   border-radius: 0 rem(8px) rem(8px) 0;
   background: #f4f4f4;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   white-space: nowrap;
 }
 
@@ -96,12 +96,12 @@
 .summary {
   margin: 0;
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
-    line-height: 30px;
+    line-height: calc(30px * var(--case-study-text));
   }
 }
 
@@ -135,22 +135,22 @@
 }
 
 .listenKicker {
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   white-space: nowrap;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: 15px;
-    letter-spacing: 3px;
+    font-size: calc(15px * var(--case-study-text));
+    letter-spacing: calc(3px * var(--case-study-text));
   }
 }
 
 .listenHint {
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .listenPlay {
@@ -158,10 +158,10 @@
   flex-shrink: 0;
   align-items: center;
   gap: rem(17px);
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 1.08px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(1.08px * var(--case-study-text));
   white-space: nowrap;
 }
 
@@ -176,9 +176,9 @@
   flex-direction: column;
   gap: rem(50px);
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 4.8px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(4.8px * var(--case-study-text));
   white-space: nowrap;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -277,21 +277,21 @@
 
 .kicker {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .body {
   margin: 0;
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
-    line-height: 30px;
+    line-height: calc(30px * var(--case-study-text));
   }
 }
 
@@ -380,9 +380,9 @@
 
 .researchLede {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .why {
@@ -417,9 +417,9 @@
 
 .whyText {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .whyAside {
@@ -475,18 +475,18 @@
 
 .compareTitle {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .points {
   margin: 0;
   padding: 0 0 0 rem(24px);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   list-style: disc;
 }
 
@@ -514,17 +514,17 @@
 
 .eyebrow {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .headingLede {
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /*
@@ -624,24 +624,24 @@
 }
 
 .answerValue {
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .answerLabel {
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .caption {
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .rememberCaption {
@@ -698,9 +698,9 @@
 }
 
 .interestLabel {
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---- If I was a user / Missions (y4164) ---- */
@@ -777,8 +777,8 @@
   flex: 1;
   min-width: 0;
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
 }
 
 .missions {
@@ -817,15 +817,15 @@
   display: flex;
   gap: rem(40px);
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .missionText {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }

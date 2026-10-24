@@ -41,19 +41,19 @@
   margin: 0;
   color: var(--color-primary);
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .lead {
   margin: 0;
   color: var(--color-primary);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .alertTypes {
@@ -109,10 +109,10 @@
   margin: 0;
   color: var(--color-primary);
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 
   &::before {
@@ -132,10 +132,10 @@
 .timeframe {
   margin: 0;
   color: var(--color-secondary);
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .alertBody {
@@ -147,17 +147,17 @@
 .alertDescription {
   margin: 0;
   color: var(--color-primary);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .example {
   margin: 0;
   color: var(--color-secondary);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---------- If I was a user... ---------- */
@@ -225,9 +225,9 @@
 .stepText {
   margin: 0;
   color: var(--color-primary);
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---------- Annotated sketch (y4419) ---------- */
@@ -253,10 +253,10 @@
   margin: rem(128px) 0 0;
   color: var(--color-secondary);
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(48px);
@@ -338,29 +338,29 @@
   margin: 0;
   color: var(--color-primary);
   font-family: var(--font-plex), sans-serif;
-  font-size: 14px;
+  font-size: calc(14px * var(--case-study-text));
   font-weight: 600;
-  line-height: 30px;
-  letter-spacing: 4.2px;
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(4.2px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .cardBody {
   margin: 0;
   color: var(--color-primary);
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Source line sits at the bottom of the card */
 .source {
   margin: auto 0 0;
   color: var(--color-secondary);
-  font-size: 14px;
+  font-size: calc(14px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.56px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.56px * var(--case-study-text));
 
   a {
     color: inherit;

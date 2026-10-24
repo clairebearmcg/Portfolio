@@ -15,18 +15,18 @@
 /* Shared text styles */
 .label {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .body {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Header cards */
@@ -90,9 +90,9 @@
 
 .subtitle {
   margin: rem(8px) 0 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .stats {
@@ -134,10 +134,10 @@
   margin: rem(24px) 0 0;
   padding: 0;
   list-style: none;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* TYPE / WHERE / FLOW */
@@ -222,10 +222,10 @@
   margin: 0;
   background: #d9d9d9;
   color: #000;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Comfort Drift vs Anomaly Detection cards */
@@ -250,9 +250,9 @@
   padding: rem(40px) rem(40px) rem(41px);
   border-radius: rem(5px);
   background: #f4f4f4;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
     min-height: 0;
@@ -268,10 +268,10 @@
 
 .compareTitle {
   margin: 0;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .compareQuote {
@@ -327,9 +327,9 @@
 
 .calloutText {
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   & + & {
     margin-top: 30px;
@@ -426,8 +426,8 @@
 }
 
 .barLabel {
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }

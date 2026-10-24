@@ -59,18 +59,18 @@
 .bandTitle {
   margin: 0;
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .bandSubtitle {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Learnings are scattered across the band like the Figma frame; positions are % of the 1180px content width */
@@ -148,17 +148,17 @@
 .learningTitle {
   margin: 0;
   font-family: var(--font-plex), sans-serif;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 500;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .learningBody {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---------- Improvements intro card ---------- */
@@ -204,9 +204,9 @@
 .introSubtitle {
   max-width: rem(434px);
   margin: rem(8px) 0 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---------- Before / After / What changed ---------- */
@@ -240,10 +240,10 @@
 .columnLabel {
   margin: 0;
   padding: rem(76px) 0 rem(80px);
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 
   &.before {
@@ -311,10 +311,10 @@
 .mobileLabel {
   display: none;
   margin: 0;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 3.84px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(3.84px * var(--case-study-text));
   text-transform: uppercase;
 
   .before > & {
@@ -426,20 +426,20 @@
 .noteTitle {
   margin: 0;
   font-family: var(--font-plex), sans-serif;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 500;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .noteBody,
 .noteList {
   margin: 0;
   color: var(--color-secondary);
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .noteList {
@@ -466,10 +466,10 @@
 
 .flowLabel {
   margin: 0;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 3.84px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(3.84px * var(--case-study-text));
   text-transform: uppercase;
 }
 
@@ -479,10 +479,10 @@
   gap: 8px;
   margin: 0;
   padding-left: 24px;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Bullets line up with the step numbers, as in the Figma frame */
@@ -511,8 +511,8 @@
 .calloutText {
   margin: 0;
   color: var(--color-secondary);
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }

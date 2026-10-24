@@ -38,9 +38,9 @@
   margin-left: rem(-26px);
   padding: rem(5.5px) rem(18px) rem(5.5px) rem(38px);
   background: #f4f4f4;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   white-space: nowrap;
 }
 
@@ -94,12 +94,12 @@
 .summary {
   margin: 0;
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
-    line-height: 30px;
+    line-height: calc(30px * var(--case-study-text));
   }
 }
 
@@ -133,22 +133,22 @@
 }
 
 .listenKicker {
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   white-space: nowrap;
 
   @media (max-width: $mantine-breakpoint-xs) {
-    font-size: 15px;
-    letter-spacing: 3px;
+    font-size: calc(15px * var(--case-study-text));
+    letter-spacing: calc(3px * var(--case-study-text));
   }
 }
 
 .listenHint {
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .listenPlay {
@@ -156,10 +156,10 @@
   flex-shrink: 0;
   align-items: center;
   gap: rem(17px);
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 1.08px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(1.08px * var(--case-study-text));
   white-space: nowrap;
 }
 
@@ -174,9 +174,9 @@
   flex-direction: column;
   gap: rem(50px);
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 4.8px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(4.8px * var(--case-study-text));
   white-space: nowrap;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -276,21 +276,21 @@
 
 .kicker {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 700;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .body {
   margin: 0;
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 
   @media (max-width: $mantine-breakpoint-md) {
-    line-height: 30px;
+    line-height: calc(30px * var(--case-study-text));
   }
 }
 
@@ -378,9 +378,9 @@
 
 .researchLede {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .missions {
@@ -429,10 +429,10 @@
   display: flex;
   gap: rem(40px);
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
 }
 
 .missionBody {
@@ -443,9 +443,9 @@
 
 .missionLine {
   margin: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* ---- Research methods, centred italic lines ---- */
@@ -458,15 +458,15 @@
   padding: 0;
   color: var(--color-tertiary);
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-style: italic;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   text-align: center;
   list-style: none;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(56px);
-    line-height: 28px;
+    line-height: calc(28px * var(--case-study-text));
   }
 }

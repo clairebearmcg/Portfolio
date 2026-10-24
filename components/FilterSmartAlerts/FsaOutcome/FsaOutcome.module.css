@@ -17,19 +17,19 @@
   margin: 0;
   color: #fff;
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .body {
   margin: 0;
   color: #fff;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Heading with a white bar on its left */
@@ -102,9 +102,9 @@
   height: calc(315 / 613 * 100%);
   color: #000;
   font-family: var(--font-public), sans-serif;
-  font-size: 16px;
-  line-height: 35px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   background: #d9d9d9;
 }
 
@@ -186,9 +186,9 @@
 
 .titleSubtitle {
   margin: rem(8px) 0 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .futureText {
@@ -297,10 +297,10 @@
   position: absolute;
   margin: 0;
   color: #fff;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -342,9 +342,9 @@
 .methodName,
 .methodNote {
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .methodName {

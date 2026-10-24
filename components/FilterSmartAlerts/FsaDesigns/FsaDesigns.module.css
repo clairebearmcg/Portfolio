@@ -20,19 +20,19 @@
   margin: 0;
   color: #fff;
   font-family: var(--font-plex), sans-serif;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
 .body {
   margin: 0;
   color: #fff;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Section header */
@@ -119,9 +119,9 @@
 .mvpList {
   margin: 0;
   padding: 0;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   list-style: none;
 }
 
@@ -165,9 +165,9 @@
     max-width: rem(125px);
     color: #000;
     font-family: var(--font-public), sans-serif;
-    font-size: 16px;
-    line-height: 35px;
-    letter-spacing: 0.64px;
+    font-size: calc(16px * var(--case-study-text));
+    line-height: calc(35px * var(--case-study-text));
+    letter-spacing: calc(0.64px * var(--case-study-text));
   }
 }
 
@@ -188,9 +188,9 @@
 
 .betterSubtitle {
   margin: 0;
-  font-size: 16px;
-  line-height: 30px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* Question blocks */
@@ -215,10 +215,10 @@
   margin: 0;
   padding: rem(24px) rem(40px);
   color: #fff;
-  font-size: 16px;
+  font-size: calc(16px * var(--case-study-text));
   font-weight: 400;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
   background: rgb(244 244 244 / 5%);
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -229,10 +229,10 @@
 .afterLabel,
 .beforeLabel {
   margin: 0;
-  font-size: 18px;
+  font-size: calc(18px * var(--case-study-text));
   font-weight: 600;
-  line-height: 25px;
-  letter-spacing: 5.4px;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
   text-transform: uppercase;
 }
 
@@ -307,9 +307,9 @@
 .caption {
   margin: 0;
   color: #fff;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.64px;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 /* App screens */
