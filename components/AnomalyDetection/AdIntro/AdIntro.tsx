@@ -47,7 +47,7 @@ export function AdIntro() {
   return (
     <div className={classes.intro}>
       <header className={`${classes.container} ${classes.top}`}>
-        <SiteNav />
+        <SiteNav homeHref="/" />
       </header>
 
       <div className={classes.container}>

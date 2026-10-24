@@ -13,10 +13,17 @@ const TAIL = [
   { lag: 75, scale: 'scale(0.42, 0.55)' },
 ];
 
-// The ME and CV pages don't exist yet, so for now the items only move the pill
-export function SiteNav() {
-  const [active, setActive] = useState(0);
-  const items = useRef<(HTMLButtonElement | null)[]>([]);
+interface SiteNavProps {
+  /**
+   * On pages other than the homepage: no item starts active (no pill), and UX links back to this URL
+   */
+  homeHref?: string;
+}
+
+// The ME and CV pages don't exist yet, so for now those items only move the pill
+export function SiteNav({ homeHref }: SiteNavProps) {
+  const [active, setActive] = useState<number | null>(homeHref ? null : 0);
+  const items = useRef<(HTMLElement | null)[]>([]);
   const pill = useRef<HTMLSpanElement>(null);
   const tail = useRef<(HTMLSpanElement | null)[]>([]);
 
@@ -60,12 +67,20 @@ export function SiteNav() {
     if (i === active) {
       return;
     }
-    animate(active, i);
+    // With nothing active yet there's nowhere to slide from, so the pill just appears
+    if (active !== null) {
+      animate(active, i);
+    }
     setActive(i);
   };
 
   return (
-    <nav aria-label="Main" className={classes.nav} style={{ '--active': active } as CSSProperties}>
+    <nav
+      aria-label="Main"
+      className={classes.nav}
+      data-empty={active === null || undefined}
+      style={{ '--active': active ?? 0 } as CSSProperties}
+    >
       <svg className={classes.filter} aria-hidden>
         <filter id="nav-goo" x="-20%" y="-50%" width="140%" height="200%">
           <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
@@ -88,21 +103,35 @@ export function SiteNav() {
         ))}
         <span ref={pill} className={classes.pill} />
       </span>
-      {ITEMS.map((label, i) => (
-        <button
-          key={label}
-          ref={(el) => {
-            items.current[i] = el;
-          }}
-          type="button"
-          className={classes.item}
-          data-active={i === active || undefined}
-          aria-current={i === active ? 'page' : undefined}
-          onClick={() => select(i)}
-        >
-          {label}
-        </button>
-      ))}
+      {ITEMS.map((label, i) =>
+        homeHref && label === 'UX' ? (
+          // A plain link (not next/link) so it does a full page load of the homepage
+          <a
+            key={label}
+            ref={(el) => {
+              items.current[i] = el;
+            }}
+            href={homeHref}
+            className={classes.item}
+          >
+            {label}
+          </a>
+        ) : (
+          <button
+            key={label}
+            ref={(el) => {
+              items.current[i] = el;
+            }}
+            type="button"
+            className={classes.item}
+            data-active={i === active || undefined}
+            aria-current={i === active ? 'page' : undefined}
+            onClick={() => select(i)}
+          >
+            {label}
+          </button>
+        )
+      )}
     </nav>
   );
 }

@@ -38,6 +38,10 @@
   background: var(--color-primary);
 }
 
+.nav[data-empty] .pill {
+  opacity: 0;
+}
+
 .pill {
   transform: translateX(calc(var(--active) * (var(--slot) + var(--gap))));
 }
@@ -50,6 +54,9 @@
 /* letter-spacing adds trailing space after the last letter; text-indent re-centres the label */
 .item {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   width: var(--slot);
   height: rem(35px);
   padding: 0;
@@ -61,6 +68,7 @@
   font-weight: 400;
   letter-spacing: rem(8px);
   text-indent: rem(8px);
+  text-decoration: none;
   cursor: pointer;
 
   /* Colour flips as the pill passes: the old label darkens early, the new one lightens late */

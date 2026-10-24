@@ -11,4 +11,11 @@ describe('SiteNav', () => {
     expect(screen.getByRole('button', { name: 'UX' })).not.toHaveAttribute('aria-current');
     expect(screen.getByRole('navigation').style.getPropertyValue('--active')).toBe('2');
   });
+
+  it('on other pages starts with nothing active and links UX home', () => {
+    render(<SiteNav homeHref="/" />);
+    expect(screen.getByRole('link', { name: 'UX' })).toHaveAttribute('href', '/');
+    expect(screen.getByRole('navigation')).toHaveAttribute('data-empty');
+    expect(screen.getByRole('button', { name: 'ME' })).not.toHaveAttribute('aria-current');
+  });
 });
