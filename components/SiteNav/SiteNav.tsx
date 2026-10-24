@@ -24,13 +24,13 @@ export function activeIndexFor(pathname: string): number | null {
   }
   return null;
 }
-const DURATION = 290;
+const DURATION = 230;
 const EASE = 'cubic-bezier(0.5, 0, 0.2, 1)';
 // Blobs that follow the pill, each smaller and later; the goo filter blends them into one tapering tail
 const TAIL = [
-  { lag: 25, scale: 'scale(0.8, 0.85)' },
-  { lag: 50, scale: 'scale(0.6, 0.7)' },
-  { lag: 75, scale: 'scale(0.42, 0.55)' },
+  { lag: 20, scale: 'scale(0.8, 0.85)' },
+  { lag: 40, scale: 'scale(0.6, 0.7)' },
+  { lag: 60, scale: 'scale(0.42, 0.55)' },
 ];
 
 // Rendered once in the site layout so the pill can slide between pages
