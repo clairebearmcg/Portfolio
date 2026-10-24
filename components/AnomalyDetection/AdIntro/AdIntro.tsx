@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { SiteNav } from '../../SiteNav/SiteNav';
 import classes from './AdIntro.module.css';
 
 const IMG = '/case-studies/anomaly-detection';
@@ -46,10 +45,6 @@ const RESEARCH_METHODS = [
 export function AdIntro() {
   return (
     <div className={classes.intro}>
-      <header className={`${classes.container} ${classes.top}`}>
-        <SiteNav homeHref="/" />
-      </header>
-
       <div className={classes.container}>
         <p className={classes.tag}>
           <Image

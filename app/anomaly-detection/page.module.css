@@ -1,0 +1,19 @@
+/* Nav bar in the same spot and size as on the homepage */
+.top {
+  display: flex;
+  justify-content: flex-end;
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: rem(136px) rem(16px) 0;
+  box-sizing: content-box;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    justify-content: flex-start;
+    padding-top: rem(40px);
+  }
+}
+
+/* The case study is shown at 90% (the rest of the site is 95%): every rem() size inside scales with it */
+.content {
+  --mantine-scale: 0.9;
+}

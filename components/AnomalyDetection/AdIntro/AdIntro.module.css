@@ -15,18 +15,6 @@
   box-sizing: content-box;
 }
 
-/* ---- Top bar: nav on the right, in the same spot as on the homepage ---- */
-.top {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: rem(136px);
-
-  @media (max-width: $mantine-breakpoint-md) {
-    justify-content: flex-start;
-    padding-top: rem(40px);
-  }
-}
-
 /* ---- "A Vivint project" tag ---- */
 .tag {
   display: inline-flex;
