@@ -10,7 +10,7 @@
   }
 }
 
-/* Back link sits on the left, level with the site nav (136px down, 35px tall); above the story on small screens */
+/* Back link lines up with the story's left edge, level with the site nav (136px down, 35px tall); above the story on small screens */
 .backBar {
   position: absolute;
   top: rem(136px);
@@ -19,7 +19,7 @@
   height: rem(35px);
   right: 0;
   left: 0;
-  max-width: rem(1180px);
+  max-width: rem(972px);
   margin: 0 auto;
   padding: 0 rem(16px);
   box-sizing: content-box;
