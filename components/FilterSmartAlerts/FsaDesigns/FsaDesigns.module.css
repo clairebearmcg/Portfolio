@@ -1,0 +1,561 @@
+/* Sits on the page's dark band, so no background of its own */
+.section {
+  padding: rem(140px) 0 rem(122px);
+  color: #fff;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(64px) 0 rem(80px);
+  }
+}
+
+.container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Shared text styles */
+.label {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-plex), sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+}
+
+.body {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* Section header */
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: rem(48px);
+  }
+}
+
+.titleCard {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 rem(589px);
+  gap: rem(186px);
+  box-sizing: border-box;
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+  border-radius: rem(16px);
+  background: rgb(244 244 244 / 5%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(64px);
+    padding: rem(40px) rem(24px);
+  }
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: rem(20px);
+  max-width: rem(434px);
+}
+
+.titleIcon {
+  display: block;
+  flex: none;
+  width: rem(90px);
+  height: rem(188px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: rem(60px);
+    height: rem(125px);
+  }
+}
+
+.titleText {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: rem(8px);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(56px);
+    line-height: rem(72px);
+  }
+}
+
+.mvp {
+  display: flex;
+  flex-direction: column;
+  gap: rem(21px);
+  max-width: rem(283px);
+  padding-left: rem(26px);
+  border-left: rem(2px) solid #fff;
+}
+
+.mvpList {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+  list-style: none;
+}
+
+.headerPhone {
+  position: relative;
+  flex: 0 1 rem(300px);
+  margin: 0 rem(132px) 0 0;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    margin-right: 0;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    width: 100%;
+    max-width: rem(300px);
+    margin: 0 auto;
+  }
+}
+
+.headerPhoneImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Grey "add prototype" box Figma lays over the phone screen */
+.prototypePlaceholder {
+  position: absolute;
+  top: 27.205%;
+  left: 9.153%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 81.657%;
+  height: 45.586%;
+  padding-left: 24.66%;
+  background: #d9d9d9;
+
+  span {
+    max-width: rem(125px);
+    color: #000;
+    font-family: var(--font-public), sans-serif;
+    font-size: 16px;
+    line-height: 35px;
+    letter-spacing: 0.64px;
+  }
+}
+
+/* "But it could be better" title */
+.betterTitle {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+  margin-top: rem(256px);
+  padding-left: rem(24px);
+  border-left: rem(2px) solid #fff;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(80px);
+    padding-left: rem(16px);
+  }
+}
+
+.betterSubtitle {
+  margin: 0;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+/* Question blocks */
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40px);
+  margin-top: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(4px);
+}
+
+.question {
+  margin: 0;
+  padding: rem(24px) rem(40px);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+  background: rgb(244 244 244 / 5%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(20px);
+  }
+}
+
+.afterLabel,
+.beforeLabel {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  text-transform: uppercase;
+}
+
+.afterLabel {
+  color: #06e5af;
+}
+
+.beforeLabel {
+  color: #ff6b6b;
+}
+
+/* Before / after copy comparison */
+.compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: rem(4px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compareCell {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(40px);
+  min-height: rem(213px);
+  box-sizing: border-box;
+  padding: rem(24px) rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+    padding: rem(20px);
+  }
+}
+
+.compareBefore {
+  background: rgb(255 177 162 / 25%);
+}
+
+.compareAfter {
+  background: rgb(103 247 242 / 10%);
+}
+
+.compareText {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Tinted "after" panel with screens */
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: rem(730px);
+  box-sizing: border-box;
+  padding: rem(76px) rem(40px) rem(24px);
+  background: rgb(103 247 242 / 10%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+    gap: rem(32px);
+    padding: rem(32px) rem(16px) rem(20px);
+  }
+}
+
+.panelContent {
+  flex: 1 0 auto;
+}
+
+.caption {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* App screens */
+.shot {
+  position: relative;
+  flex: 0 1 rem(200px);
+  min-width: 0;
+}
+
+.shotImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.arrowRight,
+.arrowLeft {
+  position: absolute;
+  width: rem(22px);
+  height: rem(11px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+/* Sits right of the screen, pointing back at it */
+.arrowRight {
+  left: calc(100% + rem(9px));
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Sits left of the screen, pointing at it */
+.arrowLeft {
+  right: calc(100% + rem(6px));
+  transform: translateY(-50%);
+}
+
+/* One screen, then a pair of screens, with captions below */
+.flow {
+  display: flex;
+  flex-direction: column;
+  gap: rem(47px);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 auto;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(24px);
+  }
+}
+
+.flowLow {
+  padding-top: rem(16px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: 0;
+  }
+}
+
+.flowGuide {
+  gap: rem(48px);
+  padding-top: rem(43px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(24px);
+    padding-top: 0;
+  }
+}
+
+.flowWide {
+  width: rem(862px);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    gap: rem(48px);
+  }
+}
+
+.pair {
+  display: flex;
+  flex: 0 1 rem(530px);
+  align-items: center;
+  gap: rem(130px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    flex-basis: rem(464px);
+    gap: rem(64px);
+  }
+}
+
+.captions {
+  display: grid;
+  grid-template-columns: rem(486px) 1fr;
+  gap: rem(24px) 0;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(24px);
+  }
+}
+
+/* Captions follow the screens' width instead of widening the flow */
+.captions,
+.flow > .caption {
+  contain: inline-size;
+}
+
+.captions > .caption:first-child {
+  max-width: rem(357px);
+}
+
+.captionNarrow {
+  max-width: rem(384px);
+}
+
+/* Motivation block: two screens with a caption, then one */
+.motivate {
+  display: flex;
+  justify-content: center;
+  gap: rem(160px);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    gap: rem(60px);
+  }
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40px);
+  min-width: 0;
+}
+
+.groupShots {
+  display: flex;
+  gap: rem(60px);
+}
+
+.captionMotivate1 {
+  max-width: rem(313px);
+}
+
+.captionMotivate2 {
+  max-width: rem(346px);
+}
+
+/* Five-step replacement guide */
+.guide {
+  display: flex;
+  gap: rem(16px);
+}
+
+.guide > .guideShot {
+  flex: 0 1 rem(175px);
+}
+
+/* Two screens, each with a caption, on the same columns as the captions above */
+.split {
+  display: grid;
+  grid-template-columns: rem(486px) 1fr;
+  gap: rem(24px) 0;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: rem(24px);
+  }
+}
+
+.splitItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: rem(47px);
+
+  .shot {
+    flex: none;
+    width: rem(200px);
+    max-width: 100%;
+  }
+
+  .caption {
+    max-width: rem(357px);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+  }
+}
+
+/* Figma keeps the right-hand caption on one line */
+@media (min-width: $mantine-breakpoint-lg) {
+  .split > :last-child .caption {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+/* Small screens: flatten the screen groups into a two-column grid, captions full width */
+@media (max-width: $mantine-breakpoint-md) {
+  .flow,
+  .flowWide {
+    width: auto;
+  }
+
+  .row,
+  .motivate,
+  .guide,
+  .split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: rem(24px) rem(16px);
+    align-items: start;
+  }
+
+  .pair,
+  .group,
+  .groupShots {
+    display: contents;
+  }
+
+  .captions {
+    grid-template-columns: 1fr;
+    gap: rem(16px);
+  }
+
+  .group > .caption {
+    grid-column: 1 / -1;
+  }
+
+  .caption,
+  .captions > .caption:first-child,
+  .captionNarrow,
+  .captionMotivate1,
+  .captionMotivate2,
+  .splitItem .caption {
+    max-width: none;
+  }
+
+  .splitItem .shot {
+    width: 100%;
+  }
+}

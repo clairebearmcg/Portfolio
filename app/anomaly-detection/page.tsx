@@ -4,8 +4,7 @@ import { AdIntro } from '@/components/AnomalyDetection/AdIntro/AdIntro';
 import { AdOutro } from '@/components/AnomalyDetection/AdOutro/AdOutro';
 import { AdResearch } from '@/components/AnomalyDetection/AdResearch/AdResearch';
 import { AdUserTesting } from '@/components/AnomalyDetection/AdUserTesting/AdUserTesting';
-import { SiteNav } from '@/components/SiteNav/SiteNav';
-import classes from './page.module.css';
+import { CaseStudyShell } from '@/components/CaseStudyShell/CaseStudyShell';
 
 export const metadata = {
   title: 'Anomaly Detection — Claire McGregor',
@@ -16,18 +15,13 @@ export const metadata = {
 // Sections run top to bottom in the order of the Figma frame; AdOutro includes the footer
 export default function AnomalyDetectionPage() {
   return (
-    <>
-      <header className={classes.top}>
-        <SiteNav homeHref="/" />
-      </header>
-      <main className={classes.content}>
-        <AdIntro />
-        <AdResearch />
-        <AdFirstDesigns />
-        <AdUserTesting />
-        <AdImprovements />
-        <AdOutro />
-      </main>
-    </>
+    <CaseStudyShell>
+      <AdIntro />
+      <AdResearch />
+      <AdFirstDesigns />
+      <AdUserTesting />
+      <AdImprovements />
+      <AdOutro />
+    </CaseStudyShell>
   );
 }

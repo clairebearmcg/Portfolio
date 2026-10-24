@@ -1,0 +1,831 @@
+/* Vertical spacing follows the y positions of the Figma frame (24510:2264), y326 to y4752 */
+.intro {
+  padding-bottom: rem(162px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-bottom: rem(80px);
+  }
+}
+
+.container {
+  max-width: rem(1180px);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---- "A Vivint project" tag ---- */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  margin: rem(155px) 0 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(72px);
+  }
+}
+
+.tagIcon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.tagText {
+  margin-left: rem(-28px);
+  padding: rem(5.5px) rem(14px) rem(5.5px) rem(38px);
+  border-radius: 0 rem(8px) rem(8px) 0;
+  background: #f4f4f4;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+  white-space: nowrap;
+}
+
+/* ---- Topper: title, summary, audio card and stats ---- */
+.topper {
+  display: flex;
+  justify-content: space-between;
+  gap: rem(40px);
+  margin-top: rem(50px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(48px);
+    margin-top: rem(32px);
+  }
+}
+
+.lead {
+  display: flex;
+  flex: 0 1 rem(829px);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(88px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(40px);
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: rem(30px);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(52px);
+    line-height: rem(58px);
+  }
+}
+
+.summary {
+  margin: 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    line-height: 30px;
+  }
+}
+
+/* Audio card: disabled until a recording exists, but styled exactly as designed */
+.listen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(24px);
+  width: 100%;
+  max-width: rem(555px);
+  min-height: rem(108px);
+  padding: rem(27px) rem(54px) rem(26px) rem(40px);
+  border: 0;
+  border-radius: rem(30px);
+  background: rgb(0 0 0 / 5%);
+  color: var(--color-primary);
+  font-family: var(--font-plex), sans-serif;
+  text-align: left;
+  cursor: default;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(22px) rem(24px);
+  }
+}
+
+.listenText {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+}
+
+.listenKicker {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+}
+
+.listenHint {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.listenPlay {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: rem(17px);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 1.08px;
+  white-space: nowrap;
+}
+
+.playIcon {
+  display: block;
+  width: rem(23px);
+  height: rem(20px);
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  gap: rem(50px);
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 4.8px;
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: rem(32px) rem(16px);
+    white-space: normal;
+  }
+}
+
+/* Value sits above its label visually; the dt stays first for screen readers */
+.stat {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: rem(24px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(8px);
+  }
+}
+
+.statLabel {
+  color: var(--color-tertiary);
+  font-weight: 600;
+}
+
+.statValue {
+  margin: 0;
+  font-weight: 700;
+}
+
+/* ---- Hero phone with problem / proposal (y1057) ---- */
+.hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: rem(420px) minmax(0, rem(513px));
+  column-gap: rem(87px);
+  margin-top: rem(90px);
+  padding-left: rem(83px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+    row-gap: rem(48px);
+    margin-top: rem(64px);
+    padding-left: 0;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: rem(807px);
+  left: rem(46px);
+  width: rem(978px);
+  max-width: none;
+  height: auto;
+  pointer-events: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.phone {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: rem(320px);
+    margin: 0 auto;
+  }
+}
+
+.heroText {
+  padding-top: rem(87px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: 0;
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(20px);
+}
+
+.proposal {
+  margin-top: rem(88px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+.kicker {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.body {
+  margin: 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: 16px;
+  line-height: 35px;
+  letter-spacing: 0.64px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    line-height: 30px;
+  }
+}
+
+/* ---- Research card and why filter replacement matters (y2102) ---- */
+.research {
+  display: flex;
+  flex-direction: column;
+  gap: rem(80px);
+  margin-top: rem(229px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(48px);
+    margin-top: rem(80px);
+  }
+}
+
+/* Dotted rule: round 2px dots every ~10.5px, as in the Figma line */
+.divider {
+  width: 100%;
+  max-width: rem(1152px);
+  height: 2px;
+  margin: 0;
+  border: 0;
+  background-image: radial-gradient(circle, var(--color-tertiary) 1px, transparent 1.5px);
+  background-repeat: repeat-x;
+  background-size: rem(10.45px) 2px;
+}
+
+/* Grey card on the left, a 521px column on the right */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(48px);
+  }
+}
+
+.researchCard {
+  display: flex;
+  flex: 0 1 rem(589px);
+  flex-direction: column;
+  gap: rem(20px);
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: rem(443px);
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+  border-radius: rem(16px);
+  background: var(--color-card);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 0;
+    padding: rem(32px) rem(24px);
+  }
+}
+
+.researchImage {
+  display: block;
+  width: rem(178px);
+  height: rem(178px);
+}
+
+.researchHeading {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+}
+
+.researchTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(52px);
+    line-height: rem(64px);
+  }
+}
+
+.researchLede {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.why {
+  display: flex;
+  flex: 0 1 rem(521px);
+  flex-direction: column;
+  gap: rem(60px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(32px);
+  }
+}
+
+/* Large faded italic serif heading ("Why is…", "Missions") */
+.sideTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.3;
+}
+
+.whyBody {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40px);
+}
+
+.whyText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.whyAside {
+  color: var(--color-secondary);
+  font-style: italic;
+}
+
+/* ---- Traditional vs Vivint (y2753) ---- */
+.comparison {
+  display: grid;
+  grid-template-columns: minmax(0, rem(554px)) minmax(0, 1fr);
+  column-gap: rem(46px);
+  margin: rem(128px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: rem(56px);
+    margin-top: rem(80px);
+  }
+}
+
+.compare {
+  display: flex;
+  align-items: center;
+  gap: rem(66px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(40px);
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: rem(24px);
+  }
+}
+
+.cube {
+  display: block;
+  flex: none;
+  width: rem(183.38px);
+  height: rem(197.88px);
+}
+
+.compareText {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  min-width: 0;
+}
+
+.compareTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.points {
+  margin: 0;
+  padding: 0 0 0 rem(24px);
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+  list-style: disc;
+}
+
+.pointNote {
+  display: block;
+}
+
+/* ---- Behaviors & demand survey (y3117) ---- */
+.survey {
+  margin-top: rem(166px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(80px);
+  }
+}
+
+/* Title with a thin vertical rule on the left */
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+  padding-left: rem(24px);
+  border-left: rem(2px) solid var(--color-primary);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.headingLede {
+  margin: 0;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.64px;
+}
+
+/*
+  Two ring charts drawn as one image, with the figures laid over them at their
+  Figma positions (group 24510:2414, 1098 × 730). Below lg the box would not fit,
+  so everything falls back to normal flow under the image.
+*/
+.chart {
+  position: relative;
+  width: rem(1098px);
+  height: rem(730px);
+  margin: rem(126px) 0 0 rem(41px);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+    width: auto;
+    height: auto;
+    margin: rem(64px) 0 0;
+  }
+}
+
+.rings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: rem(1098px);
+  height: rem(612px);
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    position: static;
+    width: 100%;
+    max-width: rem(1098px);
+    height: auto;
+  }
+}
+
+.remember,
+.interest {
+  margin: 0;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+  }
+}
+
+/* Left column has four answers; the right column starts one row down */
+.answers {
+  position: absolute;
+  top: rem(66px);
+  left: 0;
+  display: grid;
+  grid-template-columns: rem(153px) rem(215px);
+  column-gap: rem(60px);
+  row-gap: rem(60px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    position: static;
+    grid-template-columns: repeat(2, minmax(0, rem(260px)));
+    column-gap: rem(48px);
+    row-gap: rem(40px);
+  }
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: rem(14px);
+  white-space: nowrap;
+
+  &:nth-child(n + 5) {
+    grid-column: 2;
+  }
+
+  &:nth-child(5) {
+    grid-row: 2;
+  }
+
+  &:nth-child(6) {
+    grid-row: 3;
+  }
+
+  &:nth-child(7) {
+    grid-row: 4;
+  }
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    white-space: normal;
+  }
+}
+
+.answerValue {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.answerLabel {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.caption {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+.rememberCaption {
+  position: absolute;
+  top: rem(680px);
+  left: rem(150px);
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    position: static;
+    white-space: normal;
+  }
+}
+
+.interestCaption {
+  position: absolute;
+  top: rem(680px);
+  left: rem(653px);
+  width: rem(356px);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    position: static;
+    width: auto;
+    text-align: left;
+  }
+}
+
+.interestStat {
+  position: absolute;
+  top: rem(268px);
+  left: rem(744px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(10px);
+  width: rem(117px);
+  margin: 0;
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-lg) {
+    position: static;
+    align-items: flex-start;
+    width: auto;
+    text-align: left;
+  }
+}
+
+.interestValue {
+  color: #000;
+  font-family: var(--font-serif), serif;
+  font-size: rem(80px);
+  line-height: rem(80px);
+}
+
+.interestLabel {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}
+
+/* ---- If I was a user / Missions (y4164) ---- */
+.userRow {
+  margin-top: rem(131px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(80px);
+  }
+}
+
+.userCard {
+  display: flex;
+  flex: 0 1 rem(589px);
+  flex-direction: column;
+  gap: rem(40px);
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: rem(588px);
+  padding: rem(40px) rem(59px) rem(40px) rem(60px);
+  border-radius: rem(16px);
+  background: var(--color-card);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    width: 100%;
+    min-height: 0;
+    padding: rem(32px) rem(24px);
+  }
+}
+
+.userHeading {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+}
+
+.journey {
+  display: flex;
+  flex-direction: column;
+  gap: rem(56px);
+  max-width: rem(453px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+  }
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: rem(26px);
+}
+
+.stepIconBox {
+  display: flex;
+  flex: none;
+  justify-content: center;
+  width: rem(67px);
+}
+
+/* Each icon's Figma size comes in as --icon-w / --icon-h, scaled like rem() values */
+.stepIcon {
+  display: block;
+  width: calc(var(--icon-w) * var(--mantine-scale));
+  height: calc(var(--icon-h) * var(--mantine-scale));
+  object-fit: contain;
+}
+
+.stepText {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+.missions {
+  display: flex;
+  flex: 0 1 rem(521px);
+  flex-direction: column;
+  gap: rem(60px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(40px);
+  }
+}
+
+.missionList {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(40px);
+  }
+}
+
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: rem(21px);
+}
+
+.missionHeading {
+  display: flex;
+  gap: rem(40px);
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 25px;
+  letter-spacing: 5.4px;
+}
+
+.missionText {
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.64px;
+}

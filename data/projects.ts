@@ -28,6 +28,7 @@ export const projects: Project[] = [
       'Bringing eduction and ease into alerts triggered by actual system usage, not just time passed.',
     image: '/projects/filter-smart-alerts.png',
     featured: true,
+    href: '/filter-smart-alerts',
     rouletteBlurb: 'An inhaler for your home',
   },
   {

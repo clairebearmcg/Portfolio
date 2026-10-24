@@ -1,0 +1,32 @@
+<svg width="183.38" height="197.88" viewBox="0 0 183.38 197.88" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg x="0" y="56.71" width="183.374" height="126.28" overflow="visible">
+<g id="Group 2147228127">
+<path id="Rectangle 161125166" d="M0 29.9428L72.345 0L72.159 96.5238L0 126.281V29.9428Z" fill="#DCDCDC" fill-opacity="0.6"/>
+<path id="Rectangle 161125167" d="M72.1602 0L183.374 14.5065V110.844L72.1602 96.5238V0Z" fill="#DCDCDC" fill-opacity="0.3"/>
+</g>
+</svg>
+<svg x="13.67" y="32.44" width="161.612" height="161.612" overflow="visible">
+<g id="Ellipse 14928" filter="url(#v-blur)">
+<ellipse cx="80.8055" cy="80.8067" rx="64.7199" ry="64.7212" fill="#72C5D6"/>
+</g>
+<defs>
+<filter id="v-blur" x="0" y="0" width="161.611" height="161.613" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="8.04278" result="effect1_foregroundBlur_0_10"/>
+</filter>
+</defs>
+</svg>
+<svg x="0" y="71.22" width="183.376" height="126.65" overflow="visible">
+<g id="Group 2147228128">
+<path id="Rectangle 161125168" d="M111.215 30.3147L183.374 0V96.8956L111.215 126.653V30.3147Z" fill="#DCDCDC" fill-opacity="0.4"/>
+<path id="Rectangle 161125169" d="M0 15.4375L111.214 30.3165V126.654L0 111.775V15.4375Z" fill="#DCDCDC" fill-opacity="0.5"/>
+</g>
+</svg>
+<svg x="0" y="0" width="183.376" height="101.545" overflow="visible">
+<g id="Group 2147228115">
+<path id="Polygon 15" d="M95.0352 0L183.374 71.2305L111.215 101.545L95.0352 0Z" fill="#DCDCDC" fill-opacity="0.45"/>
+<path id="Polygon 16" d="M95.0341 0L111.214 101.545L0 86.6668L95.0341 0Z" fill="#DCDCDC" fill-opacity="0.6"/>
+</g>
+</svg>
+</svg>

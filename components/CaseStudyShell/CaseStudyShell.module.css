@@ -13,7 +13,7 @@
   }
 }
 
-/* The case study is shown at 90% (the rest of the site is 95%): every rem() size inside scales with it */
+/* Case studies are shown at 90% (the rest of the site is 95%): every rem() size inside scales with it */
 .content {
   --mantine-scale: 0.9;
 }
