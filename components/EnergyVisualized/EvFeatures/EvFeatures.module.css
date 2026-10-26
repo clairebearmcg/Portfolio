@@ -1,0 +1,481 @@
+/* Sits on the page's dark band; spacing follows the Figma frame (24519:3410, y7061–10403) */
+.features {
+  padding: 0 0 rem(178px);
+  color: #fff;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-bottom: rem(120px);
+  }
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Section label: italic caption followed by a dotted rule */
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: rem(36px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(20px);
+  }
+}
+
+.label {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-plex), sans-serif;
+  font-size: calc(16px * var(--case-study-text));
+  font-style: italic;
+  font-weight: 400;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(1.6px * var(--case-study-text));
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    white-space: normal;
+  }
+}
+
+/* Figma's dashed line: round 2px dots every ~10.5px */
+.dots {
+  flex: 1 1 0;
+  min-width: rem(24px);
+  height: 2px;
+  background-image: radial-gradient(circle, var(--color-tertiary) 0 1px, transparent 1.25px);
+  background-repeat: repeat-x;
+  background-size: rem(10.5px) 2px;
+}
+
+/* Shared note text */
+.collageNote,
+.mediumCaption,
+.evCaption {
+  font-family: var(--font-plex), sans-serif;
+  font-size: calc(14px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(1.4px * var(--case-study-text));
+}
+
+/* ---- Feature collage: Figma positions on desktop, stacked groups on small screens ---- */
+.collage {
+  position: relative;
+  height: rem(540px);
+  margin-top: rem(70px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+    height: auto;
+    margin-top: rem(48px);
+  }
+}
+
+.collageGroup,
+.collageShots {
+  display: contents;
+}
+
+.collageGroup {
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(20px);
+  }
+}
+
+.collageShots {
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: rem(16px);
+    max-width: 100%;
+  }
+}
+
+/* --x is a share of the canvas width so the collage spans the content width; the rest scales like rem() */
+.collageShot {
+  position: absolute;
+  top: calc(var(--y) / 16 * 1rem * var(--mantine-scale));
+  left: var(--x);
+  display: block;
+  box-sizing: border-box;
+  width: calc(var(--w) / 16 * 1rem * var(--mantine-scale));
+  height: calc(var(--h) / 16 * 1rem * var(--mantine-scale));
+  object-fit: cover;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    flex: 0 1 auto;
+    min-width: 0;
+    height: auto;
+    aspect-ratio: var(--w) / var(--h);
+  }
+}
+
+.framed {
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: rem(16px);
+}
+
+.collageNote {
+  position: absolute;
+  top: calc(var(--y) / 16 * 1rem * var(--mantine-scale));
+  left: var(--x);
+  width: calc(var(--w) * 1px * var(--case-study-text));
+  margin: 0;
+  font-style: italic;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---- Exploring data translating between mediums ---- */
+.mediums {
+  margin-top: rem(137px);
+  padding: 0 rem(20px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+    padding: 0;
+  }
+}
+
+.mediumsTitle {
+  margin: 0;
+  font-family: var(--font-plex), sans-serif;
+  font-size: calc(20px * var(--case-study-text));
+  font-weight: 500;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(2px * var(--case-study-text));
+}
+
+.mediumSteps {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(24px);
+  margin: rem(83px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(56px);
+    margin-top: rem(48px);
+  }
+}
+
+/* Later steps start lower, as in Figma */
+.mediumStep {
+  margin-top: calc(var(--offset) / 16 * 1rem * var(--mantine-scale));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    margin-top: 0;
+  }
+}
+
+.mediumFigure {
+  display: flex;
+  flex-direction: column;
+  gap: rem(48px);
+  margin: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    align-items: center;
+    gap: rem(24px);
+  }
+}
+
+.mediumImage {
+  display: block;
+  width: calc(var(--w) / 16 * 1rem * var(--mantine-scale));
+  height: calc(var(--h) / 16 * 1rem * var(--mantine-scale));
+  border-radius: rem(12px);
+  object-fit: cover;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: var(--w) / var(--h);
+  }
+}
+
+.mediumCaption {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  width: calc(235px * var(--case-study-text));
+  max-width: 100%;
+  font-style: italic;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    text-align: center;
+  }
+}
+
+/* ---- Energy savings in live activities ---- */
+.liveSection {
+  margin-top: rem(118px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+  }
+}
+
+.activityRows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(60px);
+  margin-top: rem(48px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+  }
+}
+
+/* Each row is centred on the page; --gap is the Figma spacing between widgets */
+.activityRow {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--gap) / 16 * 1rem * var(--mantine-scale));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: block;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(16px);
+  }
+}
+
+/* The countdown sits 28px down inside its 142px-tall group */
+.activityRowLast {
+  margin-top: rem(-28px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: 0;
+  }
+}
+
+.activity {
+  display: block;
+  box-sizing: border-box;
+  width: rem(170px);
+  height: rem(79px);
+  object-fit: cover;
+}
+
+.activityFramed {
+  width: rem(175px);
+  height: rem(81px);
+  border: 1px solid rgb(255 255 255 / 20%);
+  border-radius: rem(20px);
+}
+
+.activitySwitch {
+  width: rem(173px);
+  height: rem(83px);
+}
+
+.countdown {
+  position: relative;
+  padding: rem(28px) 0 rem(35px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: 100%;
+    padding: 0;
+  }
+}
+
+.countdownList {
+  display: flex;
+  gap: rem(30px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(16px);
+  }
+}
+
+/* Curved arrows joining the countdown steps */
+.arrow {
+  position: absolute;
+  display: block;
+  width: rem(87.8px);
+  height: rem(17.4px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.arrowBottom {
+  top: rem(125.3px);
+  left: rem(126.7px);
+}
+
+.arrowTop {
+  top: rem(-0.5px);
+  left: rem(345.7px);
+  transform: scaleY(-1);
+}
+
+/* ---- EV reimagined ---- */
+.evSection {
+  margin-top: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+  }
+}
+
+.ev {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: rem(160px);
+  margin-top: rem(81px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    align-items: center;
+    gap: rem(56px);
+    margin-top: rem(48px);
+  }
+}
+
+.evGroup {
+  display: flex;
+  flex-direction: column;
+  gap: rem(40px);
+  margin: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    align-items: center;
+    gap: rem(24px);
+  }
+}
+
+.evGroupWide {
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+  }
+}
+
+.evPhones {
+  display: flex;
+  gap: rem(40px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, rem(200px)));
+    justify-content: center;
+    gap: rem(16px);
+    width: 100%;
+  }
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    grid-template-columns: minmax(0, rem(200px));
+    gap: rem(32px);
+  }
+}
+
+.evPhone {
+  display: block;
+  width: rem(200px);
+  height: rem(434px);
+  object-fit: cover;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+    max-width: rem(200px);
+    height: auto;
+    aspect-ratio: 200 / 434;
+  }
+}
+
+.evPhoneRounded {
+  border-radius: rem(16px);
+}
+
+.evCaption {
+  display: flex;
+  flex-direction: column;
+  gap: rem(3px);
+
+  strong {
+    font-weight: 700;
+  }
+
+  em {
+    font-style: italic;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ---- Closing statement ---- */
+.closing {
+  display: flex;
+  flex-direction: column;
+  gap: rem(45px);
+  max-width: calc(979px * var(--case-study-text));
+  margin: rem(303px) auto 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: calc(16px * var(--case-study-text));
+  font-style: italic;
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(24px);
+    margin-top: rem(120px);
+  }
+}
+
+.closingLead {
+  color: #fff;
+}
+
+.closingBody {
+  color: var(--color-secondary);
+}

@@ -38,6 +38,7 @@ export const projects: Project[] = [
       'Rethinking how people experience energy data through creative, intuitive visualizations that make insights accessible.',
     image: '/projects/energy-visualized.png',
     featured: false,
+    href: '/energy-visualized',
     rouletteBlurb: 'A firehose of UI',
   },
   {

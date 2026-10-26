@@ -1,0 +1,141 @@
+/* Sits on the page's dark band; spacing follows the Figma frame (24519:3410) */
+.overview {
+  padding: rem(86px) 0 rem(84px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(64px) 0;
+  }
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---- Three goal cards ---- */
+.goals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: rem(16px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: rem(451px);
+  padding: rem(40px) rem(40px) rem(45px);
+  border-radius: rem(16px);
+  background: rgb(244 244 244 / 5%);
+  color: #fff;
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+    padding: rem(40px) rem(24px);
+  }
+}
+
+/* Every icon starts at the top; the text always begins 152px below */
+.iconBox {
+  display: flex;
+  justify-content: center;
+  height: rem(152px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: auto;
+    margin-bottom: rem(32px);
+  }
+}
+
+.icon {
+  display: block;
+  width: calc(var(--icon-w) * var(--mantine-scale));
+  height: calc(var(--icon-h) * var(--mantine-scale));
+}
+
+/* Title comes first in the DOM but sits at the bottom of the card */
+.goalText {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  width: 100%;
+  max-width: rem(303px);
+  min-height: rem(214px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(24px);
+    min-height: 0;
+  }
+}
+
+.narrow {
+  max-width: rem(263px);
+}
+
+.goalTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(30px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0.3;
+}
+
+.goalBody {
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* ---- Energy funnel and spectrum diagrams ---- */
+.funnel {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: rem(84px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+/* Dotted rule: round 2px dots every ~10.5px, as in the Figma line */
+.divider {
+  width: 100%;
+  max-width: rem(1152px);
+  height: 2px;
+  margin: rem(69px) auto 0;
+  border: 0;
+  background-image: radial-gradient(circle, var(--color-tertiary) 1px, transparent 1.5px);
+  background-repeat: repeat-x;
+  background-size: rem(10.45px) 2px;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(48px);
+  }
+}
+
+.spectrum {
+  display: block;
+  width: 100%;
+  max-width: rem(1140px);
+  height: auto;
+  margin: rem(44px) auto 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(40px);
+  }
+}

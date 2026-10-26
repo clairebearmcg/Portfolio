@@ -1,0 +1,6 @@
+/* Figma: solid #070417 from y1039 to the bottom of the frame */
+.band {
+  overflow: hidden;
+  background: #070417;
+  color: var(--mantine-color-white);
+}

@@ -1,0 +1,115 @@
+/* Vertical spacing follows the y positions of the Figma frame (24519:3410) */
+.intro {
+  padding-bottom: rem(100px);
+  color: var(--color-primary);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-bottom: rem(64px);
+  }
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* ---- Title with the "A Vivint project" tag on the right ---- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(24px);
+  margin-top: rem(155px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    gap: rem(32px);
+    margin-top: rem(72px);
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(52px);
+    line-height: rem(58px);
+  }
+}
+
+.tag {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  margin: 0;
+}
+
+.tagIcon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: rem(40px);
+  height: rem(40px);
+}
+
+.tagText {
+  margin-left: rem(-28px);
+  padding: rem(5.5px) rem(14px) rem(5.5px) rem(38px);
+  border-radius: 0 rem(8px) rem(8px) 0;
+  background: #f4f4f4;
+  font-size: calc(16px * var(--case-study-text));
+  font-weight: 500;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+  white-space: nowrap;
+}
+
+/* ---- What it is / why it matters / snapshot ---- */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: rem(50px);
+  margin-top: rem(61px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(40px);
+    margin-top: rem(40px);
+  }
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+  }
+}
+
+.kicker {
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  font-weight: 700;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(4.8px * var(--case-study-text));
+}
+
+.body {
+  margin: 0;
+  font-family: var(--font-public), sans-serif;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(35px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    line-height: calc(30px * var(--case-study-text));
+  }
+}

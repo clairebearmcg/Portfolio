@@ -1,0 +1,411 @@
+/* Sits on the page's dark band; spacing follows the Figma frame (24519:3410, y3204–7061) */
+.root {
+  /* One Figma px; collage positions are unitless numbers multiplied by this */
+  --u: rem(1px);
+
+  padding: 0 0 rem(44px);
+  color: #fff;
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-tertiary);
+  font-family: var(--font-serif), serif;
+  font-size: rem(50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: rem(80px);
+  text-align: center;
+  opacity: 0.4;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(40px);
+    line-height: rem(56px);
+  }
+}
+
+/* Gaps between label rows: 140px under the title, then 101px and 107px under each collage */
+.group {
+  margin-top: rem(140px);
+
+  & + & {
+    margin-top: rem(101px);
+  }
+
+  & + & + & {
+    margin-top: rem(107px);
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(64px);
+
+    & + &,
+    & + & + & {
+      margin-top: rem(64px);
+    }
+  }
+}
+
+/* Section label: italic caption followed by a dotted rule */
+.labelRow {
+  display: flex;
+  align-items: center;
+  gap: rem(36px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(20px);
+  }
+}
+
+.label {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-plex), sans-serif;
+  font-size: calc(16px * var(--case-study-text));
+  font-style: italic;
+  font-weight: 400;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(1.6px * var(--case-study-text));
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    white-space: normal;
+  }
+}
+
+/* Figma's dashed line: round 2px dots every ~10.5px */
+.dots {
+  flex: 1 1 0;
+  min-width: rem(24px);
+  height: 2px;
+  background-image: radial-gradient(circle, var(--color-tertiary) 0 1px, transparent 1.25px);
+  background-repeat: repeat-x;
+  background-size: rem(10.5px) 2px;
+}
+
+/*
+ * Desktop: a 1440px-wide canvas centred on the band, with every piece placed at its
+ * Figma position. Pieces past the frame edges bleed out and the band clips them.
+ */
+.canvas {
+  position: relative;
+  width: rem(1440px);
+  max-width: none;
+  height: calc(var(--h) * var(--u));
+  margin: 0 0 0 calc(50% - rem(720px));
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    /* Lets smaller items fill the gaps left before full-width ones */
+    grid-auto-flow: row dense;
+    align-items: center;
+    gap: rem(16px);
+    width: auto;
+    max-width: var(--case-study-width);
+    height: auto;
+    margin: rem(32px) auto 0;
+    padding: 0 rem(16px);
+    box-sizing: content-box;
+  }
+}
+
+.item {
+  position: absolute;
+  z-index: 1;
+  top: calc(var(--y) * var(--u));
+  left: calc(var(--x) * var(--u));
+  width: calc(var(--w) * var(--u));
+  height: calc(var(--h) * var(--u));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.under {
+  z-index: 0;
+}
+
+.wide {
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-column: 1 / -1;
+  }
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: auto;
+  }
+}
+
+.rounded {
+  overflow: hidden;
+  border-radius: calc(var(--r) * var(--u));
+}
+
+.rightCorners {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Figma's 0.2px white border, drawn over the image so it isn't hidden underneath */
+.outlined::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: inset 0 0 0 0.2px #fff;
+  pointer-events: none;
+}
+
+/* HTML-built pieces keep their designed size on small screens too */
+.widget {
+  @media (max-width: $mantine-breakpoint-md) {
+    justify-self: center;
+    width: auto;
+  }
+}
+
+/* Spend per category as shrinking circles (24519:3500). Mock UI type scales with the collage */
+.circles {
+  display: flex;
+  gap: rem(24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: rem(24px);
+  }
+}
+
+.circleItem {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  width: rem(89.9px);
+  color: #fff;
+  font-family: var(--font-public), sans-serif;
+}
+
+.circleBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: rem(85.78px);
+}
+
+.circle {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: calc(var(--size) * var(--u));
+  height: calc(var(--size) * var(--u));
+  border-radius: 50%;
+  color: #0d0d0d;
+  font-weight: 700;
+  line-height: calc(var(--size) * var(--u));
+}
+
+.circleValue {
+  font-size: rem(16.5px);
+}
+
+.circleUnit {
+  margin-left: rem(1px);
+  font-size: rem(10.3px);
+}
+
+.circleLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: rem(31.7px);
+  padding-bottom: rem(13.6px);
+  border-bottom: rem(0.41px) solid #d8d8d8;
+  font-size: rem(9.07px);
+  line-height: rem(9.9px);
+  white-space: nowrap;
+}
+
+.chevron {
+  display: block;
+  flex: none;
+  width: rem(9.9px);
+  height: rem(9.9px);
+}
+
+.circlePrice,
+.circleChange {
+  font-size: rem(7.42px);
+  line-height: rem(9.07px);
+  white-space: nowrap;
+}
+
+.circlePrice {
+  margin-top: rem(8.7px);
+}
+
+.circleChange {
+  margin-top: rem(4.5px);
+  color: #b8b8b8;
+}
+
+/* Cost list beside glowing category blobs (24519:3415) */
+.glowList {
+  position: relative;
+  width: rem(338px);
+  height: rem(201px);
+  font-family: var(--font-public), sans-serif;
+}
+
+.glowRows {
+  display: flex;
+  flex-direction: column;
+  gap: rem(12px);
+  margin: 0;
+  padding: rem(9px) 0 0;
+  list-style: none;
+}
+
+.glowRow {
+  display: flex;
+  align-items: center;
+  height: rem(18px);
+}
+
+.glowPrice {
+  width: rem(64px);
+  color: #fff;
+  font-size: rem(14px);
+  font-weight: 500;
+  line-height: rem(18px);
+}
+
+.glowIcon {
+  display: block;
+  width: rem(16px);
+  height: rem(17.13px);
+  margin-right: rem(8px);
+}
+
+.glowLabel {
+  color: #77746d;
+  font-size: rem(12px);
+  line-height: rem(14px);
+}
+
+.glowCluster {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.glow {
+  position: absolute;
+  top: calc(var(--y) * var(--u));
+  left: calc(var(--x) * var(--u));
+  display: block;
+  width: calc(var(--size) * var(--u));
+  height: calc(var(--size) * var(--u));
+}
+
+/* The large heating and cooling blob is a blurred CSS shape in Figma */
+.glowHeating {
+  position: absolute;
+  top: rem(14.5px);
+  left: rem(202px);
+  width: rem(78.7px);
+  height: rem(77.5px);
+  border-radius: rem(49.55px);
+  background-image: linear-gradient(33.74deg, #ffbe92 26.44%, #f53d3d 90.48%);
+  filter: blur(rem(11.07px));
+  transform: rotate(30.34deg);
+}
+
+/* Savings goal card with an indoor camera (24519:3601) */
+.cameraGoal {
+  position: relative;
+  width: rem(121px);
+  height: rem(170px);
+  font-family: var(--font-public), sans-serif;
+}
+
+.cameraPanel {
+  position: absolute;
+  top: rem(14px);
+  left: rem(7px);
+  width: rem(108px);
+  height: rem(156px);
+  border-radius: rem(12px);
+  background: rgb(255 255 255 / 30%);
+}
+
+.cameraImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: rem(121px);
+  height: rem(121px);
+}
+
+.cameraTrack {
+  position: absolute;
+  top: rem(112px);
+  left: rem(15px);
+  width: rem(92px);
+  height: rem(11px);
+  border-radius: rem(6px);
+  background: rgb(255 255 255 / 10%);
+}
+
+.cameraFill {
+  display: block;
+  width: rem(68px);
+  height: 100%;
+  border-radius: rem(6px);
+  background: rgb(125 145 255 / 60%);
+}
+
+.cameraText {
+  position: absolute;
+  top: rem(141px);
+  left: rem(42.5px);
+  color: #fff;
+  font-size: rem(14px);
+  font-weight: 500;
+  line-height: rem(18px);
+  white-space: nowrap;
+  transform: translateX(-50%);
+}
+
+.cameraArrow {
+  position: absolute;
+  top: rem(138px);
+  left: rem(83px);
+  display: block;
+  width: rem(24px);
+  height: rem(24px);
+}

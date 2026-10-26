@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="63" height="63" viewBox="0 0 63 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 2147227478">
+<g id="Ellipse 14055" filter="url(#filter0_f_0_54)">
+<circle cx="31.5" cy="31.5" r="16.5" fill="url(#paint0_linear_0_54)"/>
+</g>
+<g id="lightning-bolt-fill">
+<path id="Vector" d="M32.9546 25.0069C33.0912 24.849 33.3117 24.7916 33.5074 24.8643C33.7029 24.9372 33.8324 25.1244 33.8326 25.3331V30.8331H37.0005C37.1959 30.8333 37.3733 30.9484 37.4546 31.126C37.5358 31.3037 37.506 31.5123 37.3785 31.6602L31.0455 38.9932C30.9091 39.1511 30.6884 39.2083 30.4927 39.1358C30.297 39.063 30.1667 38.8758 30.1666 38.667V33.167H26.9996C26.804 33.167 26.6269 33.0519 26.5455 32.8741C26.4642 32.6963 26.4939 32.4878 26.6216 32.3399L32.9546 25.0069Z" fill="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_54" x="0" y="0" width="63" height="63" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="7.5" result="effect1_foregroundBlur_0_54"/>
+</filter>
+<linearGradient id="paint0_linear_0_54" x1="41.0192" y1="16.2692" x2="22.6154" y2="45.4615" gradientUnits="userSpaceOnUse">
+<stop stop-color="#A6B3F7"/>
+<stop offset="1" stop-color="#EAEDFF"/>
+</linearGradient>
+</defs>
+</svg>
