@@ -1,0 +1,300 @@
+/* Sits on the page's dark band, so no background of its own */
+.root {
+  overflow: hidden;
+  padding: 0 0 rem(49px);
+  color: #fff;
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Shared text styles */
+.label {
+  margin: 0;
+  color: #fff;
+  font-family: var(--font-plex), sans-serif;
+  font-size: calc(18px * var(--case-study-text));
+  font-weight: 600;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
+  text-transform: uppercase;
+}
+
+.body {
+  margin: 0;
+  color: #fff;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* Heading with a white bar on its left */
+.titleBlock {
+  display: flex;
+  gap: rem(24px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+  }
+}
+
+.bar {
+  flex: none;
+  width: rem(2px);
+  border-radius: rem(100px);
+  background: #fff;
+}
+
+.titleText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: rem(5px);
+  min-width: 0;
+}
+
+/* Explorations: two rows of six screens, kept at 90% of their Figma size */
+.explorations {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, calc(175px * 0.9)));
+  justify-content: center;
+  gap: calc(25px * 0.9);
+  margin: rem(76px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: repeat(3, minmax(0, calc(175px * 0.9)));
+    gap: rem(12px);
+    margin-top: rem(48px);
+  }
+}
+
+.exploration {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 175 / 379;
+  border-radius: calc(12px * 0.9);
+  object-fit: cover;
+}
+
+/* The verdict */
+.verdict {
+  margin-top: rem(188px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+  }
+}
+
+.verdictTitle {
+  text-align: center;
+}
+
+/*
+ * Annotated screens: Figma positions inside the 1031 × 959 group, drawn at 90%
+ * like the other phone screenshots so the leader lines still meet the screens.
+ */
+.annotated {
+  --u: 0.9px;
+
+  position: relative;
+  width: calc(1031 * var(--u));
+  height: calc(959 * var(--u));
+  margin: rem(109px) auto 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(24px);
+    width: auto;
+    height: auto;
+    margin-top: rem(48px);
+  }
+}
+
+.lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: var(--color-tertiary);
+  stroke-linecap: round;
+  stroke-width: 2px;
+
+  path {
+    vector-effect: non-scaling-stroke;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+.phone {
+  position: absolute;
+  display: block;
+  width: calc(300 * var(--u));
+  height: calc(613 * var(--u));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    width: calc(300px * 0.9);
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 300 / 613;
+  }
+}
+
+.phoneAlert {
+  top: calc(21 * var(--u));
+  left: calc(264 * var(--u));
+}
+
+.phoneTips {
+  top: calc(346 * var(--u));
+  left: calc(664 * var(--u));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(24px);
+  }
+}
+
+.note {
+  position: absolute;
+  margin: 0;
+  color: var(--color-tertiary);
+  font-size: calc(16px * var(--case-study-text));
+  font-style: italic;
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    position: static;
+    width: 100%;
+    max-width: calc(300px * 0.9);
+  }
+}
+
+.noteLanguage {
+  top: 0;
+  left: calc(669 * var(--u));
+  width: calc(357 * var(--u));
+}
+
+.noteGap {
+  top: calc(223 * var(--u));
+  left: calc(664 * var(--u));
+  white-space: nowrap;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    white-space: normal;
+  }
+}
+
+.noteSavings {
+  top: calc(504 * var(--u));
+  left: 0;
+  width: calc(227 * var(--u));
+}
+
+.noteTips {
+  top: calc(829 * var(--u));
+  left: calc(354 * var(--u));
+  width: calc(246 * var(--u));
+}
+
+/* Final designs (matches the Anomaly Detection outro) */
+.experience {
+  margin-top: rem(210px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+  }
+}
+
+/* Dotted divider */
+.divider {
+  max-width: rem(1152px);
+  height: 2px;
+  margin: 0 auto;
+  border: 0;
+  background: radial-gradient(circle, #c3c2bf 1px, transparent 1.5px) 0 50% / rem(10.45px) 2px
+    repeat-x;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(30px);
+  margin-top: rem(80px);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(56px);
+  }
+}
+
+.experienceTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(25px);
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-weight: 400;
+}
+
+.eyebrow {
+  font-size: rem(36px);
+  font-style: italic;
+  line-height: rem(40px);
+  opacity: 0.5;
+}
+
+.name {
+  font-size: rem(52px);
+  line-height: rem(52px);
+  letter-spacing: rem(3.64px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(40px);
+    line-height: rem(44px);
+    letter-spacing: rem(2.4px);
+  }
+}
+
+.phones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, rem(300px)));
+  justify-content: center;
+  gap: rem(150px) rem(80px);
+  margin: rem(183px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: minmax(0, rem(300px));
+    gap: rem(48px);
+    margin-top: rem(72px);
+  }
+}
+
+.finalPhone {
+  margin: 0;
+}
+
+.finalImage {
+  display: block;
+  width: 100%;
+  height: auto;
+}

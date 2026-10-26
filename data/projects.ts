@@ -48,6 +48,7 @@ export const projects: Project[] = [
       'Helping homeowners catch temperature issues and inefficiencies before they snowball.',
     image: '/projects/comfort-drift.png',
     featured: false,
+    href: '/comfort-drift',
     rouletteBlurb: 'For all the people that can’t handle a 3° temp change',
   },
   {

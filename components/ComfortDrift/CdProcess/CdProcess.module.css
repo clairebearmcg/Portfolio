@@ -1,0 +1,348 @@
+/* Sits on the page's dark band; vertical spacing follows the y positions of the Figma frame (24519:3733) */
+.process {
+  padding: rem(117px) 0 rem(184px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding: rem(64px) 0 rem(96px);
+  }
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Shared text styles */
+.label {
+  margin: 0;
+  font-size: calc(18px * var(--case-study-text));
+  font-weight: 600;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
+  text-transform: uppercase;
+}
+
+.body {
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* ---- Section header: title card + italic intro ---- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: rem(40px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+  }
+}
+
+.titleCard {
+  display: flex;
+  flex: 0 1 rem(589px);
+  flex-direction: column;
+  gap: rem(20px);
+  box-sizing: border-box;
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+  border-radius: rem(16px);
+  background: rgb(244 244 244 / 5%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    width: 100%;
+    padding: rem(40px) rem(24px);
+  }
+}
+
+.frameworkIcon {
+  display: block;
+  width: rem(100px);
+  height: rem(108px);
+}
+
+.visualsIcon {
+  display: block;
+  width: rem(150px);
+  height: rem(150px);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(56px);
+    line-height: rem(72px);
+  }
+}
+
+.intro {
+  display: flex;
+  flex: 0 1 rem(521px);
+  flex-direction: column;
+  gap: rem(60px);
+  min-width: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(24px);
+  }
+}
+
+.introTitle {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(50px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: normal;
+  white-space: nowrap;
+  opacity: 0.3;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(40px);
+    white-space: normal;
+  }
+}
+
+/* ---- Framework: three phones joined by arrows ---- */
+.flow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: rem(16px);
+  margin-top: rem(126px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(40px);
+    margin-top: rem(64px);
+  }
+}
+
+/* Keeps the size from before the 15% desktop shrink (300px at 90%) */
+.phone {
+  display: block;
+  flex: none;
+  width: calc(300px * 0.9);
+  max-width: 100%;
+  height: auto;
+}
+
+.arrow {
+  display: block;
+  flex: none;
+  width: rem(88px);
+  height: rem(17px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: none;
+  }
+}
+
+/* ---- Visuals ---- */
+.visuals {
+  margin-top: rem(146px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(96px);
+  }
+}
+
+/* Four columns of screens, 250px wide in Figma, shown at the 90% screen size */
+.explorations {
+  display: grid;
+  grid-template-columns: repeat(4, calc(250px * 0.9));
+  justify-content: space-between;
+  gap: rem(24px);
+  margin: rem(177px) 0 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, calc(250px * 0.9)));
+    justify-content: center;
+    gap: rem(32px) rem(16px);
+    margin-top: rem(64px);
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: rem(36px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(16px);
+  }
+}
+
+/* White card; the column's last one stretches so all columns end level, as in Figma */
+.card {
+  overflow: hidden;
+  border-radius: rem(16px);
+  background: #fff;
+
+  &:last-child {
+    flex: 1 1 auto;
+  }
+}
+
+.visual {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Heading with a thin white bar on its left */
+.barTitle {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5px);
+  padding-left: rem(26px);
+  border-left: rem(2px) solid #fff;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-left: rem(16px);
+  }
+}
+
+.barText {
+  max-width: rem(635px);
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* ---- Design review boards ---- */
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  margin-top: rem(146px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    margin-top: rem(80px);
+  }
+}
+
+.boards {
+  display: flex;
+  gap: rem(2px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(8px);
+  }
+}
+
+/* Widths in Figma: 330, 353 and 483px; heights follow each image's ratio */
+.board {
+  display: block;
+  min-width: 0;
+  height: auto;
+
+  &:nth-child(1) {
+    flex: 330 1 0;
+    border-radius: rem(4px) 0 0 rem(4px);
+  }
+
+  &:nth-child(2) {
+    flex: 353 1 0;
+    border-radius: 0 rem(4px) rem(4px) 0;
+  }
+
+  &:nth-child(3) {
+    flex: 483 1 0;
+  }
+
+  @media (max-width: $mantine-breakpoint-md) {
+    width: 100%;
+
+    &:nth-child(n) {
+      flex: none;
+      border-radius: rem(4px);
+    }
+  }
+}
+
+/* ---- The finals: heating and cooling charts ---- */
+.finals {
+  display: flex;
+  flex-direction: column;
+  gap: rem(60px);
+  margin-top: rem(115px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    margin-top: rem(80px);
+  }
+}
+
+.charts {
+  display: flex;
+  gap: rem(80px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+    gap: rem(40px);
+  }
+}
+
+.chartFigure {
+  display: flex;
+  flex: 0 1 rem(550px);
+  flex-direction: column;
+  gap: rem(24px);
+  min-width: 0;
+  margin: 0;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(12px);
+  }
+}
+
+.chartCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: rem(327px);
+  padding: rem(40px) rem(58px);
+  border-radius: rem(16px);
+  background: rgb(244 244 244 / 5%);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    min-height: 0;
+    padding: rem(32px) rem(20px);
+  }
+}
+
+/* App UI chart (vivintCircular labels), kept as an image */
+.chart {
+  display: block;
+  width: rem(436px);
+  max-width: 100%;
+  height: auto;
+}
+
+.chartCaption {
+  color: var(--color-tertiary);
+  font-size: calc(16px * var(--case-study-text));
+  font-style: italic;
+  line-height: calc(30px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+  text-align: center;
+}

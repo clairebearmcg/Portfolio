@@ -36,9 +36,10 @@ describe('DesignRoulette', () => {
     expect(screen.getByRole('heading', { name: comfortDrift.title })).toBeInTheDocument();
     expect(screen.getByText(comfortDrift.rouletteBlurb)).toBeInTheDocument();
     expect(screen.getByRole('button', { name: 'Spin again' })).toBeEnabled();
+    // Projects with a case study link to it; the rest link to their homepage card
     expect(screen.getByRole('link', { name: 'View project' })).toHaveAttribute(
       'href',
-      '#comfort-drift'
+      comfortDrift.href ?? '#comfort-drift'
     );
   });
 
