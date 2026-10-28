@@ -2,6 +2,7 @@
 
 import { useState, type CSSProperties, type MouseEvent, type TransitionEvent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { projects, type Project } from '@/data/projects';
 import classes from './DesignRoulette.module.css';
 
@@ -84,13 +85,13 @@ export function DesignRoulette() {
             <button type="button" className={classes.secondary} onClick={spin}>
               Spin again
             </button>
-            <a
+            <Link
               href={landed.href ?? `#${landed.slug}`}
               className={classes.primary}
               onClick={viewProject}
             >
               View project
-            </a>
+            </Link>
           </>
         ) : (
           <button type="button" className={classes.primary} onClick={spin} disabled={spinning}>

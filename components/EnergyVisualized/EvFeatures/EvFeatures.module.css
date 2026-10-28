@@ -129,7 +129,7 @@
 .collageNote {
   position: absolute;
   top: calc(var(--y) / 16 * 1rem * var(--mantine-scale));
-  left: var(--x);
+  left: calc(var(--x) + var(--after) / 16 * 1rem * var(--mantine-scale));
   width: calc(var(--w) * 1px * var(--case-study-text));
   margin: 0;
   font-style: italic;
@@ -178,13 +178,21 @@
   }
 }
 
-/* Later steps start lower, as in Figma */
 .mediumStep {
-  margin-top: calc(var(--offset) / 16 * 1rem * var(--mantine-scale));
-
   @media (max-width: $mantine-breakpoint-md) {
     max-width: 100%;
-    margin-top: 0;
+  }
+}
+
+/* As tall as the tallest image (the bar chart), with each image on its bottom edge */
+.mediumFrame {
+  display: flex;
+  align-items: flex-end;
+  height: calc(371 / 16 * 1rem * var(--mantine-scale));
+
+  @media (max-width: $mantine-breakpoint-md) {
+    display: block;
+    height: auto;
   }
 }
 
@@ -240,15 +248,21 @@
   }
 }
 
+/* Drawn 20% larger than Figma on desktop; zoom keeps the arrows lined up with the widgets */
 .activityRows {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: rem(60px);
-  margin-top: rem(48px);
+  margin-top: rem(60px);
+
+  @media (min-width: $mantine-breakpoint-md) {
+    zoom: 1.2;
+  }
 
   @media (max-width: $mantine-breakpoint-md) {
     gap: rem(16px);
+    margin-top: rem(48px);
   }
 }
 
@@ -350,7 +364,7 @@
 
 /* ---- EV reimagined ---- */
 .evSection {
-  margin-top: rem(80px);
+  margin-top: rem(140px);
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(96px);
@@ -372,14 +386,15 @@
   }
 }
 
+/* Captions are centred under their phone, or under the group of three */
 .evGroup {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rem(40px);
   margin: 0;
 
   @media (max-width: $mantine-breakpoint-md) {
-    align-items: center;
     gap: rem(24px);
   }
 }
@@ -432,7 +447,9 @@
 .evCaption {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: rem(3px);
+  text-align: center;
 
   strong {
     font-weight: 700;
@@ -440,11 +457,6 @@
 
   em {
     font-style: italic;
-  }
-
-  @media (max-width: $mantine-breakpoint-md) {
-    align-items: center;
-    text-align: center;
   }
 }
 

@@ -78,3 +78,13 @@ export const projects: Project[] = [
     rouletteBlurb: 'Dusting up some old pixels',
   },
 ];
+
+/**
+ * The case study after the one at `href`, in homepage order (left to right, top to bottom).
+ * Projects without a page are skipped, and the last one wraps round to the first.
+ */
+export function nextProject(href: string): Project | undefined {
+  const withPages = projects.filter((project) => project.href);
+  const index = withPages.findIndex((project) => project.href === href);
+  return index === -1 ? undefined : withPages[(index + 1) % withPages.length];
+}

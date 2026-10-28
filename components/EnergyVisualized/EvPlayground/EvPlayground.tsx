@@ -25,6 +25,8 @@ interface Shot {
   wide?: boolean;
   /** Sits under its neighbours, as in the Figma layer order */
   under?: boolean;
+  /** Box is narrower than the image; shows the image's left side only */
+  cropLeft?: boolean;
 }
 
 type Widget = 'categoryCircles' | 'glowList' | 'cameraGoal';
@@ -99,9 +101,11 @@ const GROUPS: Group[] = [
         alt: 'Usage percentages along an arc with category icons, highlighting electric vehicle at 14%',
         x: 1183,
         y: 222,
-        w: 590,
+        // Only the left half of the circle (the image is 590 wide)
+        w: 352,
         h: 496.5,
         wide: true,
+        cropLeft: true,
       },
       {
         src: `${IMG}/play-petal-chart.png`,
@@ -670,6 +674,9 @@ function itemClass(item: Item) {
     }
     if (item.under) {
       names.push(classes.under);
+    }
+    if (item.cropLeft) {
+      names.push(classes.cropLeft);
     }
   } else {
     names.push(classes.widget);

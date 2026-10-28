@@ -39,10 +39,19 @@
   gap: rem(20px);
 
   .card[data-variant='featured'] & {
-    flex: 0 1 rem(337px);
+    flex: 0 1 rem(360px);
 
     @media (max-width: $mantine-breakpoint-md) {
       flex-basis: auto;
+    }
+  }
+
+  /* Room for a three-line description, so every compact card's image sits at the same height */
+  .card[data-variant='compact'] & {
+    min-height: calc(rem(60px) + 75px);
+
+    @media (max-width: $mantine-breakpoint-md) {
+      min-height: 0;
     }
   }
 }

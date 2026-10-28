@@ -157,6 +157,15 @@
   }
 }
 
+.cropLeft .img {
+  object-position: left center;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    height: auto;
+    aspect-ratio: calc(var(--w) / var(--h));
+  }
+}
+
 .rounded {
   overflow: hidden;
   border-radius: calc(var(--r) * var(--u));

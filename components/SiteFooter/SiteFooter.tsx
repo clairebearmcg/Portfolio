@@ -1,5 +1,8 @@
 'use client';
 
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { nextProject } from '@/data/projects';
 import classes from './SiteFooter.module.css';
 
 interface SiteFooterProps {
@@ -10,6 +13,9 @@ interface SiteFooterProps {
 }
 
 export function SiteFooter({ tone = 'light', backToTop = true }: SiteFooterProps) {
+  // Case study pages also link on to the next one
+  const next = nextProject(usePathname());
+
   const scrollToTop = () => {
     const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
@@ -22,9 +28,17 @@ export function SiteFooter({ tone = 'light', backToTop = true }: SiteFooterProps
       data-wordmark-only={!backToTop || undefined}
     >
       {backToTop && (
-        <button type="button" className={classes.backToTop} onClick={scrollToTop}>
-          BACK TO TOP
-        </button>
+        <div className={classes.links}>
+          <button type="button" className={classes.backToTop} onClick={scrollToTop}>
+            BACK TO TOP
+          </button>
+          {next?.href && (
+            <Link href={next.href} className={classes.next}>
+              NEXT PROJECT <span aria-hidden="true">→</span>
+              <span className={classes.visuallyHidden}>: {next.title}</span>
+            </Link>
+          )}
+        </div>
       )}
       <p className={classes.wordmark}>CLAIRE MCGREGOR</p>
     </footer>

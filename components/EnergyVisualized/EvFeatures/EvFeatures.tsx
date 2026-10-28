@@ -27,10 +27,12 @@ interface PlacedShot extends Shot {
 
 interface PlacedNote {
   text: string;
-  x: number;
   y: number;
   w: number;
 }
+
+// Space between a note and the screen before it, as on the tomorrow cards
+const NOTE_GAP = 30;
 
 // Each group stacks together on small screens (screens, then their note)
 const COLLAGE: { shots: PlacedShot[]; note?: PlacedNote }[] = [
@@ -73,7 +75,7 @@ const COLLAGE: { shots: PlacedShot[]; note?: PlacedNote }[] = [
         h: 50,
       },
     ],
-    note: { text: 'Personalized energy assistant and energy saving coach', x: 568, y: 0, w: 235 },
+    note: { text: 'Personalized energy assistant and energy saving coach', y: 0, w: 235 },
   },
   {
     shots: [
@@ -90,7 +92,6 @@ const COLLAGE: { shots: PlacedShot[]; note?: PlacedNote }[] = [
     ],
     note: {
       text: 'Increasing transparency about where user’s energy is actually coming from',
-      x: 698,
       y: 119,
       w: 205,
     },
@@ -134,7 +135,6 @@ const COLLAGE: { shots: PlacedShot[]; note?: PlacedNote }[] = [
     ],
     note: {
       text: 'Estimated runtime/cost based on weather patterns and your average system use',
-      x: 882,
       y: 367,
       w: 217,
     },
@@ -151,12 +151,19 @@ function placement(item: { x: number; y: number; w: number; h?: number }): CSSPr
   } as CSSProperties;
 }
 
+// A note starts NOTE_GAP after the right edge of the screen before it
+function notePlacement(note: PlacedNote, shot: PlacedShot): CSSProperties {
+  return {
+    ...placement({ x: shot.x, y: note.y, w: note.w }),
+    '--after': shot.w + NOTE_GAP,
+  } as CSSProperties;
+}
+
 interface MediumStep extends Shot {
   captions: string[];
-  // Figma display size and distance from the top of the row
+  // Figma display size
   w: number;
   h: number;
-  offset: number;
 }
 
 const MEDIUMS: MediumStep[] = [
@@ -167,7 +174,6 @@ const MEDIUMS: MediumStep[] = [
     height: 1326,
     w: 220,
     h: 371,
-    offset: 0,
     captions: ['Your runtime data/energy data laid out in a bar chart'],
   },
   {
@@ -177,7 +183,6 @@ const MEDIUMS: MediumStep[] = [
     height: 632,
     w: 257,
     h: 207,
-    offset: 121,
     captions: [
       'The bar chart is converted into musical notes on a scale.',
       'The height of the bar determines the note.',
@@ -190,7 +195,6 @@ const MEDIUMS: MediumStep[] = [
     height: 632,
     w: 250,
     h: 201,
-    offset: 121,
     captions: ['A little musical riff of what your energy “sounds like” is created.'],
   },
   {
@@ -200,7 +204,6 @@ const MEDIUMS: MediumStep[] = [
     height: 632,
     w: 250,
     h: 201,
-    offset: 128,
     captions: ['Users have the option to make this their doorbell chime.'],
   },
 ];
@@ -342,7 +345,10 @@ export function EvFeatures() {
                   ))}
                 </div>
                 {group.note && (
-                  <p className={classes.collageNote} style={placement(group.note)}>
+                  <p
+                    className={classes.collageNote}
+                    style={notePlacement(group.note, group.shots[group.shots.length - 1])}
+                  >
                     {group.note.text}
                   </p>
                 )}
@@ -355,21 +361,20 @@ export function EvFeatures() {
             <h3 className={classes.mediumsTitle}>Exploring data translating between mediums...</h3>
             <ol className={classes.mediumSteps}>
               {MEDIUMS.map((step) => (
-                <li
-                  key={step.src}
-                  className={classes.mediumStep}
-                  style={{ '--offset': step.offset } as CSSProperties}
-                >
+                <li key={step.src} className={classes.mediumStep}>
                   <figure className={classes.mediumFigure}>
-                    <Image
-                      className={classes.mediumImage}
-                      style={{ '--w': step.w, '--h': step.h } as CSSProperties}
-                      src={step.src}
-                      alt={step.alt}
-                      width={step.width}
-                      height={step.height}
-                      unoptimized
-                    />
+                    {/* Every image sits on the same baseline, so the captions all start level */}
+                    <div className={classes.mediumFrame}>
+                      <Image
+                        className={classes.mediumImage}
+                        style={{ '--w': step.w, '--h': step.h } as CSSProperties}
+                        src={step.src}
+                        alt={step.alt}
+                        width={step.width}
+                        height={step.height}
+                        unoptimized
+                      />
+                    </div>
                     <figcaption className={classes.mediumCaption}>
                       {step.captions.map((caption) => (
                         <p key={caption}>{caption}</p>
