@@ -259,12 +259,13 @@
 }
 
 /* Adoption vs accuracy matrix (Figma positions inside its 965 × 436 box) */
+/* Only scrolls sideways on small screens; on desktop the whole matrix shows */
 .matrixScroll {
   margin-top: rem(158px);
-  overflow-x: auto;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(64px);
+    overflow-x: auto;
   }
 }
 
