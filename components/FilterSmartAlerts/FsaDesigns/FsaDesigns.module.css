@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   flex: 0 1 rem(589px);
-  gap: rem(186px);
+  gap: rem(90px);
   box-sizing: border-box;
   padding: rem(56px) rem(59px) rem(56px) rem(60px);
   border-radius: rem(16px);
@@ -127,7 +127,8 @@
 
 .headerPhone {
   position: relative;
-  flex: 0 1 rem(300px);
+  /* Same size as the prototypes on Anomaly Detection (300px at 90%) */
+  flex: 0 1 calc(300px * 0.9);
   margin: 0 rem(132px) 0 0;
 
   @media (max-width: $mantine-breakpoint-lg) {
@@ -197,7 +198,7 @@
 .blocks {
   display: flex;
   flex-direction: column;
-  gap: rem(40px);
+  gap: rem(72px);
   margin-top: rem(80px);
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -381,7 +382,7 @@
 }
 
 .flowWide {
-  width: rem(862px);
+  width: fit-content;
 }
 
 .row {
@@ -476,12 +477,16 @@
 /* Two screens, each with a caption, on the same columns as the captions above */
 .split {
   display: grid;
-  grid-template-columns: rem(486px) 1fr;
-  gap: rem(24px) 0;
+  /* Two equal columns, each as wide as its caption */
+  grid-template-columns: repeat(2, rem(357px));
+  gap: rem(24px) rem(160px);
+  /* Captions (357) run wider than the screens (200): this offset centres the two screens in the panel */
+  padding-left: rem(157px);
 
   @media (max-width: $mantine-breakpoint-lg) {
     grid-template-columns: 1fr 1fr;
     column-gap: rem(24px);
+    padding-left: 0;
   }
 }
 
@@ -503,14 +508,6 @@
 
   @media (max-width: $mantine-breakpoint-md) {
     gap: rem(16px);
-  }
-}
-
-/* Figma keeps the right-hand caption on one line */
-@media (min-width: $mantine-breakpoint-lg) {
-  .split > :last-child .caption {
-    max-width: none;
-    white-space: nowrap;
   }
 }
 
