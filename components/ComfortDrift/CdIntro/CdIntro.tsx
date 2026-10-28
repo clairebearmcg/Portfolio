@@ -7,7 +7,7 @@ const SUMMARY = [
   {
     title: 'WHAT IS IT',
     text: 'A fault detection alert surfaced when a home’s temperature drifts opposite of what a set temperature called for.',
-    quote: '“Your home cooled 3° while the AC was on from 12:43pm-4:15pm on Monday, June 15th”.',
+    quote: '“Your home warmed 3° while the AC was on from 12:43pm-4:15pm on Monday, June 15th”.',
   },
   {
     title: 'WHY IT MATTERS',

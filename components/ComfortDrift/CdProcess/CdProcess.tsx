@@ -229,7 +229,7 @@ export function CdProcess() {
           <div className={classes.review}>
             <div className={classes.barTitle}>
               <h3 className={classes.label}>Classic design review roast sesh</h3>
-              <p className={classes.barText}>
+              <p className={`${classes.barText} ${classes.oneLine}`}>
                 Feedback and comments made by the UX team about the flow and visual style.
               </p>
             </div>
@@ -251,7 +251,7 @@ export function CdProcess() {
           <div className={classes.finals}>
             <div className={classes.barTitle}>
               <h3 className={classes.label}>The finals</h3>
-              <p className={classes.barText}>
+              <p className={`${classes.barText} ${classes.twoLines}`}>
                 An incredibly simple design with intentional use of color to show the gap between
                 how a home’s temperature was expected to change vs how it actually changed.
               </p>

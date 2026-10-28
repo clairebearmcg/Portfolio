@@ -34,9 +34,8 @@
 /* ---- Section header: title card + italic intro ---- */
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: rem(40px);
+  gap: rem(96px);
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
@@ -87,7 +86,7 @@
 
 .intro {
   display: flex;
-  flex: 0 1 rem(521px);
+  flex: 1 1 rem(521px);
   flex-direction: column;
   gap: rem(60px);
   min-width: 0;
@@ -224,6 +223,20 @@
   letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
+/* Desktop: the review description stays on one line, the finals one wraps to two */
+.oneLine {
+  @media (min-width: $mantine-breakpoint-md) {
+    max-width: none;
+    white-space: nowrap;
+  }
+}
+
+.twoLines {
+  @media (min-width: $mantine-breakpoint-md) {
+    max-width: calc(780px * var(--case-study-text));
+  }
+}
+
 /* ---- Design review boards ---- */
 .review {
   display: flex;
@@ -292,6 +305,7 @@
 
 .charts {
   display: flex;
+  justify-content: center;
   gap: rem(80px);
 
   @media (max-width: $mantine-breakpoint-md) {
