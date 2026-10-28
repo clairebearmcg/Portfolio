@@ -26,45 +26,25 @@
   padding-top: 0;
 }
 
-/* Back to top stays centred; Next project sits on the same line, a little to its right */
+/* Back to top and Next project, grouped and centred on one line */
 .links {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: baseline;
-  width: 100%;
+  gap: rem(24px) rem(64px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    row-gap: rem(32px);
-  }
-}
-
-.links > .backToTop {
-  grid-column: 2;
-
-  @media (max-width: $mantine-breakpoint-md) {
-    grid-column: 1;
+    column-gap: rem(40px);
   }
 }
 
 .next {
-  justify-self: start;
-  margin-left: rem(80px);
   color: var(--color-primary);
   letter-spacing: rem(2.1px);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-position: from-font;
   white-space: nowrap;
-
-  &:hover {
-    text-decoration: underline;
-    text-underline-position: from-font;
-  }
-
-  @media (max-width: $mantine-breakpoint-md) {
-    justify-self: center;
-    margin-left: 0;
-  }
 }
 
 .visuallyHidden {
