@@ -215,7 +215,7 @@
   position: relative;
   display: grid;
   grid-template-columns: rem(420px) minmax(0, rem(513px));
-  column-gap: rem(87px);
+  column-gap: rem(140px);
   margin-top: rem(90px);
   padding-left: rem(83px);
 
@@ -320,12 +320,11 @@
   background-size: rem(10.45px) 2px;
 }
 
-/* Grey card on the left, a 521px column on the right */
+/* Grey card on the left, text column 96px after it (same spacing as the other case studies) */
 .row {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: rem(40px);
+  gap: rem(96px);
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
@@ -387,7 +386,7 @@
 
 .why {
   display: flex;
-  flex: 0 1 rem(521px);
+  flex: 1 1 rem(521px);
   flex-direction: column;
   gap: rem(60px);
   min-width: 0;
@@ -430,8 +429,10 @@
 /* ---- Traditional vs Vivint (y2753) ---- */
 .comparison {
   display: grid;
-  grid-template-columns: minmax(0, rem(554px)) minmax(0, 1fr);
-  column-gap: rem(46px);
+  /* Desktop: the two comparisons sit as a pair centred on the page */
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: rem(120px);
   margin: rem(128px) 0 0;
   padding: 0;
   list-style: none;
@@ -536,7 +537,7 @@
   position: relative;
   width: rem(1098px);
   height: rem(730px);
-  margin: rem(126px) 0 0 rem(41px);
+  margin: rem(126px) auto 0;
 
   @media (max-width: $mantine-breakpoint-lg) {
     display: flex;
@@ -783,7 +784,7 @@
 
 .missions {
   display: flex;
-  flex: 0 1 rem(521px);
+  flex: 1 1 rem(521px);
   flex-direction: column;
   gap: rem(60px);
   min-width: 0;

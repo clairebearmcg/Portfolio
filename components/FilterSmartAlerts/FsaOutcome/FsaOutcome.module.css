@@ -137,7 +137,7 @@
 .future {
   display: flex;
   align-items: flex-start;
-  gap: rem(60px);
+  gap: rem(96px);
   margin-top: rem(80px);
 
   @media (max-width: $mantine-breakpoint-md) {

@@ -40,8 +40,7 @@
 .header {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
-  gap: rem(40px);
+  gap: rem(96px);
 
   @media (max-width: $mantine-breakpoint-md) {
     flex-direction: column;
@@ -98,7 +97,7 @@
 .issues {
   display: flex;
   flex-direction: column;
-  flex: 0 1 rem(521px);
+  flex: 1 1 rem(521px);
   gap: rem(60px);
 
   @media (max-width: $mantine-breakpoint-md) {
