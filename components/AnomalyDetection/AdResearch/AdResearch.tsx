@@ -106,7 +106,7 @@ export function AdResearch() {
               className={classes.graphs}
               src={`${IMG}/research-graphs.svg`}
               width={383}
-              height={603}
+              height={553}
               alt="Two runtime graphs: a blue line that rises sharply then drops (spike), and an orange line that climbs unevenly over time (gradual)"
               unoptimized
             />

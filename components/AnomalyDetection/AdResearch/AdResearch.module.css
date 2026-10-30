@@ -58,7 +58,7 @@
 
 .alertTypes {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: start;
   gap: rem(64px);
 
@@ -70,7 +70,6 @@
 
 .graphs {
   width: 100%;
-  max-width: rem(460px);
   height: auto;
 }
 
@@ -201,19 +200,23 @@
   }
 }
 
+/* As tall as the largest icon, so every card's text starts at the same height */
 .stepTop {
+  --icon-scale: 1.15;
+
   display: flex;
+  flex: none;
   align-items: center;
   justify-content: space-between;
-  min-height: rem(56px);
+  height: calc(68px * var(--icon-scale) * var(--mantine-scale));
   padding-right: rem(24px);
 }
 
-/* Each icon's Figma size comes in as --icon-w / --icon-h, scaled like rem() values */
+/* Each icon's Figma size comes in as --icon-w / --icon-h, scaled like rem() values and a touch larger */
 .stepIcon {
   display: block;
-  width: calc(var(--icon-w) * var(--mantine-scale));
-  height: calc(var(--icon-h) * var(--mantine-scale));
+  width: calc(var(--icon-w) * var(--icon-scale) * var(--mantine-scale));
+  height: calc(var(--icon-h) * var(--icon-scale) * var(--mantine-scale));
   object-fit: contain;
 }
 
@@ -253,6 +256,7 @@
   font-style: italic;
   line-height: calc(35px * var(--case-study-text));
   letter-spacing: calc(0.64px * var(--case-study-text));
+  text-align: center;
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(48px);
@@ -278,9 +282,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(54px);
+  gap: rem(64px);
   min-height: rem(823px);
-  padding: rem(41px) rem(36px) rem(45px);
+  padding: rem(72px) rem(28px) rem(45px);
   border-radius: rem(16px);
   background: var(--color-card);
   box-sizing: border-box;
@@ -311,7 +315,7 @@
   flex-direction: column;
   gap: rem(30px);
   width: 100%;
-  max-width: rem(312px);
+  max-width: rem(350px);
 }
 
 .cardHeading {
@@ -350,9 +354,11 @@
   letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
-/* Source line sits at the bottom of the card */
+/* Source line sits centred at the bottom of the card */
 .source {
+  align-self: center;
   margin: auto 0 0;
+  text-align: center;
   white-space: nowrap;
 
   @media (max-width: $mantine-breakpoint-md) {

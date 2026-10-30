@@ -213,18 +213,13 @@
 
 .comparison {
   margin-top: rem(60px);
-
-  /* Desktop: the before/after columns stretch out to the left edge of the page */
-  @media (min-width: $mantine-breakpoint-md) {
-    margin-left: calc(50% - 50vw);
-  }
 }
 
-/* Column widths from Figma: 357 / 357 / 401 with a 4px gap between the tinted columns */
+/* Column widths from Figma: two 357px tinted boxes lined up under the card, 4px apart */
 .headerRow,
 .row {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) rem(420px);
+  grid-template-columns: rem(357px) rem(357px) minmax(0, 1fr);
   column-gap: rem(4px);
 }
 
@@ -252,7 +247,7 @@
   text-transform: uppercase;
 
   &.before {
-    border-radius: 0 rem(16px) 0 0;
+    border-radius: rem(16px) rem(16px) 0 0;
     color: #f38571;
     text-align: center;
   }
@@ -343,8 +338,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  /* Same size as the 1st Designs screens */
-  width: calc(160.4px * 0.9);
+  /* 10% larger than the 1st Designs screens */
+  width: calc(160.4px * 0.9 * 1.1);
   max-width: 100%;
 
   @media (max-width: $mantine-breakpoint-md) {
@@ -354,8 +349,8 @@
 
 .screen {
   display: block;
-  /* Same size as the 1st Designs screens */
-  width: calc(160.4px * 0.9);
+  /* 10% larger than the 1st Designs screens */
+  width: calc(160.4px * 0.9 * 1.1);
   max-width: 100%;
   height: auto;
 
@@ -376,21 +371,24 @@
   }
 }
 
-/* Bracket arrows leading from the first after-screen to the follow-up sheets below it */
+/*
+ * Bracket arrows leading from the first after-screen to the follow-up sheets below it.
+ * In px because the screens are; only shown on desktop, where the layout is fixed.
+ */
 .connector {
   position: absolute;
-  top: rem(185px);
+  top: 156px;
   left: rem(-50px);
   width: rem(35px);
   border: rem(1px) solid #1e8984;
   border-right: 0;
 
   &[data-to='2'] {
-    height: rem(557px);
+    height: 460px;
   }
 
   &[data-to='3'] {
-    height: rem(905px);
+    height: 747px;
   }
 
   &::after {
