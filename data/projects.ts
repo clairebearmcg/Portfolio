@@ -58,6 +58,7 @@ export const projects: Project[] = [
       'From insights to iteration. Turning user behavior into thoughtful design improvements.',
     image: '/projects/ev-smart-charging.png',
     featured: false,
+    href: '/ev-smart-charging',
     rouletteBlurb: 'Constantly being humbled by user tests',
   },
   {

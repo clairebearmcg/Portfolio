@@ -1,0 +1,132 @@
+/* Sits on the page's dark band; Figma y954 (band top) to y1628 */
+.root {
+  padding-top: rem(100px);
+  color: #fff;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: rem(64px);
+  }
+}
+
+.container {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: 0 rem(16px);
+  box-sizing: content-box;
+}
+
+/* Title card (463px) and details card (701px), as in Figma */
+.cards {
+  display: flex;
+  align-items: stretch;
+  gap: rem(16px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-direction: column;
+  }
+}
+
+.card {
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: rem(16px);
+  background: rgb(244 244 244 / 5%);
+}
+
+.titleCard {
+  display: flex;
+  flex: 0 1 rem(463px);
+  flex-direction: column;
+  justify-content: space-between;
+  gap: rem(100px);
+  min-height: rem(574px);
+  padding: rem(56px) rem(59px) rem(56px) rem(60px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    flex-basis: auto;
+    gap: rem(40px);
+    min-height: 0;
+    padding: rem(40px) rem(24px);
+  }
+}
+
+.icon {
+  display: block;
+  width: rem(200px);
+  height: rem(200px);
+}
+
+.titleText {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8px);
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif), serif;
+  font-size: rem(72px);
+  font-weight: 400;
+  line-height: rem(100px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    font-size: rem(56px);
+    line-height: rem(72px);
+  }
+}
+
+.subtitle {
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+/* Label column and value column, each row 50px apart */
+.details {
+  display: flex;
+  flex: 1 1 rem(701px);
+  flex-direction: column;
+  gap: rem(50px);
+  min-width: 0;
+  padding: rem(50px) rem(60px) rem(68px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    gap: rem(32px);
+    padding: rem(40px) rem(24px);
+  }
+}
+
+.detail {
+  display: grid;
+  grid-template-columns: calc(110px * var(--case-study-text)) minmax(0, 1fr);
+  column-gap: rem(74px);
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: rem(12px);
+  }
+}
+
+.label {
+  font-size: calc(18px * var(--case-study-text));
+  font-weight: 600;
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(5.4px * var(--case-study-text));
+}
+
+.value {
+  margin: 0;
+  font-size: calc(16px * var(--case-study-text));
+  line-height: calc(25px * var(--case-study-text));
+  letter-spacing: calc(0.64px * var(--case-study-text));
+}
+
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

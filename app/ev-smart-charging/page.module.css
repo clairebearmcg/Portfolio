@@ -1,0 +1,5 @@
+/* Figma: #050e1d for the first two thirds, easing toward #4e5477 at the bottom */
+.band {
+  background: linear-gradient(180deg, #050e1d 63.8%, #4e5477 133.3%);
+  color: var(--mantine-color-white);
+}
