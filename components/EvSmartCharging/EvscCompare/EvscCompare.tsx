@@ -66,8 +66,8 @@ const ROWS: Row[] = [
         834
       ),
       notes: [
-        'Eliminated visuals cues of tappability, or choice.',
-        'Specified the hours discounted charing occurs.',
+        'Eliminated visual cues of tappability, or choice.',
+        'Specified the hours discounted charging occurs.',
       ],
     },
   },

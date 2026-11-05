@@ -9,7 +9,7 @@ const DETAILS = [
 
 const GOALS = [
   'Are users able to enroll in scheduled charging',
-  'Are users abl to understand the concept of the Reliant X Vivint Schedule & Save product',
+  'Are users able to understand the concept of the Reliant X Vivint Schedule & Save product',
   'Are users able to easily override schedule or change now',
   'Identify what is working well and what is not working well in the current Schedule & Save experience',
 ];

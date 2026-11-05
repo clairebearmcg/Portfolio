@@ -14,7 +14,7 @@ const SUMMARY = [
   },
   {
     title: 'SNAPSHOT I’M SHOWING',
-    text: 'Learnings and implementations of user testing findings.',
+    text: 'Learnings and implementations of key user test findings.',
   },
 ];
 
