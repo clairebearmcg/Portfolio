@@ -17,7 +17,7 @@ const instrumentSerif = Instrument_Serif({
   subsets: ['latin'],
   variable: '--font-serif',
 });
-// Loaded as the variable font (covers 100–700): Google serves every Plex weight from one file, and
+// Plex and Public Sans load as variable fonts: Google serves every weight from one file, and
 // listing weights separately makes Turbopack fail on the duplicate font URLs
 const plexSans = IBM_Plex_Sans({
   weight: 'variable',
@@ -26,7 +26,7 @@ const plexSans = IBM_Plex_Sans({
   variable: '--font-plex',
 });
 const publicSans = Public_Sans({
-  weight: ['400', '500', '700'],
+  weight: 'variable',
   style: ['normal', 'italic'],
   subsets: ['latin'],
   variable: '--font-public',
