@@ -311,7 +311,7 @@
 }
 
 .why {
-  margin-top: rem(68px);
+  margin-top: rem(104px);
 
   @media (max-width: $mantine-breakpoint-md) {
     margin-top: rem(56px);

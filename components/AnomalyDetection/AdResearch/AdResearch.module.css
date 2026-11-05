@@ -58,7 +58,8 @@
 
 .alertTypes {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  /* The graphs' width is set so their dotted grid is about as tall as the text beside it */
+  grid-template-columns: rem(444px) minmax(0, 1fr);
   align-items: start;
   gap: rem(64px);
 

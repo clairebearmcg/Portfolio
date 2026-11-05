@@ -32,7 +32,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: rem(24px) rem(96px);
+  gap: rem(24px) rem(140px);
 
   @media (max-width: $mantine-breakpoint-md) {
     column-gap: rem(40px);
