@@ -471,7 +471,8 @@
 }
 
 .guide > .guideShot {
-  flex: 0 1 rem(175px);
+  /* Same width as the other app screens */
+  flex: 0 1 rem(200px);
 }
 
 /* Two screens, each with a caption, on the same columns as the captions above */
