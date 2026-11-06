@@ -19,10 +19,10 @@
 .tag {
   display: inline-flex;
   align-items: center;
-  margin: rem(155px) 0 0;
+  margin: rem(56px) 0 0;
 
   @media (max-width: $mantine-breakpoint-md) {
-    margin-top: rem(72px);
+    margin-top: rem(32px);
   }
 }
 
@@ -105,9 +105,11 @@
   }
 }
 
-/* Audio card: disabled until a recording exists, but styled exactly as designed */
+/* Audio card: disabled until a recording exists, but styled exactly as designed.
+   It pulls up into the shell's nav space so its middle lines up with the site nav's */
 .listen {
   display: flex;
+  margin-top: rem(-79px);
   justify-content: space-between;
   align-items: center;
   gap: rem(24px);
@@ -124,6 +126,7 @@
   cursor: default;
 
   @media (max-width: $mantine-breakpoint-md) {
+    margin-top: rem(24px);
     padding: rem(22px) rem(24px);
   }
 }

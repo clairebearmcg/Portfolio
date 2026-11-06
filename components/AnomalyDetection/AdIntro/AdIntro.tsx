@@ -46,6 +46,30 @@ export function AdIntro() {
   return (
     <div className={classes.intro}>
       <div className={classes.container}>
+        {/* Top left, level with the site nav. No recording yet: shown as designed but can't be played */}
+        <button
+          type="button"
+          className={classes.listen}
+          disabled
+          aria-label="Listen to a 2 minute audio version (coming soon)"
+        >
+          <span className={classes.listenText}>
+            <span className={classes.listenKicker}>ANTI-READING?</span>
+            <span className={classes.listenHint}>Same!!! Listen to me instead!</span>
+          </span>
+          <span className={classes.listenPlay}>
+            <Image
+              className={classes.playIcon}
+              src={`${IMG}/intro-play.svg`}
+              alt=""
+              width={23}
+              height={20}
+              unoptimized
+            />
+            2 min
+          </span>
+        </button>
+
         <p className={classes.tag}>
           <Image
             className={classes.tagIcon}
@@ -72,30 +96,6 @@ export function AdIntro() {
                 features across the experience.
               </p>
             </div>
-
-            {/* No recording yet: the card is shown as designed but can't be played */}
-            <button
-              type="button"
-              className={classes.listen}
-              disabled
-              aria-label="Listen to a 2 minute audio version (coming soon)"
-            >
-              <span className={classes.listenText}>
-                <span className={classes.listenKicker}>ANTI-READING?</span>
-                <span className={classes.listenHint}>Same!!! Listen to me instead!</span>
-              </span>
-              <span className={classes.listenPlay}>
-                <Image
-                  className={classes.playIcon}
-                  src={`${IMG}/intro-play.svg`}
-                  alt=""
-                  width={23}
-                  height={20}
-                  unoptimized
-                />
-                2 min
-              </span>
-            </button>
           </div>
 
           <dl className={classes.stats}>
