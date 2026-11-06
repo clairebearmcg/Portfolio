@@ -1,0 +1,35 @@
+/* Figma: the grid starts 171px into the grey band and ends 241px above the footer */
+.section {
+  max-width: var(--case-study-width);
+  margin: 0 auto;
+  padding: rem(171px) rem(16px) rem(120px);
+  box-sizing: content-box;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    padding-top: rem(64px);
+    padding-bottom: rem(64px);
+  }
+}
+
+/* Four 277.6px squares with 23.35px gaps across the 1180px column */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: calc(var(--case-study-width) * 23.35 / 1180);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (max-width: $mantine-breakpoint-md) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: rem(12px);
+  }
+}
+
+.screen {
+  display: block;
+  width: 100%;
+  height: auto;
+  /* The exports have square corners; Figma rounds the 277.6px screens by 40px */
+  border-radius: 14.5%;
+}

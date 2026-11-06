@@ -68,6 +68,7 @@ export const projects: Project[] = [
       'Creating a pattern for notifications spanning from critical alerts to simple recommendations for an uncommon interface.',
     image: '/projects/thermostat-alerts.png',
     featured: false,
+    href: '/thermostat-alerts',
     rouletteBlurb: 'Squares are so much easier to design on',
   },
   {
