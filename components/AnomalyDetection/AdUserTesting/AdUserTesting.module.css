@@ -234,10 +234,11 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: rem(8px);
-  margin-top: rem(50px);
+  margin-top: rem(100px);
 
   @media (max-width: $mantine-breakpoint-md) {
     grid-template-columns: minmax(0, 1fr);
+    margin-top: rem(56px);
   }
 }
 
