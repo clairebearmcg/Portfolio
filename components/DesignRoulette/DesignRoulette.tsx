@@ -11,7 +11,7 @@ export const SLICES = [
   'comfort-drift',
   'home',
   'ev-smart-charging',
-  'solar-lead-gen',
+  'vivint-onboarding',
   'filter-smart-alerts',
   'thermostat-alerts',
   'anomaly-detection',

@@ -71,12 +71,12 @@ export const projects: Project[] = [
     rouletteBlurb: 'Squares are so much easier to design on',
   },
   {
-    slug: 'solar-lead-gen',
-    title: 'Solar Lead Gen',
-    description: 'Going beyond what was asked for the benefit of the user. Fixing up an old flow.',
-    image: '/projects/solar-lead-gen.png',
+    slug: 'vivint-onboarding',
+    title: 'Vivint Onboarding',
+    description: 'Challenging an existing design on its efficacy at solving the user problem.',
+    image: '/projects/vivint-onboarding.png',
     featured: false,
-    rouletteBlurb: 'Dusting up some old pixels',
+    rouletteBlurb: 'My hot take on a cool project',
   },
 ];
 
