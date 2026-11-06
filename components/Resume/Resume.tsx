@@ -6,45 +6,27 @@ const PHONE = '(949) 353-4383';
 // TODO: add public/claire-mcgregor-resume.pdf
 const PDF_HREF = '/claire-mcgregor-resume.pdf';
 
+// Content follows the PDF resume (Figma 24565:5234)
 const EXPERIENCE = [
   {
-    role: 'UX DESIGNER I',
+    role: 'UX DESIGNER',
     org: 'Vivint',
     dates: 'Aug 25 - present',
     description: [
-      'Leading 0→1 design and strategy of user experiences for HVAC systems, enabling users to manage routine maintenance (e.g., filter replacement), identify potential issues, and reduce system failures.',
-      'Leading design and strategy of the energy experience to provide insights about energy usage, costs, and sustainability to users. Translating energy from complex data to understandable and engaging experiences.',
+      'Led UX design and strategy for HVAC Services, helping shape a new service experience for homeowners.',
+      'Designed and launched runtime-based HVAC filter replacement alerts and early issue diagnosis alerts that provide more accurate, system-specific recommendations.',
+      'Contributed to energy management experiences that help homeowners better understand and manage their energy usage.',
+      'Partnered with product managers and engineers to translate product requirements into cohesive, user-centered experiences from concept through launch.',
     ],
-  },
-  {
-    role: 'SANDBOX',
-    org: 'Arcade Freelance',
-    dates: 'Sep 24 - Apr 24',
-    description: [
-      'Built and launched a product in a two-semester BYU program. Designed a platform that connects game studios with freelancers in collaboration with a product manager and developer.',
-    ],
+    // TODO: still a placeholder in the PDF, shown in red until the real achievement is added
+    placeholder: '[Specific quantified achievement or business impact.]',
   },
   {
     role: 'UX DESIGNER',
-    org: 'McKay School of Education',
-    dates: 'May 24 - Dec 24',
+    org: 'Arcade Freelance',
+    dates: 'Sep 24 - Apr 25',
     description: [
-      'UX designer and researcher for BYU’s McKay School of Education website. Conducted competitive analysis reports, user research studies and interviews, and iterative redesigns of web pages.',
-    ],
-  },
-  {
-    role: 'FREELANCE',
-    org: 'Oso Pediatrics',
-    dates: 'Summer 24',
-    description: [
-      'Developed 0→1 branding for Oso Pediatrics clinic in collaboration with CHOC hospital. Work included logo, poster, and banner designs to promote the new clinic.',
-    ],
-  },
-  {
-    role: 'FAA PROJECT',
-    dates: 'Feb 23 - Jun 23',
-    description: [
-      'Finalist in a team-based competition designing an interactive user interface for the Federal Aviation Administration’s new automation system. The designed system will increase efficiency for traffic flow management and instruction in the airspace field.',
+      'Built and launched a product during a two-semester BYU program. Designed a platform that connects game studios with freelancers in collaboration with a product manager and developer.',
     ],
   },
 ];
@@ -54,64 +36,50 @@ const EDUCATION = [
     school: 'BRIGHAM YOUNG UNIVERSITY',
     details: ['BA in UX Design', 'Minor in Music', 'Aug 21 - Apr 25'],
   },
+];
+
+const PATENTS = [
   {
-    school: 'TESORO HIGH SCHOOL',
-    details: ['Jun 21', 'GPA 4.1'],
+    title: 'Intelligent HVAC Filter Replacement Alerts',
+    // TODO: still a placeholder in the PDF, shown in red until the real number is added
+    number: '[number]',
+    granted: 'Granted May 2026',
+    summary:
+      'Runtime-based filter replacement system improving filter-life accuracy and homeowner maintenance recommendations.',
   },
 ];
 
 // Two rows, as laid out in the design
 const SKILLS = [
   [
-    'Figma',
-    'Figma Prototyping',
-    'Framer',
-    'Design Thinking',
-    'Typography',
-    'Data Visualization',
+    'UX/UI Design',
+    'Interaction Design',
     'User Research',
+    'Prototyping',
+    'Design Systems',
+    'Data Visualization',
   ],
   [
+    'Figma',
+    'Claude Code',
+    'Framer',
     'Adobe Illustrator',
-    'Adobe Photoshop',
-    'Adobe After Effects',
-    'Adobe Lightroom',
-    'Motion Design',
-    'Music',
-    'Adaptive',
+    'Photoshop',
+    'After Effects',
+    'Lightroom',
   ],
-];
-
-const PATENTS = [
-  {
-    title: 'Co-inventor for “Intelligent HVAC Filter Replacement Alerts” U.S. Patent No.',
-    // TODO: still a placeholder in the design, shown in red until the real number is added
-    number: 'CHANGE THIS',
-    granted: '(Granted May 2026)',
-    summary:
-      'Filter reminder system based on runtime rather than time-based intervals. This feature improves filter life and maintenance accuracy.',
-  },
 ];
 
 // Two columns of accolades
 const ACCOLADES = [
-  [
-    'Vivint Internship Capstone Award',
-    'BYU Top Designer, Graduating Senior Award',
-    'BYU & U of U Product Hackathon Judge',
-    'Featured in the 2024 Interaction Design Award shortlist',
-  ],
-  [
-    'Finalist in the FAA-AID UX Challenge',
-    'National Honor Society for Tesoro High School',
-    'State of California Piano Certificate of Merit: Level V',
-  ],
+  ['Vivint Internship Capstone Award', 'BYU Top UX Designer, Graduating Senior Award'],
+  ['2024 Interaction Design Award shortlist feature', 'Finalist in the FAA-AID UX Challenge'],
 ];
 
 // Two columns of activities, with an optional duration after each
-const EXTRACURRICULARS: { name: string; duration?: string }[][] = [
+const BEYOND_DESIGN: { name: string; duration?: string }[][] = [
   [
-    { name: 'Harp Lessons and Performance', duration: '6 years' },
+    { name: 'Harp Lessons and Performance', duration: '7 years' },
     { name: 'Piano Lessons and Performance', duration: '13 years' },
   ],
   [
@@ -145,10 +113,10 @@ export function Resume() {
           <h2 className={classes.label}>Experience</h2>
           <ul className={classes.entries}>
             {EXPERIENCE.map((job) => (
-              <li key={job.role} className={classes.entry}>
+              <li key={job.org} className={classes.entry}>
                 <div className={classes.meta}>
                   <h3 className={classes.title}>{job.role}</h3>
-                  {job.org && <p className={classes.metaLine}>{job.org}</p>}
+                  <p className={classes.metaLine}>{job.org}</p>
                   <p className={classes.metaLine}>{job.dates}</p>
                 </div>
                 <div className={classes.description}>
@@ -157,6 +125,11 @@ export function Resume() {
                       {paragraph}
                     </p>
                   ))}
+                  {job.placeholder && (
+                    <p className={classes.text}>
+                      <mark className={classes.placeholder}>{job.placeholder}</mark>
+                    </p>
+                  )}
                 </div>
               </li>
             ))}
@@ -180,6 +153,22 @@ export function Resume() {
         </section>
 
         <section className={classes.section}>
+          <h2 className={classes.label}>Patents</h2>
+          <div className={classes.content}>
+            {PATENTS.map((patent) => (
+              <div key={patent.title}>
+                <p className={classes.text}>{patent.title}</p>
+                <p className={classes.text}>
+                  Co-inventor · U.S. Patent{' '}
+                  <mark className={classes.placeholder}>{patent.number}</mark> · {patent.granted}
+                </p>
+                <p className={classes.text}>{patent.summary}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className={classes.section}>
           <h2 className={classes.label}>Skills</h2>
           <div className={classes.content}>
             {SKILLS.map((row) => (
@@ -188,21 +177,6 @@ export function Resume() {
                   <li key={skill}>{skill}</li>
                 ))}
               </ul>
-            ))}
-          </div>
-        </section>
-
-        <section className={classes.section}>
-          <h2 className={classes.label}>Patents</h2>
-          <div className={classes.content}>
-            {PATENTS.map((patent) => (
-              <div key={patent.title}>
-                <p className={classes.text}>
-                  {patent.title} <mark className={classes.placeholder}>{patent.number}</mark>{' '}
-                  {patent.granted}
-                </p>
-                <p className={classes.text}>{patent.summary}</p>
-              </div>
             ))}
           </div>
         </section>
@@ -221,9 +195,9 @@ export function Resume() {
         </section>
 
         <section className={classes.section}>
-          <h2 className={classes.label}>Extracurriculars</h2>
+          <h2 className={classes.label}>Beyond design</h2>
           <div className={classes.columns}>
-            {EXTRACURRICULARS.map((column) => (
+            {BEYOND_DESIGN.map((column) => (
               <ul key={column[0].name} className={classes.list}>
                 {column.map((item) => (
                   <li key={item.name}>
