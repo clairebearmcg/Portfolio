@@ -27,7 +27,7 @@ describe('DesignRoulette', () => {
   });
 
   it('shows the landed project with Spin again and View project', () => {
-    // 0 picks the first non-home slice: Comfort Drift
+    // 0 picks the first slice: Comfort Drift
     jest.spyOn(Math, 'random').mockReturnValue(0);
     render(<DesignRoulette />);
     spinAndLand(screen.getByTestId('roulette-wheel'));
@@ -43,7 +43,7 @@ describe('DesignRoulette', () => {
     );
   });
 
-  it('never lands on the house', () => {
+  it('never lands on the solar panel', () => {
     render(<DesignRoulette />);
     const wheel = screen.getByTestId('roulette-wheel');
     const landed = new Set<string>();
@@ -61,7 +61,8 @@ describe('DesignRoulette', () => {
       );
     }
 
-    expect(landed.has('home')).toBe(false);
+    expect(landed.has('solar')).toBe(false);
+    expect(landed.has('vivint-onboarding')).toBe(true);
     expect(landed.size).toBe(SLICES.length - 1);
   });
 });

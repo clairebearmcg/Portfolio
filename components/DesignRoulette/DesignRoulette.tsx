@@ -9,9 +9,9 @@ import classes from './DesignRoulette.module.css';
 // Clockwise from the top of the wheel; each slice is 45°
 export const SLICES = [
   'comfort-drift',
-  'home',
-  'ev-smart-charging',
   'vivint-onboarding',
+  'ev-smart-charging',
+  'solar',
   'filter-smart-alerts',
   'thermostat-alerts',
   'anomaly-detection',
@@ -21,9 +21,9 @@ export const SLICE_ANGLE = 360 / SLICES.length;
 const FULL_TURNS = 5;
 const SPIN_MS = 4000;
 
-// The design asks that the wheel never lands on "home"
+// The solar slice is decoration only: the wheel never lands on it
 function pickSlice() {
-  const choices = SLICES.map((_, i) => i).filter((i) => SLICES[i] !== 'home');
+  const choices = SLICES.map((_, i) => i).filter((i) => SLICES[i] !== 'solar');
   return choices[Math.floor(Math.random() * choices.length)];
 }
 
