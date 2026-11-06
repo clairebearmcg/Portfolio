@@ -37,7 +37,7 @@ const EXPERIENCE = [
     org: 'Oso Pediatrics',
     dates: 'Summer 24',
     description: [
-      'Developed 0 →1 branding for Oso Pediatrics clinic in collaboration with CHOC hospital. Work included logo, poster, and banner designs to promote the new clinic.',
+      'Developed 0→1 branding for Oso Pediatrics clinic in collaboration with CHOC hospital. Work included logo, poster, and banner designs to promote the new clinic.',
     ],
   },
   {

@@ -68,7 +68,7 @@ const ROWS: Row[] = [
       <>
         <p>Instead of runtime, experiment with other types of data to show and ways to show it:</p>
         <ul>
-          <li>system showing a decrease in efficiency</li>
+          <li>System showing a decrease in efficiency</li>
           <li>System slower at reaching temp</li>
           <li>Emojis, color, line vs bar, etc.</li>
         </ul>
@@ -142,7 +142,7 @@ const ROWS: Row[] = [
   },
   {
     constraint:
-      'My PM says we don’t have the capabilities to book in-app, estimate repair time and price, or even determine what part of the system is effected quite yet.',
+      'My PM says we don’t have the capabilities to book in-app, estimate repair time and price, or even determine what part of the system is affected quite yet.',
     solution: 'Cut down on the vision while still making this alert as helpful as you can.',
     before: 'Estimated price = $187\nEstimated time = 3hrs',
     after:

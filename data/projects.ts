@@ -25,7 +25,7 @@ export const projects: Project[] = [
     slug: 'filter-smart-alerts',
     title: 'Filter Smart Alerts',
     description:
-      'Bringing eduction and ease into alerts triggered by actual system usage, not just time passed.',
+      'Bringing education and ease into alerts triggered by actual system usage, not just time passed.',
     image: '/projects/filter-smart-alerts.png',
     featured: true,
     href: '/filter-smart-alerts',

@@ -91,7 +91,7 @@ const ROWS: Row[] = [
       ),
       notes: [
         'Changed confusing language like “setting up a charging schedule” to “opt in”.',
-        'Make a promo page that looked more like an invitation state and less like an ad',
+        'Made a promo page that looked more like an invitation state and less like an ad',
       ],
     },
   },
@@ -132,7 +132,7 @@ const ROWS: Row[] = [
         427,
         true
       ),
-      notes: ['Adding language to clear up confusion'],
+      notes: ['Added language to clear up confusion'],
     },
   },
   {
@@ -161,7 +161,7 @@ const ROWS: Row[] = [
         'before-card-charging',
         'Tesla Model Y card: charging, 80%, 120 miles, 4h 35m to charge'
       ),
-      notes: ['No transparency about when charging was on-peak vs off peak'],
+      notes: ['No transparency about when charging was on-peak vs off-peak'],
     },
     after: {
       shot: card(

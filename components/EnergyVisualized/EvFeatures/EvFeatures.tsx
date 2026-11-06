@@ -91,7 +91,7 @@ const COLLAGE: { shots: PlacedShot[]; note?: PlacedNote }[] = [
       },
     ],
     note: {
-      text: 'Increasing transparency about where user’s energy is actually coming from',
+      text: 'Increasing transparency about where users’ energy is actually coming from',
       y: 119,
       w: 205,
     },
@@ -458,7 +458,7 @@ export function EvFeatures() {
               />
               <figcaption className={classes.evCaption}>
                 <strong>Before</strong>
-                <em>A teammates design</em>
+                <em>A teammate’s design</em>
               </figcaption>
             </figure>
 

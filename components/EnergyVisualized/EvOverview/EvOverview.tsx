@@ -14,7 +14,7 @@ const GOALS = [
     narrow: false,
   },
   {
-    title: 'Longterm goal',
+    title: 'Long-term goal',
     text: 'Bringing energy education, awareness, and insights to everybody (50 state plan).',
     src: `${IMG}/overview-rocket.png`,
     width: 58,

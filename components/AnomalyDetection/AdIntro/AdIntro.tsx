@@ -164,7 +164,7 @@ export function AdIntro() {
                   Research
                 </h2>
                 <p className={classes.researchLede}>
-                  Breaking it down to understand the problem at it’s core.
+                  Breaking it down to understand the problem at its core.
                 </p>
               </div>
             </div>

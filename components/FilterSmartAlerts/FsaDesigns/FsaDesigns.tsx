@@ -252,7 +252,7 @@ export function FsaDesigns() {
                   <Shot image={FILTER_HISTORY} arrow={{ y: 153, side: 'right' }} />
                 </div>
                 <p className={`${classes.caption} ${classes.captionMotivate1}`}>
-                  Show how much a customer estimated to have saved by changing their filter.
+                  Show how much a customer is estimated to have saved by changing their filter.
                 </p>
               </div>
               <div className={classes.group}>

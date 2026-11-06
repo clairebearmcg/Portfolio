@@ -190,8 +190,9 @@ export function FsaIntro() {
               <h2 className={classes.kicker}>PROPOSAL</h2>
               <p className={classes.body}>
                 A runtime-based reminder experience that guides and tracks a customer’s filter
-                changes. This experience makes HVAC care feel approachable and actionable empowering
-                customers to take small steps that lead to better long-term system performance.
+                changes. This experience makes HVAC care feel approachable and actionable,
+                empowering customers to take small steps that lead to better long-term system
+                performance.
               </p>
             </div>
           </div>

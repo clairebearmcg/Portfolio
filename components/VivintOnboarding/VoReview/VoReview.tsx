@@ -10,7 +10,7 @@ const GAPS = [
   [
     {
       title: 'Doesn’t orient the user',
-      text: 'There’s not introduction into the app, users are just thrown in there. Additionally, once a user finishes a task, there’s no indication of where it relates to their homepage or where they can find it again. We could use tooltips but I think there’s a better approach.',
+      text: 'There’s no introduction into the app, users are just thrown in there. Additionally, once a user finishes a task, there’s no indication of where it relates to their homepage or where they can find it again. We could use tooltips but I think there’s a better approach.',
     },
     {
       title: 'Makes the user work',
@@ -28,11 +28,11 @@ const GAPS = [
     },
     {
       title: 'Lacks an element of fun',
-      text: 'We have some really cool feature in the Vivint app (like the personalized HomeView feature)! Why not focus on including some of those in set up and showing the unique capabilities of Vivint to users?',
+      text: 'We have some really cool features in the Vivint app (like the personalized HomeView feature)! Why not focus on including some of those in set up and showing the unique capabilities of Vivint to users?',
     },
     {
       title: 'Tapping into delight',
-      text: 'I think that showing the “Claim reward” at the end of the checklist is less effective as an incentive for users to copmlete it. I think users suspect it’s something lame from the start. Instead, let’s suprise them with a free trial of a feature or some $ credit to their account after they’ve completed the set up. I think they will look at it as something that they were “graciously given” instead of “worked to earn”.',
+      text: 'I think that showing the “Claim reward” at the end of the checklist is less effective as an incentive for users to complete it. I think users suspect it’s something lame from the start. Instead, let’s surprise them with a free trial of a feature or some $ credit to their account after they’ve completed the set up. I think they will look at it as something that they were “graciously given” instead of “worked to earn”.',
     },
   ],
 ];
@@ -138,8 +138,8 @@ export function VoReview() {
                     accomplishment.
                   </li>
                   <li>
-                    3) Makes learning about the app/set up easy and personalized so customers are
-                    set up for success right from the start.
+                    3) Make learning about the app/set up easy and personalized so customers are set
+                    up for success right from the start.
                   </li>
                 </ol>
               </div>
@@ -150,7 +150,7 @@ export function VoReview() {
         <div className={classes.callouts}>
           <Callout label="In all honesty">
             <p className={classes.body}>
-              What I think this project needs is to start from the beginning. There’s has been no
+              What I think this project needs is to start from the beginning. There has been no
               research done about the general experiences customers have had with their install. We
               don’t even know the key problems to solve with the experience yet and that’s why it’s
               currently not as effective.
@@ -167,7 +167,7 @@ export function VoReview() {
             <p className={classes.body}>
               The MVP was designed by a Lead Designer. It took some courage to challenge a
               “superior” designer to me and I was unsure of how my feedback and proposals would be
-              taken. This project taught me a good lesson in trusting your skills and instincts and
+              taken. This project taught me a good lesson in trusting your skills and instincts as a
               designer, no matter your level.
             </p>
           </Callout>

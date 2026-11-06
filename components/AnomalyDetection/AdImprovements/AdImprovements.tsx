@@ -7,7 +7,7 @@ const IMG = '/case-studies/anomaly-detection';
 const LEARNINGS = [
   {
     title: 'Vague copy & visuals don’t drive action',
-    body: '24/31 participants preferred Comfort Drift for it’s plain language, specification of the problem, and visual data.',
+    body: '24/31 participants preferred Comfort Drift for its plain language, specification of the problem, and visual data.',
   },
   {
     title: 'Self-help steps build trust',
@@ -165,7 +165,7 @@ const ROWS: Row[] = [
       <>
         <Note title="Clarified and added supporting data verbally and visually.">
           <p className={`${classes.noteBody} ${classes.narrow}`}>
-            Users like evidence (24/31 Comfort Drift for it’s visual graph)
+            Users like evidence (24/31 Comfort Drift for its visual graph)
           </p>
         </Note>
         <Note title="Better use of progressive disclosure">
@@ -189,7 +189,7 @@ const ROWS: Row[] = [
               <li>
                 Have a lot of questions that need answering:
                 <ul className={classes.flowQuestions}>
-                  <li>why did this happen?</li>
+                  <li>Why did this happen?</li>
                   <li>How much time do I have to fix this? (severity)</li>
                   <li>How legitimate is this alert?</li>
                   <li>Can I still run my system?</li>
@@ -230,7 +230,7 @@ const ROWS: Row[] = [
       <Note title="Copy change to increase engagement">
         <ul className={classes.noteList}>
           <li>“Trusted HVAC pro” sounds too marketing-heavy.</li>
-          <li>“HVAC pro” doesn’t communicate clearly as technician</li>
+          <li>“HVAC pro” doesn’t communicate as clearly as technician</li>
           <li>
             “Local technician” makes me think Vivint is helping me search for help instead of taking
             advantage of me.
@@ -276,7 +276,7 @@ const ROWS: Row[] = [
           </svg>
           <p className={classes.calloutText}>
             We could not make a lot of design decisions or include much information with this form
-            because it strictly owned and operated by our parent company, NRG, providing the
+            because it’s strictly owned and operated by our parent company, NRG, providing the
             services.
           </p>
         </aside>
@@ -308,7 +308,7 @@ const ROWS: Row[] = [
           ways to schedule service.
         </p>
         <p className={classes.noteBody}>
-          From users testing, it was clear that users favor native booking. I feel like the current
+          From user testing, it was clear that users favor native booking. I feel like the current
           format and flow of the form causes hesitation that will inevitably result in user distrust
           and missed revenue opportunities. I continue to challenge the constraints of the form and
           advocate for a better user experience.
@@ -361,7 +361,7 @@ export function AdImprovements() {
           <div className={classes.bandHeader}>
             <h2 className={classes.bandTitle}>Key learnings</h2>
             <p className={classes.bandSubtitle}>
-              User behaviors an reactions that sparked change in the designs.
+              User behaviors and reactions that sparked change in the designs.
             </p>
           </div>
           <ol className={classes.learnings}>

@@ -484,7 +484,7 @@ const CIRCLES = [
     pct: 14,
     label: 'Electric vehicles',
     price: '$16.51',
-    change: '$2 up down last bill',
+    change: '$2 down from last bill',
     color: '#d0ffdd',
     size: 81.86,
   },

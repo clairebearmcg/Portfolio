@@ -10,7 +10,7 @@ const SUMMARY = [
   },
   {
     title: 'WHY IT MATTERS',
-    text: 'Customers miss out on knowing how to maximize their system’s capabilities, retention rates drop, and Vivint looses referrals.',
+    text: 'Customers miss out on knowing how to maximize their system’s capabilities, retention rates drop, and Vivint loses referrals.',
   },
   {
     title: 'SNAPSHOT I’M SHOWING',

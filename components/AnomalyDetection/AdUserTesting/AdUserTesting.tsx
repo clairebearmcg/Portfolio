@@ -48,7 +48,7 @@ interface Bar {
 const CHARTS: { id: string; question: string; bars: Bar[] }[] = [
   {
     id: 'familiarity',
-    question: "How familiar are people with their HVAC system's health?",
+    question: 'How familiar are people with their HVAC system’s health?',
     bars: [
       { value: 50, label: 'Had a prior HVAC issue', color: '#d5e6ff' },
       { value: 51, label: 'No prior HVAC issue', color: '#ff6b6b' },
@@ -57,7 +57,7 @@ const CHARTS: { id: string; question: string; bars: Bar[] }[] = [
   },
   {
     id: 'familiarity-repeat',
-    question: "How familiar are people with their HVAC system's health?",
+    question: 'How familiar are people with their HVAC system’s health?',
     bars: [
       { value: 50, label: 'Had a prior HVAC issue', color: '#d5e6ff' },
       { value: 51, label: 'No prior HVAC issue', color: '#ff6b6b' },
