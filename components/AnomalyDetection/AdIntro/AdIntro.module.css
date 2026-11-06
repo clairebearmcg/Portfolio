@@ -211,7 +211,7 @@
 .hero {
   position: relative;
   display: grid;
-  grid-template-columns: rem(451px) minmax(0, rem(513px));
+  grid-template-columns: rem(451px) minmax(0, 1fr);
   column-gap: rem(140px);
   margin-top: rem(95px);
   padding-left: rem(83px);
@@ -265,11 +265,9 @@
 }
 
 .outcome {
-  max-width: rem(471px);
   margin: rem(123px) 0 0 rem(13px);
 
   @media (max-width: $mantine-breakpoint-md) {
-    max-width: none;
     margin: rem(48px) 0 0;
   }
 }
