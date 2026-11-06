@@ -62,7 +62,7 @@
 
 .lead {
   display: flex;
-  flex: 0 1 rem(829px);
+  flex: 0 1 rem(1040px);
   flex-direction: column;
   justify-content: space-between;
   gap: rem(88px);
