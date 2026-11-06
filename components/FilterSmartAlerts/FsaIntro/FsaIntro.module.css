@@ -19,10 +19,10 @@
 .tag {
   display: inline-flex;
   align-items: center;
-  margin: rem(56px) 0 0;
+  margin: rem(155px) 0 0;
 
   @media (max-width: $mantine-breakpoint-md) {
-    margin-top: rem(32px);
+    margin-top: rem(72px);
   }
 }
 
@@ -105,18 +105,16 @@
   }
 }
 
-/* Audio card: disabled until a recording exists, but styled exactly as designed.
-   It pulls up into the shell's nav space so its middle lines up with the site nav's */
+/* Audio card: disabled until a recording exists, but styled exactly as designed */
 .listen {
   display: flex;
-  margin-top: rem(-79px);
   justify-content: space-between;
   align-items: center;
   gap: rem(24px);
   width: 100%;
   max-width: rem(555px);
-  min-height: rem(108px);
-  padding: rem(27px) rem(54px) rem(26px) rem(40px);
+  /* Same space above and below the kicker */
+  padding: rem(27px) rem(54px) rem(27px) rem(40px);
   border: 0;
   border-radius: rem(30px);
   background: rgb(0 0 0 / 5%);
@@ -126,7 +124,6 @@
   cursor: default;
 
   @media (max-width: $mantine-breakpoint-md) {
-    margin-top: rem(24px);
     padding: rem(22px) rem(24px);
   }
 }
@@ -148,12 +145,6 @@
     font-size: calc(15px * var(--case-study-text));
     letter-spacing: calc(3px * var(--case-study-text));
   }
-}
-
-.listenHint {
-  font-size: calc(16px * var(--case-study-text));
-  line-height: calc(25px * var(--case-study-text));
-  letter-spacing: calc(0.64px * var(--case-study-text));
 }
 
 .listenPlay {
