@@ -77,6 +77,7 @@ export const projects: Project[] = [
     description: 'Challenging an existing design on its efficacy at solving the user problem.',
     image: '/projects/vivint-onboarding.png',
     featured: false,
+    href: '/vivint-onboarding',
     rouletteBlurb: 'My hot take on a cool project',
   },
 ];
