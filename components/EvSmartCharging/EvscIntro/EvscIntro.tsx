@@ -6,7 +6,7 @@ const IMG = '/case-studies/ev-smart-charging';
 const SUMMARY = [
   {
     title: 'WHAT IS IT',
-    text: 'An NRG (parent company/energy provider) commissioned project to design an experience for user to opt into a preset scheduled charge during 1AM-1PM to minimize strain on the grid and maximize their savings.',
+    text: 'An NRG (parent company/energy provider) commissioned project to design an experience for users to opt into a preset scheduled charge during 1AM-1PM to minimize strain on the grid and maximize their savings.',
   },
   {
     title: 'WHY IT MATTERS',
