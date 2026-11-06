@@ -116,7 +116,7 @@
   /* Same space above and below the kicker */
   padding: rem(27px) rem(54px) rem(27px) rem(40px);
   border: 0;
-  border-radius: rem(30px);
+  border-radius: rem(16px);
   background: rgb(0 0 0 / 5%);
   color: var(--color-primary);
   font-family: var(--font-plex), sans-serif;
